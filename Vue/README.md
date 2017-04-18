@@ -50,10 +50,10 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 
 #### 6、接入逻辑：
    1. 设置主界面布局资源
-   2. 解析接受到的参数，根据参数动态调整TitleBar
+   2. 解析接受到的参数，根据参数动态布局TitleBar
    3. `ui +`判断网络是否正常，如果无网络连接则显示网络异常图片，不实例化Weex，否则正常加载Weex，网络异常提供刷新按钮，点击后重新检测网络状况，并作出相应处理
    4. 接入文档： [集成Weex到现有项目](https://weex.apache.org/cn/guide/integrate-to-your-app.html)
-   5. sdk开源源码：[Weex 开源源码](https://github.com/apache/incubator-weex)
+   5. sdk开源源码及SDK下载：[Weex 开源源码](https://github.com/apache/incubator-weex)
 
 
 #### 7、事件广播：
@@ -108,11 +108,15 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
         ```
 
 
-
-
 # 前端开发
  1. option传递的参数获取：`this.$getConfig().bundleUrl`
  2. data传递的参数获取：`this.host`
  3. 创建多页面开发工程：`weexpack create Vue`
  4. 创建单页面开发工程：`weex init Vue`
  5. 编译工程：`npm run build`
+ 6. 前端不统一规则： <font style="color:#FF69B4">wip</font>
+    1. ajax参数通过原生传递，前端不能获取
+    2. 图片资源使用`local:///`协议，前端不识别,需要调整使用
+    3. 自定义Module在前端不能识别，前端需要单独定制
+    4. 前端Vue实例间参数传递需要通过url来单独解析
+    5. 前端没有TitleBar，需要配合定制
