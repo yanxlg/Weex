@@ -652,7 +652,7 @@
 	    data: function data() {
 	        return {
 	            showPage: false,
-	            companyId: "145351189",
+	            companyId: "",
 	            pageIndex: 1,
 	            list: [],
 	            hasMore: false,
@@ -767,7 +767,7 @@
 	    }, [_c('div', {
 	      staticClass: ["list_content"]
 	    }, [_c('text', {
-	      staticClass: ["font_big", "font_padding"]
+	      staticClass: ["font_size", "font_padding"]
 	    }, [_vm._v("上诉方：" + _vm._s(li.party1))]), _c('text', {
 	      staticClass: ["font_size", "font_padding"]
 	    }, [_vm._v("被诉方：" + _vm._s(li.party2))]), _c('text', {

@@ -3,7 +3,7 @@
     <scroller show-scrollbar="false" append="tree" :class="['bg_silver',showPage?'visible':'hidden']" @loadmore="loadMore" loadmoreoffset="30">
         <div v-for="li in list" class="list list_mt list_padding flex_row bg_white align_center" @click="gotoDetail(li.Court_id)">
             <div class="list_content">
-                <text class="font_big font_padding">上诉方：{{li.party1}}</text>
+                <text class="font_size font_padding">上诉方：{{li.party1}}</text>
                 <text class="font_size font_padding">被诉方：{{li.party2}}</text>
                 <text class="font_small font_padding font_silver">刊登日期：{{li.publishdate}}</text>
                 <text class="font_small font_padding font_silver">公告类型：{{li.bltntypename}}</text>
@@ -23,7 +23,7 @@
         data(){
             return {
                 showPage: false,
-                companyId:"145351189",
+                companyId:"",
                 pageIndex:1,
                 list:[],
                 hasMore:false,

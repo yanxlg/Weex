@@ -54,7 +54,7 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
    3. `ui +`判断网络是否正常，如果无网络连接则显示网络异常图片，不实例化Weex，否则正常加载Weex，网络异常提供刷新按钮，点击后重新检测网络状况，并作出相应处理
    4. 接入文档： [集成Weex到现有项目](https://weex.apache.org/cn/guide/integrate-to-your-app.html)
    5. sdk开源源码及SDK下载：[Weex 开源源码](https://github.com/apache/incubator-weex)
-
+   6. Android 需要配置ndk.abiFilter=`"armeabi","x86"` weex sdk提供`x86`和`armeabi`格式so，否则在部分Android CPU中会初始化失败
 
 #### 7、事件广播：
    1. 头部导航栏最右侧菜单Click事件=>js中全局事件`right_action_click`
@@ -62,7 +62,8 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 
 
 # Weex Module开发
-  1. TitleBarModule： <font style="color:#FF69B4">v 0.1</font>
+  1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
+  2. TitleBarModule： <font style="color:#FF69B4">v 0.1</font>
     1. moduleName:`"titleBarModule"`
     2. 说明：用于通过js动态调整头部导航栏UI及事件
     3. Api
@@ -71,13 +72,13 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
         3. setSecondaryRightAction(`/*Map*/ action`) 修改最右侧二级菜单，action支持参数：`{icon:[String,Icon]}`
         4. setTitleIcon(`/*String*/ icons`) 修改头部导航右侧Icons,规则参考 `参数处理方式`
 
-  2. ToastModule： <font style="color:#FF69B4">v 0.1</font>
+  3. ToastModule： <font style="color:#FF69B4">v 0.1</font>
     1. moduleName:`"toastModule"`
     2. 说明：用于显示自定义Toast
     3. Api
         1. toastByNativeView(`/*String*/ title,/*String*/ secondaryTitle,/*String*/ icon`)：显示自定义Toast,参数都可为`null`
 
-  3. LoadingModule：<font style="color:#FF69B4">v 0.1</font>
+  4. LoadingModule：<font style="color:#FF69B4">v 0.1</font>
     1. moduleName:`"loadingModule"`
     2. 说明：用于调用加载菊花
     3. Api
@@ -85,14 +86,14 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
         2. dismissLoading() 关闭加载菊花
         3. getLoadingStatus(`/*JSCallback callback*/`) 获取是否显示的状态
 
-  4. BackPressModule：<font style="color:#FF69B4">v 0.1</font>
+  5. BackPressModule：<font style="color:#FF69B4">v 0.1</font>
     1. moduleName:`"backPressModule"`
     2. 说明：用于拦截返回事件的Api，用于前端处理
     3. Api
         1. setCallBackByJsMode(`/*String*/ mode`) `mode: only|with;only完全交给js处理，不会触发原生返回机制，with处理前端拦截的同时执行原生返回机制
     4. ES6 中拦截方式：全局事件`keyBack`
 
-  5. ShareModule：<font style="color:#FF69B4">v 0.1</font>
+  6. ShareModule：<font style="color:#FF69B4">v 0.1</font>
     1. moduleName:`"shareModule"`
     2. 说明：用于js调用APP中分享功能
     3. Api
