@@ -7,6 +7,7 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 #### 2、参数传递方式：
    1. Android 使用Intent的Bundle（IOS使用Delegate）传递，主要用于原生界面导向混合界面参数传递，传递方式不定，只要有对应的参数获取与解析方案即可
    2. URL传递 Activity（UIControllerView）需要配置为接受data（URL）参数，url参数在前端ES6中进行了编码，需要<font style="color:red">解码</font>
+   3. 需要将两种传递方式的所有参数都进行提取，转成Map及JSONString，用于Activity（UIControllerView）初始化并传递给`Weex`实例
 
 #### 3、参数处理方式
    1. title：控制TitleBar的标题
