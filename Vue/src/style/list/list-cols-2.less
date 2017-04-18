@@ -1,0 +1,19 @@
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 2列布局列表
+ */
+@import "../config";
+@import "base";
+
+/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/
+.list .list_line{
+  left:50%;
+}
+.list_line{
+  border-style:solid;
+  border-left-width: 1px;
+  border-color: @borderColor;
+  position: absolute;
+  top:@basePadding;
+  bottom:@basePadding;
+}

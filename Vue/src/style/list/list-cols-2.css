@@ -1,0 +1,36 @@
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 2列布局列表
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * some config data // theme
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 列表样式基础
+ */
+.list {
+  justify-content: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.list_mt {
+  margin-top: 21px;
+}
+.list_padding {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/
+.list .list_line {
+  left: 50%;
+}
+.list_line {
+  border-style: solid;
+  border-left-width: 1px;
+  border-color: #d5d5d5;
+  position: absolute;
+  top: 21px;
+  bottom: 21px;
+}

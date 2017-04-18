@@ -1,0 +1,22 @@
+{
+  "Head": {
+    "Ret": 0,
+    "Code": 10000,
+    "Token": null,
+    "Msg": "接口调用成功"
+  },
+  "Content": [
+    {
+      "AnnualreportID": 400,
+      "reportYear": "2015"
+    },
+    {
+      "AnnualreportID": 62,
+      "reportYear": "2014"
+    },
+    {
+      "AnnualreportID": 102,
+      "reportYear": "2013"
+    }
+  ]
+}

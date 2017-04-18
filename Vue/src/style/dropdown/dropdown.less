@@ -1,0 +1,44 @@
+/**
+  * dropdown组件
+ */
+@import "../config";
+.drop_mask{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  flex: 1;
+  background-color: @maskBg;
+}
+.options{
+  position: fixed;
+  left:0;
+  right:0;
+  transform-origin: center center;
+}
+.drop_cell{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding-left:30px;
+  padding-right:30px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+}
+.option_num{
+  color: #333;
+  font-size: 33px;
+}
+.option_name{
+  .option_num;
+  flex: 1;
+}
+.option_selected{
+  background-color: rgb(237,237,237);
+}
+.bg_white{
+  background-color: white;
+}

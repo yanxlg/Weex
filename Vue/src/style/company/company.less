@@ -1,0 +1,89 @@
+/**
+ * Created by yxl on 2017/3/24.
+ */
+@import "../framework";
+@import "../list/base";
+@import "../list/list";
+@import "../list/list-cols-3";
+
+.company_title{
+  padding-top:unit(round(50*@pxRadio),px);
+  padding-left:unit(round(50*@pxRadio),px);
+  padding-right:unit(round(50*@pxRadio),px);
+}
+
+.radius(@color:#eee){
+  font-size: unit(round(22*@pxRadio),px);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: unit(round(30*@pxRadio),px);
+  color:@color;
+  border-color:@color;
+  .text_center;
+}
+.company_status{
+  .radius(#00ae66);
+  padding-top:unit(round(4*@pxRadio),px);
+  padding-bottom: unit(round(4*@pxRadio),px);
+  padding-left:unit(round(20*@pxRadio),px);
+  padding-right:unit(round(20*@pxRadio),px);
+  min-width: unit(round(80*@pxRadio),px);
+}
+.company_type{
+  .radius(#2e72ee);
+  padding-top:unit(round(4*@pxRadio),px);
+  padding-bottom: unit(round(4*@pxRadio),px);
+  padding-left:unit(round(10*@pxRadio),px);
+  padding-right:unit(round(10*@pxRadio),px);
+  min-width: unit(round(120*@pxRadio),px);
+  margin-left:unit(round(20*@pxRadio),px);
+}
+.company_count{
+  margin-top:unit(round(30*@pxRadio),px);
+  margin-bottom: unit(round(30*@pxRadio),px);
+}
+.company_li{
+  padding-top:unit(round(10*@pxRadio),px);
+  padding-bottom:unit(round(10*@pxRadio),px);
+}
+.padding_30{
+  padding-top:unit(round(30*@pxRadio),px);
+  padding-bottom:unit(round(30*@pxRadio),px);
+}
+.company_fun_icon{
+  width:unit(round(70*@pxRadio),px);
+  height:unit(round(70*@pxRadio),px);
+}
+.company_num{
+  position: absolute;
+  left:159px;
+  top:unit(round(28*@pxRadio),px);
+  width:85px;
+}
+.mg_left{
+  margin-left: unit(round(6*@pxRadio),px);
+}
+
+/**Web**/
+body .company_li{
+  padding-top:unit(round(10*@pxRadio),px)!important;
+  padding-bottom:unit(round(10*@pxRadio),px)!important;
+}
+body .company_status{
+  padding-top:unit(round(4*@pxRadio),px)!important;
+  padding-bottom: unit(round(4*@pxRadio),px)!important;
+  padding-left:unit(round(20*@pxRadio),px)!important;
+  padding-right:unit(round(20*@pxRadio),px)!important;
+  min-width: unit(round(80*@pxRadio),px)!important;
+}
+body .company_type{
+  padding-top:unit(round(4*@pxRadio),px)!important;
+  padding-bottom: unit(round(4*@pxRadio),px)!important;
+  padding-left:unit(round(10*@pxRadio),px)!important;
+  padding-right:unit(round(10*@pxRadio),px)!important;
+  min-width: unit(round(120*@pxRadio),px)!important;
+  margin-left:unit(round(20*@pxRadio),px)!important;
+}
+body .mg_left{
+  margin-left:unit(round(6*@pxRadio),px)!important;
+}

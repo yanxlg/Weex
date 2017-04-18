@@ -1,0 +1,32 @@
+/**
+ * Created by yxl79 on 2017/4/8.
+ * 普通列表样式
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * some config data // theme
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 列表样式基础
+ */
+.list {
+  justify-content: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.list_mt {
+  margin-top: 21px;
+}
+.list_padding {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.list_content {
+  flex: 1;
+  justify-content: center;
+}
+.list_icon {
+  width: 28px;
+  height: 28px;
+}
