@@ -78,7 +78,7 @@
         data:function () {
             return {
                 showPage:false,
-                companyId:"651442",
+                companyId:"",
                 name:"",
                 addr:"",
                 regStatus:"",

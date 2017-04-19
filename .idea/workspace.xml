@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01f9f2ee-b148-4df7-b125-66615878dbf1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/ajax.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Vue/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/README.md" afterPath="$PROJECT_DIR$/Vue/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/api/weex.js" afterPath="$PROJECT_DIR$/Vue/dist/api/weex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/component/dropdown/dropdown.js" afterPath="$PROJECT_DIR$/Vue/dist/component/dropdown/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/component/dropdown/index.js" afterPath="$PROJECT_DIR$/Vue/dist/component/dropdown/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/annual.js" afterPath="$PROJECT_DIR$/Vue/dist/view/annual.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/annualDetail.js" afterPath="$PROJECT_DIR$/Vue/dist/view/annualDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/businessInfo.js" afterPath="$PROJECT_DIR$/Vue/dist/view/businessInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/copyright.js" afterPath="$PROJECT_DIR$/Vue/dist/view/copyright.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/copyrightInfo.js" afterPath="$PROJECT_DIR$/Vue/dist/view/copyrightInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/courtAnnouncementDetail.js" afterPath="$PROJECT_DIR$/Vue/dist/view/courtAnnouncementDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/courtAnnouncementList.js" afterPath="$PROJECT_DIR$/Vue/dist/view/courtAnnouncementList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/courtLawSuitDetail.js" afterPath="$PROJECT_DIR$/Vue/dist/view/courtLawSuitDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/courtLawSuitList.js" afterPath="$PROJECT_DIR$/Vue/dist/view/courtLawSuitList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/dishonestDetail.js" afterPath="$PROJECT_DIR$/Vue/dist/view/dishonestDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/dishonestInfo.js" afterPath="$PROJECT_DIR$/Vue/dist/view/dishonestInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/index.js" afterPath="$PROJECT_DIR$/Vue/dist/view/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/invest.js" afterPath="$PROJECT_DIR$/Vue/dist/view/invest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/markInfo.js" afterPath="$PROJECT_DIR$/Vue/dist/view/markInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/patentDetail.js" afterPath="$PROJECT_DIR$/Vue/dist/view/patentDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/dist/view/patentInfo.js" afterPath="$PROJECT_DIR$/Vue/dist/view/patentInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/src/api/weex.js" afterPath="$PROJECT_DIR$/Vue/src/api/weex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/src/component/dropdown/dropdown.vue" afterPath="$PROJECT_DIR$/Vue/src/component/dropdown/dropdown.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/src/view/index.vue" afterPath="$PROJECT_DIR$/Vue/src/view/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/src/view/invest.vue" afterPath="$PROJECT_DIR$/Vue/src/view/invest.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,18 +43,43 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="762">
-                <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+              <first_editor relative-caret-position="19">
+                <caret line="1" column="75" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="75" />
                 <folding />
               </first_editor>
               <second_editor>
                 <js_state />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/ajax.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weex.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/src/api/weex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -41,11 +93,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Vue/README.md" />
+        <option value="$PROJECT_DIR$/doc/ajax.md" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -58,6 +117,9 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -74,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -100,10 +163,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Weex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Weex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Weex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Weex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -111,7 +213,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="D:/Node/setup/node" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -164,6 +268,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -200,6 +310,7 @@
       <workItem from="1492496660645" duration="56000" />
       <workItem from="1492496979844" duration="115000" />
       <workItem from="1492497375820" duration="1819000" />
+      <workItem from="1492582171155" duration="495000" />
     </task>
     <task id="LOCAL-00001" summary="v 1.0">
       <created>1492498246964</created>
@@ -212,13 +323,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1990000" />
+    <option name="totallyTimeSpent" value="2485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Weex Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3300866" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -250,6 +362,19 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Vue/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -268,8 +393,29 @@
     <entry file="file://$PROJECT_DIR$/Vue/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="762">
-            <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+          <first_editor relative-caret-position="19">
+            <caret line="1" column="75" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="75" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/src/api/weex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/ajax.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor>

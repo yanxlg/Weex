@@ -490,7 +490,8 @@
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params
+	            body: params,
+	            timeout: 100000
 	        }, function (res) {
 	            callback(res);
 	        });
@@ -785,10 +786,10 @@
 	                _weex.api.openShare("投资关系", $this.companyId, "6", _weex.appConfig.h5_host + $this.shareUrl, "");
 	            });
 	        },
-	        gotoCompany: function gotoCompany(id) {
+	        gotoCompany: function gotoCompany(name) {
 	            _weex.api.startActivity("company/index.js", {
 	                title: "企业详情",
-	                companyId: id
+	                name: name
 	            });
 	        }
 	    }
@@ -819,7 +820,7 @@
 	      staticClass: ["list", "list_mt", "bg_white", "list_padding", "flex_row", "align_center"],
 	      on: {
 	        "click": function($event) {
-	          _vm.gotoCompany(li.CompanyID)
+	          _vm.gotoCompany(li.name)
 	        }
 	      }
 	    }, [_c('div', {
@@ -846,7 +847,7 @@
 	      staticClass: ["list", "list_mt", "bg_white", "list_padding", "flex_row", "align_center"],
 	      on: {
 	        "click": function($event) {
-	          _vm.gotoCompany(li.CompanyID)
+	          _vm.gotoCompany(li.name)
 	        }
 	      }
 	    }, [_c('div', {

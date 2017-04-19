@@ -2,7 +2,7 @@
 <template>
     <tab tabShowNumber="true" :tabsAdapter="tabsAdapter" :class="['bg_silver',showPage?'visible':'hidden']">
         <scroller slot="tabContent0" class="all" show-scrollbar="false">
-            <div v-for="li in Investor" class="list list_mt bg_white list_padding flex_row align_center" :key="li.CompanyID" @click="gotoCompany(li.CompanyID)">
+            <div v-for="li in Investor" class="list list_mt bg_white list_padding flex_row align_center" :key="li.CompanyID" @click="gotoCompany(li.name)">
                 <div class="list_content">
                     <text class="font_size font_padding">{{li.name}}</text>
                     <text class="font_small font_silver font_padding">{{li.amount>0?(li.amount+"万元"):"未知"}}</text>
@@ -11,7 +11,7 @@
             </div>
         </scroller>
         <scroller slot="tabContent1" class="all" show-scrollbar="false">
-            <div v-for="li in Invest" class="list list_mt bg_white list_padding flex_row align_center" @click="gotoCompany(li.CompanyID)">
+            <div v-for="li in Invest" class="list list_mt bg_white list_padding flex_row align_center" @click="gotoCompany(li.name)">
                 <div class="list_content">
                     <text class="font_size font_padding">{{li.name}}</text>
                     <text class="font_small font_silver font_padding">{{li.amount>0?(li.amount+"万元"):"未知"}}</text>
@@ -83,10 +83,10 @@
                     api.openShare("投资关系",$this.companyId,"6",appConfig.h5_host+$this.shareUrl,"");
                 })
             },
-            gotoCompany:function (id) {
+            gotoCompany:function (name) {
                 api.startActivity("company/index.js",{
                     title:"企业详情",
-                    companyId:id
+                    name:name
                 });
             }
         }

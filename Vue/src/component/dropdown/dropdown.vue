@@ -1,8 +1,6 @@
 <!--dropdown组件-->
 <template>
-    <div>
-        <div class="drop_mask" ref="dropMask" :style="{visibility:visibility}" @click="">
-        </div>
+    <div class="drop_mask" ref="dropMask" :style="{visibility:visibility}" @click="">
         <scroller show-scrollbar="false" append="tree" class="options" ref="options" style="top: -550px;height: 550px;">
             <div v-for="(option,index) in options" :class="['drop_cell',selectedIndex==index?'option_selected':'bg_white']"
                  @click="itemClick(option,index)">
@@ -24,11 +22,9 @@
             },
         },
         data: function () {
-            let height = weex.config.env.deviceHeight - 100;
             return {
                 visibility: "hidden",
-                height: height,
-                selectedIndex:0
+                selectedIndex:0,
             }
         },
         methods: {
@@ -59,12 +55,8 @@
                 }, 'ease', 100, callback);
             },
             collapse: function (el, callback) {
-                debugger;
                 var platform = weex.config.env.platform;
                 var translate = 'translate(0, 100%)'; // Web need % ;
-                if (platform == 'iOS') {
-                    translate = 'translate(0, ' + this.wholeHeight + ')'; // ios bug && fixing
-                }
                 this.current_translate = (this.current_translate && this.current_translate !== 'translate(0,0)') ? 'translate(0,0)' : translate;
                 this.anim(el, {
                     transform: this.current_translate

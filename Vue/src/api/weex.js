@@ -60,7 +60,8 @@ let api={
             type: 'json',
             headers:headers,
             url:url,
-            body:params
+            body:params,
+            timeout:100000
         }, res=>{
             callback(res);
         })

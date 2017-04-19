@@ -241,7 +241,8 @@
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params
+	            body: params,
+	            timeout: 100000
 	        }, function (res) {
 	            callback(res);
 	        });

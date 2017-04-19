@@ -358,7 +358,8 @@
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params
+	            body: params,
+	            timeout: 100000
 	        }, function (res) {
 	            callback(res);
 	        });
@@ -704,7 +705,7 @@
 	    data: function data() {
 	        return {
 	            showPage: false,
-	            companyId: "651442",
+	            companyId: "",
 	            name: "",
 	            addr: "",
 	            regStatus: "",

@@ -167,8 +167,6 @@
 	//
 	//
 	//
-	//
-	//
 
 	//选项太多需要使用scroller
 	var animation = weex.requireModule('animation');
@@ -180,10 +178,8 @@
 	        }
 	    },
 	    data: function data() {
-	        var height = weex.config.env.deviceHeight - 100;
 	        return {
 	            visibility: "hidden",
-	            height: height,
 	            selectedIndex: 0
 	        };
 	    },
@@ -215,12 +211,8 @@
 	            }, 'ease', 100, callback);
 	        },
 	        collapse: function collapse(el, callback) {
-	            debugger;
 	            var platform = weex.config.env.platform;
 	            var translate = 'translate(0, 100%)'; // Web need % ;
-	            if (platform == 'iOS') {
-	                translate = 'translate(0, ' + this.wholeHeight + ')'; // ios bug && fixing
-	            }
 	            this.current_translate = this.current_translate && this.current_translate !== 'translate(0,0)' ? 'translate(0,0)' : translate;
 	            this.anim(el, {
 	                transform: this.current_translate
@@ -242,7 +234,7 @@
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('div', {
+	  return _c('div', {
 	    ref: "dropMask",
 	    staticClass: ["drop_mask"],
 	    style: {
@@ -251,7 +243,7 @@
 	    on: {
 	      "click": function($event) {}
 	    }
-	  }), _c('scroller', {
+	  }, [_c('scroller', {
 	    ref: "options",
 	    staticClass: ["options"],
 	    staticStyle: {
