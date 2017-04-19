@@ -55,6 +55,7 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
    3. `ui +`判断网络是否正常，如果无网络连接则显示网络异常图片，不实例化Weex，否则正常加载Weex，网络异常提供刷新按钮，点击后重新检测网络状况，并作出相应处理
    4. 接入文档： [集成Weex到现有项目](https://weex.apache.org/cn/guide/integrate-to-your-app.html)
    5. sdk开源源码及SDK下载：[Weex 开源源码](https://github.com/apache/incubator-weex)
+   6. 接入Example:[Android Example](https://github.com/apache/incubator-weex/tree/master/android/playground)  [IOS Example](https://github.com/apache/incubator-weex/tree/master/ios/playground)
    6. Android 需要配置ndk.abiFilter=`"armeabi","x86"` weex sdk提供`x86`和`armeabi`格式so，否则在部分Android CPU中会初始化失败
 
 #### 7、事件广播：
