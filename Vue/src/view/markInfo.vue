@@ -66,11 +66,13 @@
         },
         methods:{
             change:function (item) {
-                this.type=item.type;
-                this.getData(true,null,true);
                 api.setTitleIcon("arrow_down");
                 this.anchor="down";
-                api.setTitle(item.type);
+                if(item){
+                    this.type=item.type;
+                    this.getData(true,null,true);
+                    api.setTitle(item.type);
+                }
             },
             getTypes:function (promise) {
                 let $this=this;

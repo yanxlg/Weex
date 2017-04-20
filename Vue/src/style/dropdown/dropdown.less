@@ -12,21 +12,19 @@
   background-color: @maskBg;
 }
 .options{
-  position: fixed;
+  position: absolute;
   left:0;
   right:0;
   transform-origin: center center;
 }
 .drop_cell{
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   height: 90px;
   padding-left:30px;
   padding-right:30px;
-  border-bottom-width: 1px;
-  border-style: solid;
-  border-color: #ddd;
+  border-top-width: 1px;
+  border-top-color: @borderColor;
 }
 .option_num{
   color: #333;

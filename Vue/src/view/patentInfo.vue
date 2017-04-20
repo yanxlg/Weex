@@ -6,10 +6,9 @@
                 <div class="list_content list_padding">
                     <text class="font_padding font_size">{{li.patentName}}</text>
                     <text class="font_silver font_small font_padding">专利号：{{li.patentNum}}</text>
-                    <text class="font_silver font_small font_padding">类别：{{li.intCls}}</text>
-                    <text class="font_silver font_small font_padding">申请公布日期：{{li.applicationPublishTime}}</text>
-                    <div class="flex_row">
-                        <text class="mark_status font_padding">申请状态：{{li.patentType}}</text>
+                    <div class="flex_row align_center">
+                        <text class="font_silver font_small font_padding flex_1">申请公布日期：{{li.applicationPublishTime}}</text>
+                        <text class="mark_status font_padding">{{li.patentType}}</text>
                     </div>
                 </div>
                 <image resize="contain" class="list_icon" src="local:///check_more"></image>
@@ -64,11 +63,13 @@
         },
         methods:{
             change:function (item) {
-                this.type=item.type;
-                this.getData(true,null,true);
                 api.setTitleIcon("arrow_down");
                 this.anchor="down";
-                api.setTitle(item.type);
+                if(item){
+                    this.type=item.type;
+                    this.getData(true,null,true);
+                    api.setTitle(item.type);
+                }
             },
             getTypes:function (promise) {
                 let $this=this;

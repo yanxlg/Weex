@@ -5,9 +5,9 @@
             <text class="h2 font_padding">{{detail.title}}</text>
             <text class="font_silver font_small font_padding text_center">{{detail.submittime}}</text>
         </div>
-        <div class="flex_1 list_mt bg_white list list_padding">
+        <scroller class="flex_1 list_mt bg_white list list_padding">
             <text>{{detail.LawsuitContent}}</text>
-        </div>
+        </scroller>
     </scroller>
 </template>
 <style src="../style/company/courtLawSuitDetail.css"></style>

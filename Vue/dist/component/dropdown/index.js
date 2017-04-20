@@ -87,21 +87,19 @@
 	    "backgroundColor": "rgba(0,0,0,0.5)"
 	  },
 	  "options": {
-	    "position": "fixed",
+	    "position": "absolute",
 	    "left": 0,
 	    "right": 0,
 	    "transformOrigin": "center center"
 	  },
 	  "drop_cell": {
 	    "flexDirection": "row",
-	    "justifyContent": "space-between",
 	    "alignItems": "center",
 	    "height": 90,
 	    "paddingLeft": 30,
 	    "paddingRight": 30,
-	    "borderBottomWidth": 1,
-	    "borderStyle": "solid",
-	    "borderColor": "#dddddd"
+	    "borderTopWidth": 1,
+	    "borderTopColor": "#d5d5d5"
 	  },
 	  "option_num": {
 	    "color": "#333333",
@@ -159,6 +157,10 @@
 	        };
 	    },
 	    methods: {
+	        close: function close() {
+	            this.switchView();
+	            this.$emit('change', null);
+	        },
 	        setIndex: function setIndex(index) {
 	            this.selectedIndex = index;
 	        },
@@ -216,23 +218,28 @@
 	      visibility: _vm.visibility
 	    },
 	    on: {
-	      "click": function($event) {}
+	      "click": function($event) {
+	        _vm.close()
+	      }
 	    }
-	  }, [_c('scroller', {
+	  }, [_c('list', {
 	    ref: "options",
 	    staticClass: ["options"],
 	    staticStyle: {
 	      top: "-550px",
 	      height: "550px"
 	    },
-	    appendAsTree: true,
 	    attrs: {
-	      "showScrollbar": "false",
-	      "append": "tree"
+	      "showScrollbar": "true"
 	    }
 	  }, _vm._l((_vm.options), function(option, index) {
-	    return _c('div', {
+	    return _c('cell', {
 	      class: ['drop_cell', _vm.selectedIndex == index ? 'option_selected' : 'bg_white'],
+	      appendAsTree: true,
+	      attrs: {
+	        "keepScrollPosition": "true",
+	        "append": "tree"
+	      },
 	      on: {
 	        "click": function($event) {
 	          _vm.itemClick(option, index)

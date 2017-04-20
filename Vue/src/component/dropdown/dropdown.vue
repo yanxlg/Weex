@@ -1,13 +1,13 @@
 <!--dropdown组件-->
 <template>
-    <div class="drop_mask" ref="dropMask" :style="{visibility:visibility}" @click="">
-        <scroller show-scrollbar="false" append="tree" class="options" ref="options" style="top: -550px;height: 550px;">
-            <div v-for="(option,index) in options" :class="['drop_cell',selectedIndex==index?'option_selected':'bg_white']"
-                 @click="itemClick(option,index)">
+    <div class="drop_mask" ref="dropMask" :style="{visibility:visibility}" @click="close()">
+        <list show-scrollbar="true" class="options" ref="options" style="top: -550px;height: 550px;">
+            <cell v-for="(option,index) in options" :class="['drop_cell',selectedIndex==index?'option_selected':'bg_white']"
+                 @click="itemClick(option,index)" keep-scroll-position="true">
                 <text class="option_name">{{option.type}}</text>
                 <text class="option_num">{{option.count}}</text>
-            </div>
-        </scroller>
+            </cell>
+        </list>
     </div>
 </template>
 <style src="../../style/dropdown/dropdown.css"></style>
@@ -28,6 +28,10 @@
             }
         },
         methods: {
+            close:function () {
+                this.switchView();
+                this.$emit('change', null);
+            },
             setIndex:function(index){
                 this.selectedIndex=index;
             },
