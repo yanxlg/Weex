@@ -2,12 +2,12 @@
 <template>
     <scroller show-scrollbar="false" append="tree" :class="['bg_silver',showPage?'visible':'hidden']">
         <div class="list list_mt bg_white list_padding">
-            <text class="h2 font_padding">{{detail.title}}</text>
+            <text class="font_size font_padding text_center">{{detail.title}}</text>
             <text class="font_silver font_small font_padding text_center">{{detail.submittime}}</text>
         </div>
-        <scroller class="flex_1 list_mt bg_white list list_padding">
-            <text>{{detail.LawsuitContent}}</text>
-        </scroller>
+        <div class="list_mt bg_white list list_padding">
+            <text class="font_silver font_small">{{detail.LawsuitContent}}</text>
+        </div>
     </scroller>
 </template>
 <style src="../style/company/courtLawSuitDetail.css"></style>

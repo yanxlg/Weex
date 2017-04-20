@@ -489,12 +489,14 @@
 	  }, [_c('div', {
 	    staticClass: ["list", "list_mt", "bg_white", "list_padding"]
 	  }, [_c('text', {
-	    staticClass: ["h2", "font_padding"]
+	    staticClass: ["font_size", "font_padding", "text_center"]
 	  }, [_vm._v(_vm._s(_vm.detail.title))]), _c('text', {
 	    staticClass: ["font_silver", "font_small", "font_padding", "text_center"]
-	  }, [_vm._v(_vm._s(_vm.detail.submittime))])]), _c('scroller', {
-	    staticClass: ["flex_1", "list_mt", "bg_white", "list", "list_padding"]
-	  }, [_c('text', [_vm._v(_vm._s(_vm.detail.LawsuitContent))])])])
+	  }, [_vm._v(_vm._s(_vm.detail.submittime))])]), _c('div', {
+	    staticClass: ["list_mt", "bg_white", "list", "list_padding"]
+	  }, [_c('text', {
+	    staticClass: ["font_silver", "font_small"]
+	  }, [_vm._v(_vm._s(_vm.detail.LawsuitContent))])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
