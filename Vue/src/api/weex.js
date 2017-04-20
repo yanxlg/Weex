@@ -115,13 +115,15 @@ let api={
             callback(event.data);
         })
     },
-    openShare:function (/*String*/title,/*String*/ detailId,/*String*/type,/*String*/shareLink,/*String*/imageUrl) {
+    openShare:function (/*String*/title,/*String*/ detailId,/*String*/type,/*String*/shareLink,/*String*/imageUrl,/*String*/content,/*String*/icon) {
         share&&share.openShareUI({
             title:title,
             detailId:detailId,
             type:type,
             shareLink:shareLink,
-            imageUrl:imageUrl
+            imageUrl:imageUrl,
+            content:content,
+            icon:icon
         })
     }
 };

@@ -414,13 +414,15 @@
 	            callback(event.data);
 	        });
 	    },
-	    openShare: function openShare( /*String*/title, /*String*/detailId, /*String*/type, /*String*/shareLink, /*String*/imageUrl) {
+	    openShare: function openShare( /*String*/title, /*String*/detailId, /*String*/type, /*String*/shareLink, /*String*/imageUrl, /*String*/content, /*String*/icon) {
 	        share && share.openShareUI({
 	            title: title,
 	            detailId: detailId,
 	            type: type,
 	            shareLink: shareLink,
-	            imageUrl: imageUrl
+	            imageUrl: imageUrl,
+	            content: content,
+	            icon: icon
 	        });
 	    }
 	};
@@ -699,6 +701,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	//debug companyId:"2973638108"
 	exports.default = {
@@ -747,7 +751,7 @@
 	                $this.toggleFav();
 	            });
 	            _weex.api.addEventListener("right_action1_click", function () {
-	                _weex.api.openShare($this.name, $this.companyId, "6", _weex.appConfig.h5_host + $this.sharelink, $this.shareImage);
+	                _weex.api.openShare($this.name, $this.companyId, "6", _weex.appConfig.h5_host + $this.sharelink, $this.shareImage, "企业工商信息、涉诉信息、知识产权等，全新呈现！", "qiyemingcheng_60");
 	            });
 	        },
 	        getData: function getData() {
@@ -756,11 +760,13 @@
 	                $this = this;
 	            _weex.api.ajax("get", "api/CompanyApi/GetCompanyInfoByid", {
 	                Id: companyId,
-	                CompanyName: CompanyName
+	                CompanyName: CompanyName,
+	                token: this.Token
 	            }, function (res) {
 	                if (res.ok) {
 	                    if (res.data && res.data.Content) {
 	                        var content = res.data.Content;
+	                        $this.companyId = content.CompanyID;
 	                        $this.name = content.name;
 	                        $this.addr = content.addr;
 	                        $this.regStatus = content.regStatus;
@@ -1071,8 +1077,10 @@
 	    staticClass: ["font_size", "font_padding"]
 	  }, [_vm._v(_vm._s(_vm.estiblishTime || "未知"))]), _c('text', {
 	    staticClass: ["font_silver", "font_small", "font_padding"]
-	  }, [_vm._v("成立日期")])])]), _c('div', {
-	    staticClass: ["list", "list_padding", "bg_white", "list_mt"]
+	  }, [_vm._v("成立日期")])])]), (_vm.phoneNumber || _vm.addr || _vm.email || _vm.website) ? _c('div', {
+	    staticClass: ["list_mt", "bg_white"]
+	  }, [(_vm.phoneNumber) ? _c('div', {
+	    staticClass: ["list", "list_padding"]
 	  }, [_c('div', {
 	    staticClass: ["flex_row", "align_center"]
 	  }, [_c('image', {
@@ -1083,8 +1091,8 @@
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
-	  }, [_vm._v(_vm._s(_vm.phoneNumber))])])]), _c('div', {
-	    staticClass: ["list", "list_padding", "bg_white", "border_top"]
+	  }, [_vm._v(_vm._s(_vm.phoneNumber))])])]) : _vm._e(), (_vm.addr) ? _c('div', {
+	    staticClass: ["list", "list_padding", "border_top"]
 	  }, [_c('div', {
 	    staticClass: ["flex_row", "align_center"]
 	  }, [_c('image', {
@@ -1095,8 +1103,8 @@
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
-	  }, [_vm._v(_vm._s(_vm.addr))])])]), _c('div', {
-	    staticClass: ["list", "list_padding", "bg_white", "border_top"]
+	  }, [_vm._v(_vm._s(_vm.addr))])])]) : _vm._e(), (_vm.email) ? _c('div', {
+	    staticClass: ["list", "list_padding", "border_top"]
 	  }, [_c('div', {
 	    staticClass: ["flex_row", "align_center"]
 	  }, [_c('image', {
@@ -1107,8 +1115,8 @@
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
-	  }, [_vm._v(_vm._s(_vm.email))])])]), _c('div', {
-	    staticClass: ["list", "list_padding", "bg_white", "border_top"]
+	  }, [_vm._v(_vm._s(_vm.email))])])]) : _vm._e(), (_vm.website) ? _c('div', {
+	    staticClass: ["list", "list_padding", "border_top"]
 	  }, [_c('div', {
 	    staticClass: ["flex_row", "align_center"]
 	  }, [_c('image', {
@@ -1119,7 +1127,7 @@
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
-	  }, [_vm._v(_vm._s(_vm.website))])])]), _c('div', {
+	  }, [_vm._v(_vm._s(_vm.website))])])]) : _vm._e()]) : _vm._e(), _c('div', {
 	    staticClass: ["padding_bottom"]
 	  }, _vm._l((_vm.countInfo), function(item, index) {
 	    return _c('row', {

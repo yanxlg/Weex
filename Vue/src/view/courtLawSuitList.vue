@@ -98,7 +98,7 @@
             gotoDetail(id){
                 api.startActivity("company/courtLawSuitDetail.js",{
                     title:"判决书",
-                    dishonestID:id,
+                    id:id,
                     icons:"share_black"
                 })
             }

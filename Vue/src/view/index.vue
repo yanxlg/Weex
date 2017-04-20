@@ -32,28 +32,30 @@
                 <text class="font_silver font_small font_padding">成立日期</text>
             </div>
         </div>
-        <div class="list list_padding bg_white list_mt">
-            <div class="flex_row align_center">
-                <image class="small_icon" resize="contain" src="local:///phonenumber_w"></image>
-                <text class="font_size list_padding company_li">{{phoneNumber}}</text>
+        <div class="list_mt bg_white" v-if="phoneNumber||addr||email||website">
+            <div class="list list_padding " v-if="phoneNumber">
+                <div class="flex_row align_center">
+                    <image class="small_icon" resize="contain" src="local:///phonenumber_w"></image>
+                    <text class="font_size list_padding company_li">{{phoneNumber}}</text>
+                </div>
             </div>
-        </div>
-        <div class="list list_padding bg_white border_top">
-            <div class="flex_row align_center">
-                <image class="small_icon" resize="contain" src="local:///gps_w"></image>
-            <text class="font_size list_padding company_li">{{addr}}</text>
-        </div>
-        </div>
-        <div class="list list_padding bg_white border_top">
-            <div class="flex_row align_center">
-                <image class="small_icon" resize="contain" src="local:///email_w"></image>
-                <text class="font_size list_padding company_li">{{email}}</text>
+            <div class="list list_padding border_top" v-if="addr">
+                <div class="flex_row align_center">
+                    <image class="small_icon" resize="contain" src="local:///gps_w"></image>
+                    <text class="font_size list_padding company_li">{{addr}}</text>
+                </div>
             </div>
-        </div>
-        <div class="list list_padding bg_white border_top">
-            <div class="flex_row align_center">
-                <image class="small_icon" resize="contain" src="local:///website_w"></image>
-                <text class="font_size list_padding company_li">{{website}}</text>
+            <div class="list list_padding border_top" v-if="email">
+                <div class="flex_row align_center">
+                    <image class="small_icon" resize="contain" src="local:///email_w"></image>
+                    <text class="font_size list_padding company_li">{{email}}</text>
+                </div>
+            </div>
+            <div class="list list_padding border_top" v-if="website">
+                <div class="flex_row align_center">
+                    <image class="small_icon" resize="contain" src="local:///website_w"></image>
+                    <text class="font_size list_padding company_li">{{website}}</text>
+                </div>
             </div>
         </div>
         <div class="padding_bottom">
@@ -121,7 +123,7 @@
                     $this.toggleFav();
                 });
                 api.addEventListener("right_action1_click",function () {
-                    api.openShare($this.name,$this.companyId,"6",appConfig.h5_host+$this.sharelink,$this.shareImage);
+                    api.openShare($this.name,$this.companyId,"6",appConfig.h5_host+$this.sharelink,$this.shareImage,"企业工商信息、涉诉信息、知识产权等，全新呈现！","qiyemingcheng_60");
                 })
             },
             getData:function () {
@@ -129,11 +131,13 @@
                 let CompanyName=this.name,$this=this;
                 api.ajax("get","api/CompanyApi/GetCompanyInfoByid",{
                     Id:companyId,
-                    CompanyName:CompanyName
+                    CompanyName:CompanyName,
+                    token: this.Token,
                 },res=>{
                     if(res.ok){
                         if(res.data&&res.data.Content){
                             let content=res.data.Content;
+                            $this.companyId=content.CompanyID;
                             $this.name=content.name;
                             $this.addr=content.addr;
                             $this.regStatus=content.regStatus;

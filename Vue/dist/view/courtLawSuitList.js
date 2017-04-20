@@ -455,13 +455,15 @@
 	            callback(event.data);
 	        });
 	    },
-	    openShare: function openShare( /*String*/title, /*String*/detailId, /*String*/type, /*String*/shareLink, /*String*/imageUrl) {
+	    openShare: function openShare( /*String*/title, /*String*/detailId, /*String*/type, /*String*/shareLink, /*String*/imageUrl, /*String*/content, /*String*/icon) {
 	        share && share.openShareUI({
 	            title: title,
 	            detailId: detailId,
 	            type: type,
 	            shareLink: shareLink,
-	            imageUrl: imageUrl
+	            imageUrl: imageUrl,
+	            content: content,
+	            icon: icon
 	        });
 	    }
 	};
@@ -710,7 +712,7 @@
 	        gotoDetail: function gotoDetail(id) {
 	            _weex.api.startActivity("company/courtLawSuitDetail.js", {
 	                title: "判决书",
-	                dishonestID: id,
+	                id: id,
 	                icons: "share_black"
 	            });
 	        }

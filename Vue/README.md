@@ -107,6 +107,8 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
               type:"String",//分享类型
               shareLink:"String",//分享链接
               imageUrl:"String",//分享图片Url
+              content:"String",//content内容，用于应用内分享时popup显示
+              icon:"String"//icon,用于应用内分享时popup显示
         }
         ```
 
