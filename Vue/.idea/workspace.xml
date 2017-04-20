@@ -4,8 +4,26 @@
     <list default="true" id="1a3c03e4-640f-457d-be6c-a6caa00907c9" name="Default" comment="[edit] doc">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/api/weex.js" afterPath="$PROJECT_DIR$/dist/api/weex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/annual.js" afterPath="$PROJECT_DIR$/dist/view/annual.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/annualDetail.js" afterPath="$PROJECT_DIR$/dist/view/annualDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/businessInfo.js" afterPath="$PROJECT_DIR$/dist/view/businessInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/copyright.js" afterPath="$PROJECT_DIR$/dist/view/copyright.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/copyrightInfo.js" afterPath="$PROJECT_DIR$/dist/view/copyrightInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/courtAnnouncementDetail.js" afterPath="$PROJECT_DIR$/dist/view/courtAnnouncementDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/courtAnnouncementList.js" afterPath="$PROJECT_DIR$/dist/view/courtAnnouncementList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/courtLawSuitDetail.js" afterPath="$PROJECT_DIR$/dist/view/courtLawSuitDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/courtLawSuitDetail.vue" afterPath="$PROJECT_DIR$/src/view/courtLawSuitDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/courtLawSuitList.js" afterPath="$PROJECT_DIR$/dist/view/courtLawSuitList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/dishonestDetail.js" afterPath="$PROJECT_DIR$/dist/view/dishonestDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/dishonestInfo.js" afterPath="$PROJECT_DIR$/dist/view/dishonestInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/index.js" afterPath="$PROJECT_DIR$/dist/view/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/invest.js" afterPath="$PROJECT_DIR$/dist/view/invest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/markInfo.js" afterPath="$PROJECT_DIR$/dist/view/markInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/patentDetail.js" afterPath="$PROJECT_DIR$/dist/view/patentDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/view/patentInfo.js" afterPath="$PROJECT_DIR$/dist/view/patentInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/weex.js" afterPath="$PROJECT_DIR$/src/api/weex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index.vue" afterPath="$PROJECT_DIR$/src/view/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/invest.vue" afterPath="$PROJECT_DIR$/src/view/invest.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,99 +38,103 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dropdown.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/dropdown/dropdown.vue">
+      <file leaf-file-name="invest.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/invest.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
-              <folding>
-                <element signature="n#style#0;n#list#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courtLawSuitDetail.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitDetail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="449">
+              <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropdown.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/style/dropdown/dropdown.css">
+      <file leaf-file-name="investorrelation.html" pinned="false" current-in-tab="false">
+        <entry file="file://D:/BZone/Rongzi.BZone/Rongzi.BZone.Api/BZone/appweb/templates/company/investorrelation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courtLawSuitDetail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitDetail.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courtLawSuitList.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitList.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weex.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/weex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="30" column="83" lean-forward="true" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
               <folding>
-                <marker date="1492672215622" expanded="true" signature="234:248" ph="{...}" />
-                <marker date="1492672215622" expanded="true" signature="436:493" ph="{...}" />
-                <marker date="1492672215622" expanded="true" signature="506:543" ph="{...}" />
-                <marker date="1492672215622" expanded="true" signature="557:605" ph="{...}" />
-                <marker date="1492672215622" expanded="true" signature="623:655" ph="{...}" />
-                <marker date="1492672215622" expanded="true" signature="666:696" ph="{...}" />
+                <element signature="n#style#0;n#text#0;n#div#2;n#div#1;n#scroller#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#4487#5294#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropdown.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/style/dropdown/dropdown.less">
+      <file leaf-file-name="investorrelationCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://D:/BZone/Rongzi.BZone/Rongzi.BZone.Api/BZone/appweb/js/controllers/investorrelationCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="304">
+              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courtAnnouncementList.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementList.vue">
+      <file leaf-file-name="dishonestDetail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="patentInfo.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/patentInfo.vue">
+      <file leaf-file-name="dishonestInfo.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/dishonestInfo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="67" column="15" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="markInfo.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/markInfo.vue">
+      <file leaf-file-name="courtAnnouncementDetail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementDetail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="markInfo.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/style/company/markInfo.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="markInfo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/style/company/markInfo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2679">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -125,7 +147,6 @@
     <findStrings>
       <find>调整</find>
       <find>wholeHeight</find>
-      <find>gotoCompany</find>
       <find>cke_inner</find>
       <find>height</find>
       <find>this.config</find>
@@ -136,6 +157,8 @@
       <find>CKEDITOR.config</find>
       <find>分享</find>
       <find>s2</find>
+      <find>JumpToCompany</find>
+      <find>gotoCompany</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,10 +170,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/view/courtAnnouncementList.vue" />
         <option value="$PROJECT_DIR$/dist/component/dropdown/dropdown.js" />
-        <option value="$PROJECT_DIR$/src/view/invest.vue" />
         <option value="D:/BZone/Rongzi.BZone/Rongzi.BZone.Admin/Content/plugins/ckeditor_1.0/ckeditor.js" />
-        <option value="$PROJECT_DIR$/src/view/index.vue" />
-        <option value="$PROJECT_DIR$/src/api/weex.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="D:/BZone/Rongzi.BZone/Rongzi.BZone.Api/BZone/appweb/templates/company/patentInfo.html" />
         <option value="$PROJECT_DIR$/src/style/config.less" />
@@ -160,6 +180,10 @@
         <option value="$PROJECT_DIR$/src/view/markInfo.vue" />
         <option value="$PROJECT_DIR$/src/component/dropdown/dropdown.vue" />
         <option value="$PROJECT_DIR$/src/view/courtLawSuitDetail.vue" />
+        <option value="D:/BZone/Rongzi.BZone/Rongzi.BZone.Api/BZone/appweb/templates/company/investorrelation.html" />
+        <option value="$PROJECT_DIR$/src/view/invest.vue" />
+        <option value="$PROJECT_DIR$/src/api/weex.js" />
+        <option value="$PROJECT_DIR$/src/view/index.vue" />
       </list>
     </option>
   </component>
@@ -223,10 +247,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -239,6 +259,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,7 +415,7 @@
       <workItem from="1492584722531" duration="9331000" />
       <workItem from="1492656753546" duration="6996000" />
       <workItem from="1492669866743" duration="306000" />
-      <workItem from="1492670299930" duration="3415000" />
+      <workItem from="1492670299930" duration="8340000" />
     </task>
     <task id="LOCAL-00001" summary="ReadMe文档">
       <created>1492500771851</created>
@@ -442,11 +466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492673156941</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[change] 判决书.css">
+      <created>1492673763669</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1492673763669</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34848000" />
+    <option name="totallyTimeSpent" value="39773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -460,7 +491,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -485,7 +516,8 @@
     <MESSAGE value="[edit] doc" />
     <MESSAGE value="[edit] doc 分享接入应用内分享&#10;[build] vue 修复某些异常" />
     <MESSAGE value="[change] css&#10;[depends] sdk 0.11.0——dropdown" />
-    <option name="LAST_COMMIT_MESSAGE" value="[change] css&#10;[depends] sdk 0.11.0——dropdown" />
+    <MESSAGE value="[change] 判决书.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="[change] 判决书.css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,78 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/weex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="608">
-            <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -711,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -732,29 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/invest.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/BZone/Rongzi.BZone/Rongzi.BZone.Admin/Content/plugins/ckeditor_1.0/ckeditor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="3468" column="27" lean-forward="true" selection-start-line="3468" selection-start-column="27" selection-end-line="3468" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="51" lean-forward="false" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <element signature="e#4453#5260#0" expanded="false" />
-            <element signature="e#6388#11503#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,22 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/annual.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/weex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="96" column="6" lean-forward="false" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,7 +787,7 @@
         <state relative-caret-position="950">
           <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
           <folding>
-            <element signature="n#style#0;n#list#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#list#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,11 +816,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/copyright.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/annual.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/annualDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/businessInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/copyrightInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="418">
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/dishonestInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/BZone/Rongzi.BZone/Rongzi.BZone.Api/BZone/appweb/templates/company/investorrelation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/BZone/Rongzi.BZone/Rongzi.BZone.Api/BZone/appweb/js/controllers/investorrelationCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/weex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/invest.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="83" lean-forward="true" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#text#0;n#div#2;n#div#1;n#scroller#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#4487#5294#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

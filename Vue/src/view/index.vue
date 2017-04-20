@@ -23,7 +23,7 @@
             </div>
             <div class="list_line_1"></div>
             <div class="flex_1 list_padding align_center">
-                <text class="font_size font_padding">{{regCapital||"未知"}}</text>
+                <text class="font_size font_padding text_center" style="width: 250px;">{{regCapital||"未知"}}</text>
                 <text class="font_silver font_small font_padding">注册资金</text>
             </div>
             <div class="list_line_2"></div>

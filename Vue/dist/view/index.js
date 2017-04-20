@@ -329,7 +329,9 @@
 	        if (json) {
 	            var paramArray = [];
 	            for (var key in json) {
-	                paramArray.push(key + "=" + (json[key] ? encode ? encodeURIComponent(json[key]) : json[key] : ""));
+	                var val = json[key];
+	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
 	        } else {
@@ -346,6 +348,9 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
+	            //
+
+
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
 	            params = "from=weex";
 	        } else {
@@ -1066,7 +1071,10 @@
 	  }), _c('div', {
 	    staticClass: ["flex_1", "list_padding", "align_center"]
 	  }, [_c('text', {
-	    staticClass: ["font_size", "font_padding"]
+	    staticClass: ["font_size", "font_padding", "text_center"],
+	    staticStyle: {
+	      width: "250px"
+	    }
 	  }, [_vm._v(_vm._s(_vm.regCapital || "未知"))]), _c('text', {
 	    staticClass: ["font_silver", "font_small", "font_padding"]
 	  }, [_vm._v("注册资金")])]), _c('div', {

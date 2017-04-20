@@ -461,7 +461,9 @@
 	        if (json) {
 	            var paramArray = [];
 	            for (var key in json) {
-	                paramArray.push(key + "=" + (json[key] ? encode ? encodeURIComponent(json[key]) : json[key] : ""));
+	                var val = json[key];
+	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
 	        } else {
@@ -478,6 +480,9 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
+	            //
+
+
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
 	            params = "from=weex";
 	        } else {
@@ -788,11 +793,14 @@
 	                _weex.api.openShare("投资关系", $this.companyId, "6", _weex.appConfig.h5_host + $this.shareUrl, "");
 	            });
 	        },
-	        gotoCompany: function gotoCompany(name) {
-	            _weex.api.startActivity("company/index.js", {
-	                title: "企业详情",
-	                name: name
-	            });
+	        gotoCompany: function gotoCompany(name, type) {
+	            if (type === 1) {
+	                _weex.api.startActivity("company/index.js", {
+	                    title: "企业详情",
+	                    name: name,
+	                    icons: "collection_black,share_black"
+	                });
+	            }
 	        }
 	    }
 	};
@@ -822,7 +830,7 @@
 	      staticClass: ["list", "list_mt", "bg_white", "list_padding", "flex_row", "align_center"],
 	      on: {
 	        "click": function($event) {
-	          _vm.gotoCompany(li.name)
+	          _vm.gotoCompany(li.name, li.type)
 	        }
 	      }
 	    }, [_c('div', {
@@ -831,13 +839,13 @@
 	      staticClass: ["font_size", "font_padding"]
 	    }, [_vm._v(_vm._s(li.name))]), _c('text', {
 	      staticClass: ["font_small", "font_silver", "font_padding"]
-	    }, [_vm._v(_vm._s(li.amount > 0 ? (li.amount + "万元") : "未知"))])]), _c('image', {
+	    }, [_vm._v(_vm._s(li.amount > 0 ? (li.amount + "万元") : "未知"))])]), (li.type == 1) ? _c('image', {
 	      staticClass: ["list_icon"],
 	      attrs: {
 	        "resize": "contain",
 	        "src": "local:///check_more"
 	      }
-	    })])
+	    }) : _vm._e()])
 	  })), _c('scroller', {
 	    staticClass: ["all"],
 	    attrs: {
@@ -849,7 +857,7 @@
 	      staticClass: ["list", "list_mt", "bg_white", "list_padding", "flex_row", "align_center"],
 	      on: {
 	        "click": function($event) {
-	          _vm.gotoCompany(li.name)
+	          _vm.gotoCompany(li.name, li.type)
 	        }
 	      }
 	    }, [_c('div', {
@@ -858,13 +866,13 @@
 	      staticClass: ["font_size", "font_padding"]
 	    }, [_vm._v(_vm._s(li.name))]), _c('text', {
 	      staticClass: ["font_small", "font_silver", "font_padding"]
-	    }, [_vm._v(_vm._s(li.amount > 0 ? (li.amount + "万元") : "未知"))])]), _c('image', {
+	    }, [_vm._v(_vm._s(li.amount > 0 ? (li.amount + "万元") : "未知"))])]), (li.type == 1) ? _c('image', {
 	      staticClass: ["list_icon"],
 	      attrs: {
 	        "resize": "contain",
 	        "src": "local:///check_more"
 	      }
-	    })])
+	    }) : _vm._e()])
 	  }))])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
