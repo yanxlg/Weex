@@ -16,7 +16,7 @@
     export default {
         data:function () {
             return {
-                companyId:"2973638108",
+                companyId:"",
                 listAdapter:[],
                 showPage:false,
             }
