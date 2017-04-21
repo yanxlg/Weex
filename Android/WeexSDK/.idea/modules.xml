@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WeexSDK.iml" filepath="$PROJECT_DIR$/.idea/modules/WeexSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeexSDK.iml" filepath="$PROJECT_DIR$/WeexSDK.iml" />
+      <module fileurl="file://E:\Weex\Weex\Android\WeexSDK\.idea\modules\WeexSDK.iml" filepath="E:\Weex\Weex\Android\WeexSDK\.idea\modules\WeexSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Weex\Weex\Android\WeexSDK\app\app.iml" filepath="E:\Weex\Weex\Android\WeexSDK\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdk/sdk.iml" filepath="$PROJECT_DIR$/sdk/sdk.iml" />
+      <module fileurl="file://E:\Weex\Weex\Android\WeexSDK\sdk\sdk.iml" filepath="E:\Weex\Weex\Android\WeexSDK\sdk\sdk.iml" />
     </modules>
   </component>
 </project>

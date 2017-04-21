@@ -25,7 +25,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="743">
-                <caret line="134" column="66" lean-forward="true" selection-start-line="134" selection-start-column="66" selection-end-line="134" selection-end-column="66" />
+                <caret line="134" column="108" lean-forward="false" selection-start-line="134" selection-start-column="108" selection-end-line="134" selection-end-column="108" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -341,7 +341,7 @@
       <workItem from="1492670299930" duration="10055000" />
       <workItem from="1492738961965" duration="256000" />
       <workItem from="1492740792578" duration="127000" />
-      <workItem from="1492755093792" duration="1313000" />
+      <workItem from="1492755093792" duration="1544000" />
     </task>
     <task id="LOCAL-00001" summary="ReadMe文档">
       <created>1492500771851</created>
@@ -406,14 +406,22 @@
       <option name="project" value="LOCAL" />
       <updated>1492681486021</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[edit] doc">
+      <created>1492756414386</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1492756414386</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43184000" />
+    <option name="totallyTimeSpent" value="43415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -446,12 +454,12 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="ReadMe文档" />
     <MESSAGE value="[edit] doc&#10;[change] ui 修改" />
-    <MESSAGE value="[edit] doc" />
     <MESSAGE value="[edit] doc 分享接入应用内分享&#10;[build] vue 修复某些异常" />
     <MESSAGE value="[change] css&#10;[depends] sdk 0.11.0——dropdown" />
     <MESSAGE value="[change] 判决书.css" />
     <MESSAGE value="[update] ajax 修复get请求中参数带空格部分手机异常问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="[update] ajax 修复get请求中参数带空格部分手机异常问题" />
+    <MESSAGE value="[edit] doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="[edit] doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -839,7 +847,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="743">
-            <caret line="134" column="66" lean-forward="true" selection-start-line="134" selection-start-column="66" selection-end-line="134" selection-end-column="66" />
+            <caret line="134" column="108" lean-forward="false" selection-start-line="134" selection-start-column="108" selection-end-line="134" selection-end-column="108" />
             <folding />
           </first_editor>
           <second_editor>

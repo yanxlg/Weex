@@ -132,4 +132,4 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 
 # SDK修改
  1. Android SDK 修改ScrollView 设置下拉阴影
- 2. Android SDK 修改BaseActivity的category,`category影响navigator.push`
+ 2. Android SDK 修改BaseActivity的category,`category影响navigator.push` 调整为`com.syq.android.intent.category.WEEX`
