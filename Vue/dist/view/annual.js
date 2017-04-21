@@ -276,7 +276,7 @@
 	exports.default = {
 	    data: function data() {
 	        return {
-	            companyId: "2973638108",
+	            companyId: "",
 	            listAdapter: [],
 	            showPage: false
 	        };
