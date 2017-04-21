@@ -128,3 +128,8 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 
  7. 前端关于图片问题处理： `v0.1`
     1. Web端由于`local://`协议限制，并不支持访问本工程中的文件，因此图片资源会加载失败，参考`fis3`前端构建工具的资源定位进行处理
+
+
+# SDK修改
+ 1. Android SDK 修改ScrollView 设置下拉阴影
+ 2. Android SDK 修改BaseActivity的category,`category影响navigator.push`
