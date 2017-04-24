@@ -541,16 +541,16 @@
 	    "borderLeftWidth": 1,
 	    "borderColor": "#d5d5d5",
 	    "position": "absolute",
-	    "top": 21,
-	    "bottom": 21
+	    "top": 0,
+	    "bottom": 0
 	  },
 	  "list_line_2": {
 	    "borderStyle": "solid",
 	    "borderLeftWidth": 1,
 	    "borderColor": "#d5d5d5",
 	    "position": "absolute",
-	    "top": 21,
-	    "bottom": 21
+	    "top": 0,
+	    "bottom": 0
 	  },
 	  "company_title": {
 	    "paddingTop": 59,
@@ -634,6 +634,18 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1059,33 +1071,29 @@
 	  }), _c('text', {
 	    staticClass: ["font_silver", "font_small"]
 	  }, [_vm._v(_vm._s("收藏 " + _vm.favoriteCount))])])]), _c('div', {
-	    staticClass: ["bg_white", "border_top", "list", "flex_row", "list_mt"]
+	    staticClass: ["bg_white", "list", "list_mt"]
 	  }, [_c('div', {
-	    staticClass: ["flex_1", "list_padding", "align_center"]
+	    staticClass: ["flex_1", "flex_row", "align_center"]
+	  }, [_c('div', {
+	    staticClass: ["flex_1", "justify_center"]
 	  }, [_c('text', {
-	    staticClass: ["font_size", "font_padding"]
-	  }, [_vm._v(_vm._s(_vm.legalPersonName || "未知"))]), _c('text', {
-	    staticClass: ["font_silver", "font_small", "font_padding"]
-	  }, [_vm._v("法定代表人")])]), _c('div', {
+	    staticClass: ["font_size", "font_padding", "text_center"]
+	  }, [_vm._v(_vm._s(_vm.legalPersonName || "未知"))])]), _c('div', {
 	    staticClass: ["list_line_1"]
 	  }), _c('div', {
-	    staticClass: ["flex_1", "list_padding", "align_center"]
+	    staticClass: ["flex_1", "justify_center"]
 	  }, [_c('text', {
 	    staticClass: ["font_size", "font_padding", "text_center"],
 	    staticStyle: {
 	      width: "250px"
 	    }
-	  }, [_vm._v(_vm._s(_vm.regCapital || "未知"))]), _c('text', {
-	    staticClass: ["font_silver", "font_small", "font_padding"]
-	  }, [_vm._v("注册资金")])]), _c('div', {
+	  }, [_vm._v(_vm._s(_vm.regCapital || "未知"))])]), _c('div', {
 	    staticClass: ["list_line_2"]
 	  }), _c('div', {
-	    staticClass: ["flex_1", "list_padding", "align_center"]
+	    staticClass: ["flex_1", "justify_center"]
 	  }, [_c('text', {
-	    staticClass: ["font_size", "font_padding"]
-	  }, [_vm._v(_vm._s(_vm.estiblishTime || "未知"))]), _c('text', {
-	    staticClass: ["font_silver", "font_small", "font_padding"]
-	  }, [_vm._v("成立日期")])])]), (_vm.phoneNumber || _vm.addr || _vm.email || _vm.website) ? _c('div', {
+	    staticClass: ["font_size", "font_padding", "text_center"]
+	  }, [_vm._v(_vm._s(_vm.estiblishTime || "未知"))])])]), _vm._m(0)]), (_vm.phoneNumber || _vm.addr || _vm.email || _vm.website) ? _c('div', {
 	    staticClass: ["list_mt", "bg_white"]
 	  }, [(_vm.phoneNumber) ? _c('div', {
 	    staticClass: ["list", "list_padding"]
@@ -1164,7 +1172,27 @@
 	      }, [_vm._v(_vm._s(it.count))]) : _vm._e()])])
 	    }))
 	  }))])
-	},staticRenderFns: []}
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["flex_1", "flex_row", "align_center"]
+	  }, [_c('div', {
+	    staticClass: ["flex_1", "justify_center"]
+	  }, [_c('text', {
+	    staticClass: ["font_silver", "font_small", "font_padding", "text_center"]
+	  }, [_vm._v("法定代表人")])]), _c('div', {
+	    staticClass: ["list_line_1"]
+	  }), _c('div', {
+	    staticClass: ["flex_1", "justify_center"]
+	  }, [_c('text', {
+	    staticClass: ["font_silver", "font_small", "font_padding", "text_center"]
+	  }, [_vm._v("注册资金")])]), _c('div', {
+	    staticClass: ["list_line_2"]
+	  }), _c('div', {
+	    staticClass: ["flex_1", "justify_center"]
+	  }, [_c('text', {
+	    staticClass: ["font_silver", "font_small", "font_padding", "text_center"]
+	  }, [_vm._v("成立日期")])])])
+	}]}
 	module.exports.render._withStripped = true
 
 /***/ })

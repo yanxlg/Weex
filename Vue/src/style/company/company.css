@@ -156,16 +156,16 @@ body .weex-slider-inner {
   border-left-width: 1px;
   border-color: #d5d5d5;
   position: absolute;
-  top: 21px;
-  bottom: 21px;
+  top: 0;
+  bottom: 0;
 }
 .list_line_2 {
   border-style: solid;
   border-left-width: 1px;
   border-color: #d5d5d5;
   position: absolute;
-  top: 21px;
-  bottom: 21px;
+  top: 0;
+  bottom: 0;
 }
 .list .list_line_2 {
   left: 66.6666%;

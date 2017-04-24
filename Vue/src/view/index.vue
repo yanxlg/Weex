@@ -16,20 +16,32 @@
                 <text class="font_silver font_small">{{"收藏 "+favoriteCount}}</text>
             </div>
         </div>
-        <div class="bg_white border_top list flex_row list_mt">
-            <div class="flex_1 list_padding align_center">
-                <text class="font_size font_padding">{{legalPersonName||"未知"}}</text>
-                <text class="font_silver font_small font_padding">法定代表人</text>
+        <div class="bg_white list list_mt">
+            <div class="flex_1 flex_row align_center">
+                <div class="flex_1 justify_center">
+                    <text class="font_size font_padding text_center">{{legalPersonName||"未知"}}</text>
+                </div>
+                <div class="list_line_1"></div>
+                <div class="flex_1 justify_center">
+                    <text class="font_size font_padding text_center" style="width: 250px;">{{regCapital||"未知"}}</text>
+                </div>
+                <div class="list_line_2"></div>
+                <div class="flex_1 justify_center">
+                    <text class="font_size font_padding text_center">{{estiblishTime||"未知"}}</text>
+                </div>
             </div>
-            <div class="list_line_1"></div>
-            <div class="flex_1 list_padding align_center">
-                <text class="font_size font_padding text_center" style="width: 250px;">{{regCapital||"未知"}}</text>
-                <text class="font_silver font_small font_padding">注册资金</text>
-            </div>
-            <div class="list_line_2"></div>
-            <div class="flex_1 list_padding align_center">
-                <text class="font_size font_padding">{{estiblishTime||"未知"}}</text>
-                <text class="font_silver font_small font_padding">成立日期</text>
+            <div class="flex_1 flex_row align_center">
+                <div class="flex_1 justify_center">
+                    <text class="font_silver font_small font_padding text_center">法定代表人</text>
+                </div>
+                <div class="list_line_1"></div>
+                <div class="flex_1 justify_center">
+                    <text class="font_silver font_small font_padding text_center">注册资金</text>
+                </div>
+                <div class="list_line_2"></div>
+                <div class="flex_1 justify_center">
+                    <text class="font_silver font_small font_padding text_center">成立日期</text>
+                </div>
             </div>
         </div>
         <div class="list_mt bg_white" v-if="phoneNumber||addr||email||website">
