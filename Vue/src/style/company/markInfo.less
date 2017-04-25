@@ -1,0 +1,27 @@
+/**
+ * Created by yxl79 on 2017/4/12.
+ * 商标信息
+ */
+@import "../framework";
+@import "../list/base";
+@import "../list/list";
+.mark_status {
+  border-width: 1px;
+  border-color: @blueColor;
+  border-radius: unit(round(20*@pxRadio), px);
+  padding-left: unit(round(8*@pxRadio), px);
+  padding-right: unit(round(8*@pxRadio), px);
+  color: @blueColor;
+}
+.mark_img{
+  width: unit(round(160*@pxRadio), px);
+  height: unit(round(160*@pxRadio), px);
+  border-width:1px;
+  border-color: @borderColor;
+  border-radius:unit(round(5*@pxRadio), px);
+}
+/**for Web**/
+body .mark_status{
+  padding-left: unit(round(8*@pxRadio), px)!important;
+  padding-right: unit(round(8*@pxRadio), px)!important;
+}

@@ -1,0 +1,254 @@
+/**
+ * Created by yxl on 2017/3/24.
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用
+ * 样式能精简就精简，减少bundleJs的大小
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * some config data // theme
+ */
+/** only for web**/
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+body:before {
+  display: none;
+}
+body .weex-root {
+  background-color: #EDEDED;
+}
+body .weex-scroller {
+  flex: 1;
+}
+body .font_padding {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+/*fix weeb slider bug*/
+body .weex-slider-inner {
+  width: 100%!important;
+}
+/**通用**/
+.font_padding {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.font_bold {
+  font-weight: 700;
+}
+.font_silver {
+  color: #666666;
+}
+.font_orange {
+  color: #db9561;
+}
+.font_size {
+  font-size: 28px;
+}
+.font_small {
+  font-size: 23px;
+}
+.font_big {
+  font-size: 35px;
+}
+.bg_white {
+  background-color: white;
+}
+.bg_silver {
+  background-color: #EDEDED;
+}
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.gone {
+  height: 0.1px;
+  overflow: hidden;
+}
+.text_center {
+  text-align: center;
+}
+.flex_1 {
+  flex: 1;
+}
+.flex_row {
+  flex-direction: row;
+}
+.align_center {
+  align-items: center;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_start {
+  justify-content: flex-start;
+}
+.h2 {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+}
+.border_top {
+  border-top-width: 1px;
+  border-top-color: #d5d5d5;
+}
+.border_left {
+  border-left-width: 1px;
+  border-left-color: #d5d5d5;
+}
+.small_icon {
+  width: 28px;
+  height: 28px;
+}
+.padding_bottom {
+  padding-bottom: 16px;
+}
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 列表样式基础
+ */
+.list {
+  justify-content: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.list_mt {
+  margin-top: 21px;
+}
+.list_padding {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+/**
+ * Created by yxl79 on 2017/4/8.
+ * 普通列表样式
+ */
+.list_content {
+  flex: 1;
+  justify-content: center;
+}
+.list_icon {
+  width: 28px;
+  height: 28px;
+}
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 3列布局列表
+ */
+/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/
+.list .list_line_1 {
+  left: 33.3333%;
+}
+.list_line_1 {
+  border-style: solid;
+  border-left-width: 1px;
+  border-color: #d5d5d5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.list_line_2 {
+  border-style: solid;
+  border-left-width: 1px;
+  border-color: #d5d5d5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.list .list_line_2 {
+  left: 66.6666%;
+}
+.company_title {
+  padding-top: 59px;
+  padding-left: 59px;
+  padding-right: 59px;
+}
+.company_status {
+  font-size: 26px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 35px;
+  color: #00ae66;
+  border-color: #00ae66;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 23px;
+  padding-right: 23px;
+  min-width: 94px;
+}
+.company_type {
+  font-size: 26px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 35px;
+  color: #2e72ee;
+  border-color: #2e72ee;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  min-width: 141px;
+  margin-left: 23px;
+}
+.company_count {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.company_li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.padding_30 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.company_fun_icon {
+  width: 82px;
+  height: 82px;
+}
+.company_num {
+  position: absolute;
+  left: 159px;
+  top: 33px;
+  width: 85px;
+}
+.mg_left {
+  margin-left: 7px;
+}
+/**Web**/
+body .company_li {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+body .company_status {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 23px !important;
+  padding-right: 23px !important;
+  min-width: 94px !important;
+}
+body .company_type {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  min-width: 141px !important;
+  margin-left: 23px !important;
+}
+body .mg_left {
+  margin-left: 7px !important;
+}

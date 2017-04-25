@@ -1,0 +1,166 @@
+/**
+ * Created by yxl79 on 2017/4/12.
+ * 商标信息
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用
+ * 样式能精简就精简，减少bundleJs的大小
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * some config data // theme
+ */
+/** only for web**/
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+body:before {
+  display: none;
+}
+body .weex-root {
+  background-color: #EDEDED;
+}
+body .weex-scroller {
+  flex: 1;
+}
+body .font_padding {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+/*fix weeb slider bug*/
+body .weex-slider-inner {
+  width: 100%!important;
+}
+/**通用**/
+.font_padding {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.font_bold {
+  font-weight: 700;
+}
+.font_silver {
+  color: #666666;
+}
+.font_orange {
+  color: #db9561;
+}
+.font_size {
+  font-size: 28px;
+}
+.font_small {
+  font-size: 23px;
+}
+.font_big {
+  font-size: 35px;
+}
+.bg_white {
+  background-color: white;
+}
+.bg_silver {
+  background-color: #EDEDED;
+}
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.gone {
+  height: 0.1px;
+  overflow: hidden;
+}
+.text_center {
+  text-align: center;
+}
+.flex_1 {
+  flex: 1;
+}
+.flex_row {
+  flex-direction: row;
+}
+.align_center {
+  align-items: center;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_start {
+  justify-content: flex-start;
+}
+.h2 {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+}
+.border_top {
+  border-top-width: 1px;
+  border-top-color: #d5d5d5;
+}
+.border_left {
+  border-left-width: 1px;
+  border-left-color: #d5d5d5;
+}
+.small_icon {
+  width: 28px;
+  height: 28px;
+}
+.padding_bottom {
+  padding-bottom: 16px;
+}
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 列表样式基础
+ */
+.list {
+  justify-content: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.list_mt {
+  margin-top: 21px;
+}
+.list_padding {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+/**
+ * Created by yxl79 on 2017/4/8.
+ * 普通列表样式
+ */
+.list_content {
+  flex: 1;
+  justify-content: center;
+}
+.list_icon {
+  width: 28px;
+  height: 28px;
+}
+.mark_status {
+  border-width: 1px;
+  border-color: #2e72ee;
+  border-radius: 23px;
+  padding-left: 9px;
+  padding-right: 9px;
+  color: #2e72ee;
+}
+.mark_img {
+  width: 188px;
+  height: 188px;
+  border-width: 1px;
+  border-color: #d5d5d5;
+  border-radius: 6px;
+}
+/**for Web**/
+body .mark_status {
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+}

@@ -1,0 +1,46 @@
+/**
+  * dropdown组件
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * some config data // theme
+ */
+.drop_mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.options {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: center center;
+}
+.drop_cell {
+  flex-direction: row;
+  align-items: center;
+  height: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-top-width: 1px;
+  border-top-color: #d5d5d5;
+}
+.option_num {
+  color: #333;
+  font-size: 33px;
+}
+.option_name {
+  color: #333;
+  font-size: 33px;
+  flex: 1;
+}
+.option_selected {
+  background-color: #ededed;
+}
+.bg_white {
+  background-color: white;
+}

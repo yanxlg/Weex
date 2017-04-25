@@ -1,0 +1,341 @@
+{
+  "Head": {
+    "Ret": 0,
+    "Code": 10000,
+    "Token": null,
+    "Msg": "接口调用成功"
+  },
+  "Content": {
+    "CompanyID": "651442",
+    "id": "651442",
+    "name": "大连万达集团股份有限公司",
+    "companyOrgType": "其他股份有限公司(非上市)",
+    "regStatus": "存续",
+    "legalPersonName": "王健林",
+    "regCapital": "100000 万人民币",
+    "estiblishTime": "1992-09-28",
+    "phoneNumber": "010-85587728",
+    "addr": "北京市朝阳区建国路93号万达广场B座21层",
+    "email": "hanting@wanda.cn",
+    "website": "http://www.wanda.cn/",
+    "CountInfo": [
+      {
+        "name": "Company_BusinessInfoCount",
+        "count": 0,
+        "url": "/BZone/appweb/index.html#/businessinfo/651442",
+        "typelist": null
+      },
+      {
+        "name": "Company_InvestCount",
+        "count": 54,
+        "url": "/BZone/appweb/index.html#/investorrelation/651442",
+        "typelist": null
+      },
+      {
+        "name": "Company_AnnualreportCount",
+        "count": 3,
+        "url": "/BZone/appweb/index.html#/cmpannualreportlist/651442",
+        "typelist": null
+      },
+      {
+        "name": "Company_DishonestCount",
+        "count": 0,
+        "url": "/BZone/appweb/index.html#/dishonestyinfolist/651442",
+        "typelist": null
+      },
+      {
+        "name": "Company_CourtCount",
+        "count": 1,
+        "url": "/BZone/appweb/index.html#/CourtAnnouncementList/651442",
+        "typelist": null
+      },
+      {
+        "name": "Company_LawsuitCount",
+        "count": 0,
+        "url": "/BZone/appweb/index.html#/CourtLawSuitList/651442",
+        "typelist": null
+      },
+      {
+        "name": "Company_TrademarkCount",
+        "count": 940,
+        "url": "/BZone/appweb/index.html#/trademarkInfo/651442/全部",
+        "typelist": [
+          {
+            "type": "全部",
+            "count": 940,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/全部"
+          },
+          {
+            "type": "01-化工原料试剂",
+            "count": 10,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/01-化工原料试剂"
+          },
+          {
+            "type": "02-颜料涂料",
+            "count": 15,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/02-颜料涂料"
+          },
+          {
+            "type": "03-日化用品",
+            "count": 15,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/03-日化用品"
+          },
+          {
+            "type": "04-工业油脂燃料",
+            "count": 3,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/04-工业油脂燃料"
+          },
+          {
+            "type": "05-医药制品",
+            "count": 10,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/05-医药制品"
+          },
+          {
+            "type": "06-金属材料器具",
+            "count": 13,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/06-金属材料器具"
+          },
+          {
+            "type": "07-机械设备",
+            "count": 3,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/07-机械设备"
+          },
+          {
+            "type": "08-手动机械",
+            "count": 8,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/08-手动机械"
+          },
+          {
+            "type": "09-软件产品、科学仪器",
+            "count": 42,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/09-软件产品、科学仪器"
+          },
+          {
+            "type": "10-医疗器械",
+            "count": 10,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/10-医疗器械"
+          },
+          {
+            "type": "11-家电照明设备",
+            "count": 8,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/11-家电照明设备"
+          },
+          {
+            "type": "12-交通工具",
+            "count": 8,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/12-交通工具"
+          },
+          {
+            "type": "13-军火烟花",
+            "count": 3,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/13-军火烟花"
+          },
+          {
+            "type": "14-珠宝钟表",
+            "count": 15,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/14-珠宝钟表"
+          },
+          {
+            "type": "15-乐器",
+            "count": 11,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/15-乐器"
+          },
+          {
+            "type": "16-书刊、办公用品",
+            "count": 27,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/16-书刊、办公用品"
+          },
+          {
+            "type": "17-绝缘材料",
+            "count": 10,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/17-绝缘材料"
+          },
+          {
+            "type": "18-皮革、雨伞",
+            "count": 14,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/18-皮革、雨伞"
+          },
+          {
+            "type": "19-非金属建材",
+            "count": 19,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/19-非金属建材"
+          },
+          {
+            "type": "20-家具、非金属工艺品",
+            "count": 25,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/20-家具、非金属工艺品"
+          },
+          {
+            "type": "21-厨房器皿洁具",
+            "count": 32,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/21-厨房器皿洁具"
+          },
+          {
+            "type": "22-绳、网及包装物",
+            "count": 25,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/22-绳、网及包装物"
+          },
+          {
+            "type": "23-纺织用纱、线",
+            "count": 2,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/23-纺织用纱、线"
+          },
+          {
+            "type": "24-布料床上用品",
+            "count": 14,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/24-布料床上用品"
+          },
+          {
+            "type": "25-服装鞋帽",
+            "count": 24,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/25-服装鞋帽"
+          },
+          {
+            "type": "26-服饰用品",
+            "count": 8,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/26-服饰用品"
+          },
+          {
+            "type": "27-地毯挂毯",
+            "count": 15,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/27-地毯挂毯"
+          },
+          {
+            "type": "28-玩具、体育用品",
+            "count": 37,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/28-玩具、体育用品"
+          },
+          {
+            "type": "29-肉、蛋、奶、食用油",
+            "count": 10,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/29-肉、蛋、奶、食用油"
+          },
+          {
+            "type": "30-糖、茶、糕点、调味品",
+            "count": 12,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/30-糖、茶、糕点、调味品"
+          },
+          {
+            "type": "31-新鲜蔬果",
+            "count": 5,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/31-新鲜蔬果"
+          },
+          {
+            "type": "32-饮料啤酒",
+            "count": 37,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/32-饮料啤酒"
+          },
+          {
+            "type": "33-酒",
+            "count": 24,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/33-酒"
+          },
+          {
+            "type": "34-烟草烟具",
+            "count": 5,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/34-烟草烟具"
+          },
+          {
+            "type": "35-广告、销售、商业服务",
+            "count": 108,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/35-广告、销售、商业服务"
+          },
+          {
+            "type": "36-保险、金融、不动产服务",
+            "count": 8,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/36-保险、金融、不动产服务"
+          },
+          {
+            "type": "37-安装修理、建筑装潢服务",
+            "count": 22,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/37-安装修理、建筑装潢服务"
+          },
+          {
+            "type": "38-电讯、通信服务",
+            "count": 41,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/38-电讯、通信服务"
+          },
+          {
+            "type": "39-旅游、物流服务",
+            "count": 18,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/39-旅游、物流服务"
+          },
+          {
+            "type": "40-材料加工",
+            "count": 19,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/40-材料加工"
+          },
+          {
+            "type": "41-教育、娱乐服务",
+            "count": 42,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/41-教育、娱乐服务"
+          },
+          {
+            "type": "42-科研服务",
+            "count": 50,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/42-科研服务"
+          },
+          {
+            "type": "43-餐饮、住宿服务",
+            "count": 52,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/43-餐饮、住宿服务"
+          },
+          {
+            "type": "44-医疗、园艺服务",
+            "count": 24,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/44-医疗、园艺服务"
+          },
+          {
+            "type": "45-社交、法律服务",
+            "count": 37,
+            "itemurl": "/BZone/appweb/index.html#/trademarkInfo/651442/45-社交、法律服务"
+          }
+        ]
+      },
+      {
+        "name": "Company_PatentCount",
+        "count": 24,
+        "url": "/BZone/appweb/index.html#/patentInfo/651442/全部",
+        "typelist": [
+          {
+            "type": "全部",
+            "count": 24,
+            "itemurl": "/BZone/appweb/index.html#/patentInfo/651442/全部"
+          },
+          {
+            "type": "发明公布",
+            "count": 3,
+            "itemurl": "/BZone/appweb/index.html#/patentInfo/651442/发明公布"
+          },
+          {
+            "type": "发明授权",
+            "count": 1,
+            "itemurl": "/BZone/appweb/index.html#/patentInfo/651442/发明授权"
+          },
+          {
+            "type": "实用新型",
+            "count": 1,
+            "itemurl": "/BZone/appweb/index.html#/patentInfo/651442/实用新型"
+          },
+          {
+            "type": "外观设计",
+            "count": 19,
+            "itemurl": "/BZone/appweb/index.html#/patentInfo/651442/外观设计"
+          }
+        ]
+      },
+      {
+        "name": "Company_CopyRightCount",
+        "count": 98,
+        "url": "/BZone/appweb/index.html#/copyRightList/651442",
+        "typelist": null
+      }
+    ],
+    "isFavorite": false,
+    "isShare": true,
+    "sharelink": "/BZone/appweb/index.html#/cmpdetail/651442/大连万达集团股份有限公司",
+    "viewCount": 524,
+    "favoriteCount": 0,
+    "shareImage": "http://103.242.169.60:48020/BZone/SysIcon/CompanyDefaultAvatar.png"
+  }
+}

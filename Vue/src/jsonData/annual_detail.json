@@ -1,0 +1,79 @@
+{
+  "Company_Annualreport": {
+    "AnnualreportID1": null,
+    "reportYear": "2015",
+    "companyName": "",
+    "creditCode": "",
+    "regNumber": "632621620902739",
+    "phoneNumber": "",
+    "postcode": "",
+    "postalAddress": "",
+    "email": "",
+    "manageState": "",
+    "employeeNum": "企业选择不公示",
+    "operatorName": "张丽",
+    "totalAssets": "1万元",
+    "totalEquity": "",
+    "totalSales": "",
+    "totalProfit": "",
+    "primeBusProfit": "",
+    "retainedProfit": "",
+    "totalTax": "",
+    "totalLiability": "",
+    "IsDeleted": false,
+    "CreateTime": "2017-02-20T20:14:48.587",
+    "UpdateTime": "2017-02-20T20:14:48.587",
+    "AnnualreportID": 400,
+    "CompanyID": 8,
+    "CreateUser": 0,
+    "UpdateUser": 0
+  },
+  "Company_Annualreport_Shareholder": [{
+    investorName:"公司",
+    paidType:"货币",
+    subscribeAmount:100,subscribeTime:"2014-21-22",paidAmount:"222",paidTime:"2034121"
+  },{
+    investorName:"公司",
+    paidType:"货币",
+    subscribeAmount:100,subscribeTime:"2014-21-22",paidAmount:"222",paidTime:"2034121"
+  }],
+  "Company_Annualreport_WebInfo": [
+    {
+      "webInfoID1": null,
+      "webType": "",
+      "name": "",
+      "website": "",
+      "IsDeleted": false,
+      "CreateTime": "0001-01-01T00:00:00",
+      "UpdateTime": "0001-01-01T00:00:00",
+      "webInfoID": 0,
+      "AnnualreportID": 0,
+      "CreateUser": 0,
+      "UpdateUser": 0
+    }
+  ],
+  "Company_Annualreport_OutboundInvestment": [{
+    outcompanyName:"公司",
+    regNum:"121",
+    creditCode:"sadsadsa"
+  }],
+  "Company_Annualreport_OutGuaranteeInfo": [{
+    creditor:"MM",
+    obligor:"11",
+    creditoType:"DAS",
+    creditoAmount:"1Q",
+    guaranteeTerm:"1",
+    guaranteeTerm:"1",
+    creditoTerm:"1",
+    guaranteeWay:"1",
+    guaranteeScope:"1",
+  }],
+  "Company_Annualreport_EquityChangeInfo": [{
+    investorName:"a",
+    changeTime:"a",
+    ratioAfter:"a",
+    ratioBefore:"a",
+  }],
+  "Company_Annualreport_ChangeRecord": [],
+  "isShare": true
+}
