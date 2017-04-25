@@ -73,6 +73,7 @@
 	var toastModule = weex.requireModule("toastModule");
 	var storage = weex.requireModule('storage');
 	var share = weex.requireModule('shareModule');
+	var refresh = weex.requireModule('refreshModule');
 	var api = {
 	    startActivity: function startActivity(bundleUrl, /*Object*/params) {
 	        //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -193,6 +194,16 @@
 	            content: content,
 	            icon: icon
 	        });
+	    },
+	    setRefreshEnable: function setRefreshEnable( /*String*/ref, /*boolean*/enable) {
+	        refresh && function () {
+	            refresh.setEnable(ref, enable);
+	        }();
+	    },
+	    setRefreshing: function setRefreshing( /*String*/ref, /*boolean*/refreshing) {
+	        refresh && function () {
+	            refresh.setRefresh(ref, refreshing);
+	        }();
 	    }
 	};
 	exports.api = api;

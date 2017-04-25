@@ -50,14 +50,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(68)
+	__vue_styles__.push(__webpack_require__(72)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(69)
+	__vue_exports__ = __webpack_require__(73)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(71)
+	var __vue_template__ = __webpack_require__(75)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -549,7 +549,7 @@
 
 /***/ }),
 
-/***/ 24:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -580,6 +580,7 @@
 	var toastModule = weex.requireModule("toastModule");
 	var storage = weex.requireModule('storage');
 	var share = weex.requireModule('shareModule');
+	var refresh = weex.requireModule('refreshModule');
 	var api = {
 	    startActivity: function startActivity(bundleUrl, /*Object*/params) {
 	        //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -700,6 +701,16 @@
 	            content: content,
 	            icon: icon
 	        });
+	    },
+	    setRefreshEnable: function setRefreshEnable( /*String*/ref, /*boolean*/enable) {
+	        refresh && function () {
+	            refresh.setEnable(ref, enable);
+	        }();
+	    },
+	    setRefreshing: function setRefreshing( /*String*/ref, /*boolean*/refreshing) {
+	        refresh && function () {
+	            refresh.setRefresh(ref, refreshing);
+	        }();
 	    }
 	};
 	exports.api = api;
@@ -707,7 +718,7 @@
 
 /***/ }),
 
-/***/ 35:
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -729,7 +740,7 @@
 
 /***/ }),
 
-/***/ 68:
+/***/ 72:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -848,7 +859,7 @@
 
 /***/ }),
 
-/***/ 69:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -857,11 +868,11 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(24);
+	var _weex = __webpack_require__(28);
 
-	var _index = __webpack_require__(35);
+	var _index = __webpack_require__(39);
 
-	var _index2 = __webpack_require__(70);
+	var _index2 = __webpack_require__(74);
 
 	//debug companyId:"145351189"   回造成Android动画卡顿，需要解决
 	exports.default = {
@@ -1035,7 +1046,7 @@
 
 /***/ }),
 
-/***/ 70:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1057,7 +1068,7 @@
 
 /***/ }),
 
-/***/ 71:
+/***/ 75:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

@@ -1,87 +1,87 @@
 <!--公司详情-->
 <template>
-    <scroller show-scrollbar="false" append="tree" :class="['bg_silver',showPage?'visible':'hidden']">
-        <div class="bg_white">
-            <div class="company_title">
-                <text class="font_big font_bold text_center">{{name}}</text>
-            </div>
-            <div class="flex_row justify_center list_mt">
-                <text class="company_status">{{regStatus}}</text>
-                <text class="company_type">{{companyOrgType}}</text>
-            </div>
-            <div class="flex_row justify_center company_count justify_center">
-                <image resize="contain" class="small_icon" src="local:///sight_w"></image>
-                <text class="font_silver font_small">{{"浏览 "+viewCount}}</text>
-                <image resize="contain" class="small_icon" src="local:///collection_w" style="margin-left: 12px"></image>
-                <text class="font_silver font_small">{{"收藏 "+favoriteCount}}</text>
-            </div>
-        </div>
-        <div class="bg_white list list_mt">
-            <div class="flex_1 flex_row align_center">
-                <div class="flex_1 justify_center">
-                    <text class="font_size font_padding text_center">{{legalPersonName||"未知"}}</text>
+    <scroller ref="scroller" show-scrollbar="false" append="tree" :class="['bg_silver',showPage?'visible':'hidden']">
+            <div class="bg_white">
+                <div class="company_title">
+                    <text class="font_big font_bold text_center">{{name}}</text>
                 </div>
-                <div class="list_line_1"></div>
-                <div class="flex_1 justify_center">
-                    <text class="font_size font_padding text_center" style="width: 250px;">{{regCapital||"未知"}}</text>
+                <div class="flex_row justify_center list_mt">
+                    <text class="company_status">{{regStatus}}</text>
+                    <text class="company_type">{{companyOrgType}}</text>
                 </div>
-                <div class="list_line_2"></div>
-                <div class="flex_1 justify_center">
-                    <text class="font_size font_padding text_center">{{estiblishTime||"未知"}}</text>
+                <div class="flex_row justify_center company_count justify_center">
+                    <image resize="contain" class="small_icon" src="local:///sight_w"></image>
+                    <text class="font_silver font_small">{{"浏览 "+viewCount}}</text>
+                    <image resize="contain" class="small_icon" src="local:///collection_w" style="margin-left: 12px"></image>
+                    <text class="font_silver font_small">{{"收藏 "+favoriteCount}}</text>
                 </div>
             </div>
-            <div class="flex_1 flex_row align_center">
-                <div class="flex_1 justify_center">
-                    <text class="font_silver font_small font_padding text_center">法定代表人</text>
-                </div>
-                <div class="list_line_1"></div>
-                <div class="flex_1 justify_center">
-                    <text class="font_silver font_small font_padding text_center">注册资金</text>
-                </div>
-                <div class="list_line_2"></div>
-                <div class="flex_1 justify_center">
-                    <text class="font_silver font_small font_padding text_center">成立日期</text>
-                </div>
-            </div>
-        </div>
-        <div class="list_mt bg_white" v-if="phoneNumber||addr||email||website">
-            <div class="list list_padding " v-if="phoneNumber">
-                <div class="flex_row align_center">
-                    <image class="small_icon" resize="contain" src="local:///phonenumber_w"></image>
-                    <text class="font_size list_padding company_li">{{phoneNumber}}</text>
-                </div>
-            </div>
-            <div class="list list_padding border_top" v-if="addr">
-                <div class="flex_row align_center">
-                    <image class="small_icon" resize="contain" src="local:///gps_w"></image>
-                    <text class="font_size list_padding company_li">{{addr}}</text>
-                </div>
-            </div>
-            <div class="list list_padding border_top" v-if="email">
-                <div class="flex_row align_center">
-                    <image class="small_icon" resize="contain" src="local:///email_w"></image>
-                    <text class="font_size list_padding company_li">{{email}}</text>
-                </div>
-            </div>
-            <div class="list list_padding border_top" v-if="website">
-                <div class="flex_row align_center">
-                    <image class="small_icon" resize="contain" src="local:///website_w"></image>
-                    <text class="font_size list_padding company_li">{{website}}</text>
-                </div>
-            </div>
-        </div>
-        <div class="padding_bottom">
-            <row class="border_top list_mt bg_white" v-for="(item, index) in countInfo" :key="item.index">
-                <column v-for="(it, iIndex) in item" :key="it.name" :class="[iIndex!=0?'border_left':'']" >
-                    <div class="flex_1 padding_30 justify_center align_center" @click="goToInfo(it)">
-                        <image class="company_fun_icon" v-if="it.name" :src="'local:///'+(it.name=='Company_BusinessInfoCount'?it.icon:(it.count>0?it.icon:(it.icon+'_gray')))"></image>
-                        <text class="font_size font_padding" v-if="it.name">{{it.fName}}</text>
-                        <text class="company_num font_size" v-if="it.count>0&&it.name">{{it.count}}</text>
+            <div class="bg_white list list_mt">
+                <div class="flex_1 flex_row align_center">
+                    <div class="flex_1 justify_center">
+                        <text class="font_size font_padding text_center">{{legalPersonName||"未知"}}</text>
                     </div>
-                </column>
-            </row>
-        </div>
-    </scroller>
+                    <div class="list_line_1"></div>
+                    <div class="flex_1 justify_center">
+                        <text class="font_size font_padding text_center" style="width: 250px;">{{regCapital||"未知"}}</text>
+                    </div>
+                    <div class="list_line_2"></div>
+                    <div class="flex_1 justify_center">
+                        <text class="font_size font_padding text_center">{{estiblishTime||"未知"}}</text>
+                    </div>
+                </div>
+                <div class="flex_1 flex_row align_center">
+                    <div class="flex_1 justify_center">
+                        <text class="font_silver font_small font_padding text_center">法定代表人</text>
+                    </div>
+                    <div class="list_line_1"></div>
+                    <div class="flex_1 justify_center">
+                        <text class="font_silver font_small font_padding text_center">注册资金</text>
+                    </div>
+                    <div class="list_line_2"></div>
+                    <div class="flex_1 justify_center">
+                        <text class="font_silver font_small font_padding text_center">成立日期</text>
+                    </div>
+                </div>
+            </div>
+            <div class="list_mt bg_white" v-if="phoneNumber||addr||email||website">
+                <div class="list list_padding " v-if="phoneNumber">
+                    <div class="flex_row align_center">
+                        <image class="small_icon" resize="contain" src="local:///phonenumber_w"></image>
+                        <text class="font_size list_padding company_li">{{phoneNumber}}</text>
+                    </div>
+                </div>
+                <div class="list list_padding border_top" v-if="addr">
+                    <div class="flex_row align_center">
+                        <image class="small_icon" resize="contain" src="local:///gps_w"></image>
+                        <text class="font_size list_padding company_li">{{addr}}</text>
+                    </div>
+                </div>
+                <div class="list list_padding border_top" v-if="email">
+                    <div class="flex_row align_center">
+                        <image class="small_icon" resize="contain" src="local:///email_w"></image>
+                        <text class="font_size list_padding company_li">{{email}}</text>
+                    </div>
+                </div>
+                <div class="list list_padding border_top" v-if="website">
+                    <div class="flex_row align_center">
+                        <image class="small_icon" resize="contain" src="local:///website_w"></image>
+                        <text class="font_size list_padding company_li">{{website}}</text>
+                    </div>
+                </div>
+            </div>
+            <div class="padding_bottom">
+                <row class="border_top list_mt bg_white" v-for="(item, index) in countInfo" :key="item.index">
+                    <column v-for="(it, iIndex) in item" :key="it.name" :class="[iIndex!=0?'border_left':'']" >
+                        <div class="flex_1 padding_30 justify_center align_center" @click="goToInfo(it)">
+                            <image class="company_fun_icon" v-if="it.name" :src="'local:///'+(it.name=='Company_BusinessInfoCount'?it.icon:(it.count>0?it.icon:(it.icon+'_gray')))"></image>
+                            <text class="font_size font_padding" v-if="it.name">{{it.fName}}</text>
+                            <text class="company_num font_size" v-if="it.count>0&&it.name">{{it.count}}</text>
+                        </div>
+                    </column>
+                </row>
+            </div>
+        </scroller>
 </template>
 <style src="../style/company/company.css"></style>
 <script>

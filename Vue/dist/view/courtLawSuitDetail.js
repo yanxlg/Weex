@@ -50,14 +50,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(46)
+	__vue_styles__.push(__webpack_require__(50)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(47)
+	__vue_exports__ = __webpack_require__(51)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(48)
+	var __vue_template__ = __webpack_require__(52)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -148,7 +148,7 @@
 
 /***/ }),
 
-/***/ 24:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -179,6 +179,7 @@
 	var toastModule = weex.requireModule("toastModule");
 	var storage = weex.requireModule('storage');
 	var share = weex.requireModule('shareModule');
+	var refresh = weex.requireModule('refreshModule');
 	var api = {
 	    startActivity: function startActivity(bundleUrl, /*Object*/params) {
 	        //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -299,6 +300,16 @@
 	            content: content,
 	            icon: icon
 	        });
+	    },
+	    setRefreshEnable: function setRefreshEnable( /*String*/ref, /*boolean*/enable) {
+	        refresh && function () {
+	            refresh.setEnable(ref, enable);
+	        }();
+	    },
+	    setRefreshing: function setRefreshing( /*String*/ref, /*boolean*/refreshing) {
+	        refresh && function () {
+	            refresh.setRefresh(ref, refreshing);
+	        }();
 	    }
 	};
 	exports.api = api;
@@ -306,7 +317,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 50:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -402,7 +413,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -411,7 +422,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(24);
+	var _weex = __webpack_require__(28);
 
 	exports.default = {
 	    data: function data() {
@@ -480,7 +491,7 @@
 
 /***/ }),
 
-/***/ 48:
+/***/ 52:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

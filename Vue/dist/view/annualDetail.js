@@ -41,22 +41,23 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(26)
+	__vue_styles__.push(__webpack_require__(30)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(27)
+	__vue_exports__ = __webpack_require__(31)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(28)
+	var __vue_template__ = __webpack_require__(32)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -88,13 +89,15 @@
 
 
 /***/ }),
-/* 1 */
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(2), __esModule: true };
 
 /***/ }),
-/* 2 */
+
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var core  = __webpack_require__(3)
@@ -104,14 +107,16 @@
 	};
 
 /***/ }),
-/* 3 */
+
+/***/ 3:
 /***/ (function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ }),
-/* 4 */
+
+/***/ 4:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -142,26 +147,8 @@
 	exports.appConfig = appConfig;
 
 /***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */
+
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -192,6 +179,7 @@
 	var toastModule = weex.requireModule("toastModule");
 	var storage = weex.requireModule('storage');
 	var share = weex.requireModule('shareModule');
+	var refresh = weex.requireModule('refreshModule');
 	var api = {
 	    startActivity: function startActivity(bundleUrl, /*Object*/params) {
 	        //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -312,14 +300,24 @@
 	            content: content,
 	            icon: icon
 	        });
+	    },
+	    setRefreshEnable: function setRefreshEnable( /*String*/ref, /*boolean*/enable) {
+	        refresh && function () {
+	            refresh.setEnable(ref, enable);
+	        }();
+	    },
+	    setRefreshing: function setRefreshing( /*String*/ref, /*boolean*/refreshing) {
+	        refresh && function () {
+	            refresh.setRefresh(ref, refreshing);
+	        }();
 	    }
 	};
 	exports.api = api;
 	exports.appConfig = _weexConfig.appConfig;
 
 /***/ }),
-/* 25 */,
-/* 26 */
+
+/***/ 30:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -459,7 +457,8 @@
 	}
 
 /***/ }),
-/* 27 */
+
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -468,7 +467,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(24);
+	var _weex = __webpack_require__(28);
 
 	exports.default = {
 	    data: function data() {
@@ -847,7 +846,8 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 28 */
+
+/***/ 32:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1366,4 +1366,5 @@
 	module.exports.render._withStripped = true
 
 /***/ })
-/******/ ]);
+
+/******/ });

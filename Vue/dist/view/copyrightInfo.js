@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(37)
+	__vue_styles__.push(__webpack_require__(41)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(38)
+	__vue_exports__ = __webpack_require__(42)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(39)
+	var __vue_template__ = __webpack_require__(43)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -415,7 +415,11 @@
 /***/ }),
 /* 22 */,
 /* 23 */,
-/* 24 */
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -446,6 +450,7 @@
 	var toastModule = weex.requireModule("toastModule");
 	var storage = weex.requireModule('storage');
 	var share = weex.requireModule('shareModule');
+	var refresh = weex.requireModule('refreshModule');
 	var api = {
 	    startActivity: function startActivity(bundleUrl, /*Object*/params) {
 	        //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -566,22 +571,32 @@
 	            content: content,
 	            icon: icon
 	        });
+	    },
+	    setRefreshEnable: function setRefreshEnable( /*String*/ref, /*boolean*/enable) {
+	        refresh && function () {
+	            refresh.setEnable(ref, enable);
+	        }();
+	    },
+	    setRefreshing: function setRefreshing( /*String*/ref, /*boolean*/refreshing) {
+	        refresh && function () {
+	            refresh.setRefresh(ref, refreshing);
+	        }();
 	    }
 	};
 	exports.api = api;
 	exports.appConfig = _weexConfig.appConfig;
 
 /***/ }),
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
 /* 29 */,
 /* 30 */,
 /* 31 */,
 /* 32 */,
 /* 33 */,
-/* 34 */
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -603,9 +618,9 @@
 	                              */
 
 /***/ }),
-/* 35 */,
-/* 36 */,
-/* 37 */
+/* 39 */,
+/* 40 */,
+/* 41 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -708,7 +723,7 @@
 	}
 
 /***/ }),
-/* 38 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -717,9 +732,9 @@
 	    value: true
 	});
 
-	var _index = __webpack_require__(34);
+	var _index = __webpack_require__(38);
 
-	var _weex = __webpack_require__(24);
+	var _weex = __webpack_require__(28);
 
 	//
 	//
@@ -781,7 +796,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 39 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

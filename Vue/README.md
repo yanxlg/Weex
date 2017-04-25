@@ -112,6 +112,26 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
         }
         ```
 
+   7. RefreshModule：<font style="color:#FF69B4">v 0.1</font>
+    1. moduleName:`"refreshModule"`
+    2. 说明：用于控制下拉刷新状态
+    3. Api
+        1. setEnable(`/*String*/ ref,/*boolean*/enable`)  `ref:wx-refresh组件实例，enable:是否启用`
+        2. setRefresh(`/*String*/ref,/*boolean*/refresh`) 'ref:wx-refresh组件实例，refresh:刷新状态'
+
+# Weex Component开发
+ 1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
+ 2. RefreshComponent：<font style="color:#FF69B4">v 0.1</font>
+   1. componentName:`"wx-refresh"`
+   2. 说明：封装刷新container
+   3. example
+    ```
+        <wx-refresh ref="refresh" color="#ffc400" class="flex_1" auto="true" @refresh="refresh">
+        </wx-refresh>
+    ```
+    1. color:设置刷新组件的颜色
+    2. auto:是否在加载完成后自动开启刷新
+    3. @refresh:刷新事件
 
 # 前端开发
  1. option传递的参数获取：`this.$getConfig().bundleUrl`

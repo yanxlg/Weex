@@ -12,6 +12,7 @@ let globalEvent = weex.requireModule('globalEvent');
 let toastModule=weex.requireModule("toastModule");
 let storage = weex.requireModule('storage');
 let share= weex.requireModule('shareModule');
+let refresh=weex.requireModule('refreshModule');
 let api={
     startActivity:function (bundleUrl,/*Object*/params) {
         //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -130,6 +131,16 @@ let api={
             content:content,
             icon:icon
         })
+    },
+    setRefreshEnable:function (/*String*/ref,/*boolean*/enable) {
+        refresh&&(function () {
+            refresh.setEnable(ref,enable);
+        }())
+    },
+    setRefreshing:function (/*String*/ref, /*boolean*/refreshing) {
+        refresh&&(function () {
+            refresh.setRefresh(ref,refreshing);
+        }())
     }
 };
 export {api,appConfig};
