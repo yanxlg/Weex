@@ -225,31 +225,10 @@
 	        this.startLoading();
 	    },
 	    methods: {
-	        rotate: function rotate() {
-	            var loadingIcon = this.$refs.loadingIcon;
-	            var $this = this;
-	            animation.transition(loadingIcon, {
-	                styles: {
-	                    transform: 'rotate(' + $this.deg + 'deg)'
-	                },
-	                duration: 1000, //ms
-	                timingFunction: 'linear',
-	                transformOrigin: 'center center',
-	                delay: 0
-	            }, function () {
-	                $this.deg += 360;
-	                if (!$this.stop) {
-	                    setTimeout(function () {
-	                        $this.rotate();
-	                    }, 200);
-	                }
-	            });
-	        },
 	        startLoading: function startLoading() {
 	            //开始加载
 	            this.loading = 2;
 	            this.deg = 0;
-	            this.rotate();
 	        },
 	        stopLoading: function stopLoading() {
 	            this.loading = 1;
@@ -276,14 +255,10 @@
 	      flexDirection: "row",
 	      backgroundColor: "#EDEDED"
 	    }
-	  }, [(_vm.loading == 2) ? _c('image', {
-	    ref: "loadingIcon",
+	  }, [(_vm.loading == 2) ? _c('progressbar', {
 	    staticStyle: {
 	      width: "32px",
 	      height: "32px"
-	    },
-	    attrs: {
-	      "src": "local:///loading"
 	    }
 	  }) : _vm._e(), (_vm.loading != 3) ? _c('text', {
 	    staticStyle: {
@@ -313,7 +288,7 @@
 	      fontSize: "28px",
 	      backgroundColor: "#EDEDED"
 	    }
-	  }, [_vm._v(_vm._s(_vm.endText))])]) : _vm._e()])
+	  }, [_vm._v(_vm._s(_vm.endText))])]) : _vm._e()], 1)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

@@ -50,10 +50,10 @@
 	var __vue_styles__ = []
 
 	/* script */
-	__vue_exports__ = __webpack_require__(16)
+	__vue_exports__ = __webpack_require__(22)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(17)
+	var __vue_template__ = __webpack_require__(23)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -65,7 +65,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\Weex\\Weex\\Vue\\src\\component\\loading\\loading.vue"
+	__vue_options__.__file = "E:\\Weex\\Weex\\Vue\\src\\example\\refresf.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	__vue_options__.style = __vue_options__.style || {}
@@ -85,107 +85,32 @@
 
 /***/ }),
 
-/***/ 16:
+/***/ 22:
 /***/ (function(module, exports) {
 
+	//
+	//
+	//
+	//
 	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	// issues 转动不停止控制
-	var animation = weex.requireModule('animation');
-	exports.default = {
-	    data: function data() {
-	        return {
-	            beforeLoadingText: "加载更多",
-	            loadingText: "正在加载中...",
-	            endText: "我也是有底线的",
-	            loading: 1, //1表示初始状态，2表示加载，3表示没有数据
-	            stop: false,
-	            deg: 360
-	        };
-	    },
-	    mounted: function mounted() {
-	        this.startLoading();
-	    },
-	    methods: {
-	        startLoading: function startLoading() {
-	            //开始加载
-	            this.loading = 2;
-	            this.deg = 0;
-	        },
-	        stopLoading: function stopLoading() {
-	            this.loading = 1;
-	        },
-	        notifyNoData: function notifyNoData() {
-	            this.loading = 3;
-	        }
-	    }
-	};
-	module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 17:
+/***/ 23:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticStyle: {
-	      paddingTop: "20px",
-	      paddingBottom: "20px",
-	      justifyContent: "center",
-	      alignItems: "center",
-	      flexDirection: "row",
-	      backgroundColor: "#EDEDED"
+	  return _c('wx-refresh', {
+	    ref: "refresh",
+	    staticClass: ["flex_1"],
+	    attrs: {
+	      "color": "#ffc400",
+	      "auto": "true"
+	    },
+	    on: {
+	      "refresh": _vm.refreshEve
 	    }
-	  }, [(_vm.loading == 2) ? _c('progressbar', {
-	    staticStyle: {
-	      width: "32px",
-	      height: "32px"
-	    }
-	  }) : _vm._e(), (_vm.loading != 3) ? _c('text', {
-	    staticStyle: {
-	      textAlign: "center",
-	      fontSize: "28px"
-	    }
-	  }, [_vm._v(_vm._s(_vm.loading == 1 ? _vm.beforeLoadingText : _vm.loadingText))]) : _vm._e(), (_vm.loading == 3) ? _c('div', {
-	    staticStyle: {
-	      width: "700px",
-	      alignItems: "center",
-	      flexDirection: "row",
-	      justifyContent: "center"
-	    }
-	  }, [_c('div', {
-	    staticStyle: {
-	      position: "absolute",
-	      borderTopWidth: "1px",
-	      borderTopColor: "silver",
-	      height: "1px",
-	      top: "20px",
-	      width: "750px",
-	      left: "0"
-	    }
-	  }), _c('text', {
-	    staticStyle: {
-	      textAlign: "center",
-	      fontSize: "28px",
-	      backgroundColor: "#EDEDED"
-	    }
-	  }, [_vm._v(_vm._s(_vm.endText))])]) : _vm._e()], 1)
+	  })
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

@@ -133,6 +133,14 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
     2. auto:是否在加载完成后自动开启刷新
     3. @refresh:刷新事件
 
+ 3. ProgressBarComponent：<font style="color:#FF69B4">v 0.1</font>
+    1. componentName:`"progressbar"`
+    2. 说明：圆形进度条
+    3. example
+        ```
+           <progressbar style="width: 32px;height: 32px;"></progressbar>
+        ```
+
 # 前端开发
  1. option传递的参数获取：`this.$getConfig().bundleUrl`
  2. data传递的参数获取：`this.host`
