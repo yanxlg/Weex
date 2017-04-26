@@ -2,7 +2,8 @@
   <div class="wrapper" @click="update">
     <image :src="logoUrl" class="logo"></image>
     <text class="title">Hello {{target}}</text>
-    <!--<progressbar></progressbar>-->
+    <progressbar></progressbar>
+    <test></test>
   </div>
 </template>
 
@@ -11,7 +12,6 @@
   .title { font-size: 48px; }
   .logo { width: 360px; height: 82px; }
 </style>
-
 <script>
   export default {
     data: {

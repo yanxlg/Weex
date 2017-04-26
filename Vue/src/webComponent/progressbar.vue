@@ -1,7 +1,7 @@
 <template>
     <div class="progressbar"></div>
 </template>
-<style scoped>
+<style>
     .progressbar {
         background-color: red;
         width:40px;

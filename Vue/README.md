@@ -144,9 +144,9 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 # 前端开发
  1. option传递的参数获取：`this.$getConfig().bundleUrl`
  2. data传递的参数获取：`this.host`
- 3. 创建多页面开发工程：`weexpack create Vue`
- 4. 创建单页面开发工程：`weex init Vue`
- 5. 编译工程：`npm run build`
+ 3. 创建开发工程：`weex init Vue`
+ 4. H5运行：`npm run dev` `npm run serve`
+ 5. 编译工程：`weex compile src/foo.vue dist` `weex compile src dist`
  6. 前端不统一规则： <font style="color:#FF69B4">wip</font>
     1. ajax参数通过原生传递，前端不能获取
     2. 图片资源使用`local:///`协议，前端不识别,需要调整使用
