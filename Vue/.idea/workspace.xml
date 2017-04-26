@@ -67,8 +67,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="384">
-                <caret line="124" column="4" lean-forward="false" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
+              <first_editor relative-caret-position="627">
+                <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -436,7 +436,7 @@
       <workItem from="1493183642254" duration="729000" />
       <workItem from="1493186930306" duration="7000" />
       <workItem from="1493193263582" duration="7308000" />
-      <workItem from="1493200644989" duration="5555000" />
+      <workItem from="1493200644989" duration="5711000" />
     </task>
     <task id="LOCAL-00001" summary="[change] change project from weexpack to weex">
       <created>1493112742977</created>
@@ -466,11 +466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493206450275</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[update] doc">
+      <created>1493206778102</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1493206778102</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29028000" />
+    <option name="totallyTimeSpent" value="29184000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -517,7 +524,8 @@
     <MESSAGE value="[change] change project from weexpack to weex" />
     <MESSAGE value="[change] config update" />
     <MESSAGE value="工程编译配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="工程编译配置" />
+    <MESSAGE value="[update] doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -891,8 +899,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="384">
-            <caret line="124" column="4" lean-forward="false" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
+          <first_editor relative-caret-position="627">
+            <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

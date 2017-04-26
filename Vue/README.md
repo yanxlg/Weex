@@ -120,42 +120,42 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
            2. setRefresh(`/*String*/ref,/*boolean*/refresh`) 'ref:wx-refresh组件实例，refresh:刷新状态'
 
 # Weex Component开发
- 1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
- 2. RefreshComponent：<font style="color:#FF69B4">v 0.1</font>
-    1. componentName:`"wx-refresh"`
-   2. 说明：封装刷新container
-   3. example
-    ```
-        <wx-refresh ref="refresh" color="#ffc400" class="flex_1" auto="true" @refresh="refresh">
-        </wx-refresh>
-    ```
-    1. color:设置刷新组件的颜色
-    2. auto:是否在加载完成后自动开启刷新
-    3. @refresh:刷新事件
-
- 3. ProgressBarComponent：<font style="color:#FF69B4">v 0.1</font>
-    1. componentName:`"progressbar"`
-    2. 说明：圆形进度条
-    3. example
+   1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
+   2. RefreshComponent：<font style="color:#FF69B4">v 0.1</font>
+       1. componentName:`"wx-refresh"`
+       2. 说明：封装刷新container
+       3. example
         ```
-           <progressbar style="width: 32px;height: 32px;"></progressbar>
+            <wx-refresh ref="refresh" color="#ffc400" class="flex_1" auto="true" @refresh="refresh">
+            </wx-refresh>
         ```
+       4. color:设置刷新组件的颜色
+       5. auto:是否在加载完成后自动开启刷新
+       6. @refresh:刷新事件
+    
+   3. ProgressBarComponent：<font style="color:#FF69B4">v 0.1</font>
+       1. componentName:`"progressbar"`
+       2. 说明：圆形进度条
+       3. example
+            ```
+               <progressbar style="width: 32px;height: 32px;"></progressbar>
+            ```
 
 # 前端开发
- 1. option传递的参数获取：`this.$getConfig().bundleUrl`
- 2. data传递的参数获取：`this.host`
- 3. 创建开发工程：`weex init Vue`
- 4. H5运行：`npm run dev` `npm run serve`
- 5. 编译工程：`weex compile src/foo.vue dist` `weex compile src dist`
- 6. 前端不统一规则： <font style="color:#FF69B4">wip</font>
-    1. ajax参数通过原生传递，前端不能获取
-    2. 图片资源使用`local:///`协议，前端不识别,需要调整使用
-    3. 自定义Module在前端不能识别，前端需要单独定制
-    4. 前端Vue实例间参数传递需要通过url来单独解析
-    5. 前端没有TitleBar，需要配合定制
+   1. option传递的参数获取：`this.$getConfig().bundleUrl`
+   2. data传递的参数获取：`this.host`
+   3. 创建开发工程：`weex init Vue`
+   4. H5运行：`npm run dev` `npm run serve`
+   5. 编译工程：`weex compile src/foo.vue dist` `weex compile src dist`
+   6. 前端不统一规则： <font style="color:#FF69B4">wip</font>
+       1. ajax参数通过原生传递，前端不能获取
+       2. 图片资源使用`local:///`协议，前端不识别,需要调整使用
+       3. 自定义Module在前端不能识别，前端需要单独定制
+       4. 前端Vue实例间参数传递需要通过url来单独解析
+       5. 前端没有TitleBar，需要配合定制
 
- 7. 前端关于图片问题处理： `v0.1`
-    1. Web端由于`local://`协议限制，并不支持访问本工程中的文件，因此图片资源会加载失败，参考`fis3`前端构建工具的资源定位进行处理
+   7. 前端关于图片问题处理： `v0.1`
+       1. Web端由于`local://`协议限制，并不支持访问本工程中的文件，因此图片资源会加载失败，参考`fis3`前端构建工具的资源定位进行处理
 
 
 # SDK修改
