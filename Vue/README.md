@@ -64,65 +64,65 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
 
 
 # Weex Module开发
-  1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
-  2. TitleBarModule： <font style="color:#FF69B4">v 0.1</font>
-    1. moduleName:`"titleBarModule"`
-    2. 说明：用于通过js动态调整头部导航栏UI及事件
-    3. Api
-        1. setTitle(`/*String*/`title)：修改头部导航标题
-        2. setRightAction(`/*Map*/ action`)：修改最右侧菜单，action支持参数：`{text:[String,文字],icon:[String,Icon]}`
-        3. setSecondaryRightAction(`/*Map*/ action`) 修改最右侧二级菜单，action支持参数：`{icon:[String,Icon]}`
-        4. setTitleIcon(`/*String*/ icons`) 修改头部导航右侧Icons,规则参考 `参数处理方式`
+   1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
+   2. TitleBarModule： <font style="color:#FF69B4">v 0.1</font>
+       1. moduleName:`"titleBarModule"`
+       2. 说明：用于通过js动态调整头部导航栏UI及事件
+       3. Api
+           1. setTitle(`/*String*/`title)：修改头部导航标题
+           2. setRightAction(`/*Map*/ action`)：修改最右侧菜单，action支持参数：`{text:[String,文字],icon:[String,Icon]}`
+           3. setSecondaryRightAction(`/*Map*/ action`) 修改最右侧二级菜单，action支持参数：`{icon:[String,Icon]}`
+           4. setTitleIcon(`/*String*/ icons`) 修改头部导航右侧Icons,规则参考 `参数处理方式`
 
-  3. ToastModule： <font style="color:#FF69B4">v 0.1</font>
-    1. moduleName:`"toastModule"`
-    2. 说明：用于显示自定义Toast
-    3. Api
-        1. toastByNativeView(`/*String*/ title,/*String*/ secondaryTitle,/*String*/ icon`)：显示自定义Toast,参数都可为`null`
+   3. ToastModule： <font style="color:#FF69B4">v 0.1</font>
+       1. moduleName:`"toastModule"`
+       2. 说明：用于显示自定义Toast
+       3. Api
+           1. toastByNativeView(`/*String*/ title,/*String*/ secondaryTitle,/*String*/ icon`)：显示自定义Toast,参数都可为`null`
 
-  4. LoadingModule：<font style="color:#FF69B4">v 0.1</font>
-    1. moduleName:`"loadingModule"`
-    2. 说明：用于调用加载菊花
-    3. Api
-        1. showLoading() 显示加载菊花
-        2. dismissLoading() 关闭加载菊花
-        3. getLoadingStatus(`/*JSCallback callback*/`) 获取是否显示的状态
+   4. LoadingModule：<font style="color:#FF69B4">v 0.1</font>
+       1. moduleName:`"loadingModule"`
+       2. 说明：用于调用加载菊花
+       3. Api
+           1. showLoading() 显示加载菊花
+           2. dismissLoading() 关闭加载菊花
+           3. getLoadingStatus(`/*JSCallback callback*/`) 获取是否显示的状态
 
-  5. BackPressModule：<font style="color:#FF69B4">v 0.1</font>
-    1. moduleName:`"backPressModule"`
-    2. 说明：用于拦截返回事件的Api，用于前端处理
-    3. Api
-        1. setCallBackByJsMode(`/*String*/ mode`) `mode: only|with;only完全交给js处理，不会触发原生返回机制，with处理前端拦截的同时执行原生返回机制
-    4. ES6 中拦截方式：全局事件`keyBack`
+   5. BackPressModule：<font style="color:#FF69B4">v 0.1</font>
+       1. moduleName:`"backPressModule"`
+       2. 说明：用于拦截返回事件的Api，用于前端处理
+       3. Api
+           1. setCallBackByJsMode(`/*String*/ mode`) `mode: only|with;only完全交给js处理，不会触发原生返回机制，with处理前端拦截的同时执行原生返回机制
+       4. ES6 中拦截方式：全局事件`keyBack`
 
-  6. ShareModule：<font style="color:#FF69B4">v 0.1</font>
-    1. moduleName:`"shareModule"`
-    2. 说明：用于js调用APP中分享功能
-    3. Api
-        1. openShareUI(`/*Map*/ shareConfig`)：
-        ```
-        shareConfig:{
-              title:"String",//分享标题
-              detailId:"String",//分享Id
-              type:"String",//分享类型
-              shareLink:"String",//分享链接
-              imageUrl:"String",//分享图片Url
-              content:"String",//content内容，用于应用内分享时popup显示
-              icon:"String"//icon,用于应用内分享时popup显示
-        }
-        ```
+   6. ShareModule：<font style="color:#FF69B4">v 0.1</font>
+       1. moduleName:`"shareModule"`
+       2. 说明：用于js调用APP中分享功能
+       3. Api
+           1. openShareUI(`/*Map*/ shareConfig`)：
+            ```
+            shareConfig:{
+                  title:"String",//分享标题
+                  detailId:"String",//分享Id
+                  type:"String",//分享类型
+                  shareLink:"String",//分享链接
+                  imageUrl:"String",//分享图片Url
+                  content:"String",//content内容，用于应用内分享时popup显示
+                  icon:"String"//icon,用于应用内分享时popup显示
+            }
+            ```
 
    7. RefreshModule：<font style="color:#FF69B4">v 0.1</font>
-    1. moduleName:`"refreshModule"`
-    2. 说明：用于控制下拉刷新状态
-    3. Api
-        1. setEnable(`/*String*/ ref,/*boolean*/enable`)  `ref:wx-refresh组件实例，enable:是否启用`
-        2. setRefresh(`/*String*/ref,/*boolean*/refresh`) 'ref:wx-refresh组件实例，refresh:刷新状态'
+       1. moduleName:`"refreshModule"`
+       2. 说明：用于控制下拉刷新状态
+       3. Api
+           1. setEnable(`/*String*/ ref,/*boolean*/enable`)  `ref:wx-refresh组件实例，enable:是否启用`
+           2. setRefresh(`/*String*/ref,/*boolean*/refresh`) 'ref:wx-refresh组件实例，refresh:刷新状态'
 
 # Weex Component开发
  1. 开发文档 [Android Module扩展](http://weex-project.io/cn/references/advanced/extend-to-android.html) [IOS Module扩展](http://weex-project.io/cn/references/advanced/extend-to-ios.html)
  2. RefreshComponent：<font style="color:#FF69B4">v 0.1</font>
-   1. componentName:`"wx-refresh"`
+    1. componentName:`"wx-refresh"`
    2. 说明：封装刷新container
    3. example
     ```
