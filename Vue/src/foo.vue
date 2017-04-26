@@ -2,6 +2,7 @@
   <div class="wrapper" @click="update">
     <image :src="logoUrl" class="logo"></image>
     <text class="title">Hello {{target}}</text>
+    <!--<progressbar></progressbar>-->
   </div>
 </template>
 

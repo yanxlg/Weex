@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/dist/app.web.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/app.weex.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/assets/require.js" />
+      <root url="file://$PROJECT_DIR$/dist/assets/require.js" />
+      <root url="file://$PROJECT_DIR$/dist/config.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/app.web.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/app.weex.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/webComponent/globalRegister.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/app.web.js" />
+      <root url="file://$PROJECT_DIR$/dist/config.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/app.weex.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/webComponent/globalRegister.js" />
+      <root url="file://$PROJECT_DIR$/dist/webpack.config.js" />
+      <root url="file://$PROJECT_DIR$/dist/webpack.config.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/app.web.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/app.weex.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

@@ -74,7 +74,7 @@ function getBaseConfig () {
       //   }
       // })]
     },
-    plugins: [bannerPlugin]
+    plugins: [bannerPlugin],
   }
 }
 
