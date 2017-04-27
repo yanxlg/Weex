@@ -3,10 +3,8 @@
     <image :src="logoUrl" class="logo"></image>
     <text class="title">Hello {{target}}</text>
     <progressbar></progressbar>
-    <test></test>
   </div>
 </template>
-
 <style>
   .wrapper { align-items: center; margin-top: 120px; }
   .title { font-size: 48px; }

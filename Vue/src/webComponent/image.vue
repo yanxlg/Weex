@@ -23,10 +23,11 @@
             }
         },
         created:function () {
-            if(this.src.indexOf("local")>=0){
-                this.src=this.src.replace("local:///","dist/web/images/");
+            let src=this.src;
+            if(src.indexOf("local")>=0){
+                src=src.replace("local:///","dist/web/images/");
             }
-            this.img="url('"+this.src+"')";
+            this.img="url('"+src+"')";
         }
     }
 </script>
