@@ -137,7 +137,7 @@ let api={
             refresh.setEnable(ref,enable);
         }())
     },
-    setRefreshing:function (/*String*/ref, /*boolean*/refreshing) {
+    setRefreshState:function (/*String*/ref, /*boolean*/refreshing) {
         refresh&&(function () {
             refresh.setRefresh(ref,refreshing);
         }())
