@@ -40,9 +40,3 @@ npm run debug
 
 You can config more babel, ESLint and PostCSS plugins in `webpack.config.js`.
 
-
-
-## 修改
-
-1. babel配置文件需要添加env
-2. package.json文件中devDependencies需要添加env
