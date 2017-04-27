@@ -148,11 +148,11 @@ Android 通过自定义一个Activity(IOS UIControllerView)，其中TitleBar使�
    4. H5运行：`npm run dev` `npm run serve`
    5. 编译工程：`weex compile src/foo.vue dist` `weex compile src dist`
    6. 前端不统一规则： <font style="color:#FF69B4">wip</font>
-       1. ajax参数通过原生传递，前端不能获取
-       2. 图片资源使用`local:///`协议，前端不识别,需要调整使用
-       3. 自定义Module在前端不能识别，前端需要单独定制
-       4. 前端Vue实例间参数传递需要通过url来单独解析
-       5. 前端没有TitleBar，需要配合定制
+       * ajax参数通过原生传递，前端不能获取
+       * 图片资源使用`local:///`协议，前端不识别,需要调整使用  <span style="color:#00BDFF;font-size: 12px;padding: 1px 7px;background: #00BDFF;color: #fff;border-radius: 20px;">fixed</span>`通过自定义Web端Component来解析local:///协议`
+       * 自定义Module在前端不能识别，前端需要单独定制
+       * 前端Vue实例间参数传递需要通过url来单独解析
+       * 前端没有TitleBar，需要配合定制
 
    7. 前端关于图片问题处理： `v0.1`
        1. Web端由于`local://`协议限制，并不支持访问本工程中的文件，因此图片资源会加载失败，参考`fis3`前端构建工具的资源定位进行处理
