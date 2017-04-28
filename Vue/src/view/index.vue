@@ -124,9 +124,9 @@
             appConfig.host = this.host;
             this.getData();
             this.bindClick();
-            setTimeout(() => {
-                api.setRefreshState(this.$refs.refresh, false);
-            }, 5000)
+            setTimeout(()=>{
+                api.alert(JSON.stringify(this.companyId));
+            },1000)
         },
         components: {
             'row': Row,

@@ -2,9 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f24bd2b-2b16-41b4-a238-6738b740aa43" name="Default" comment="[change] change project from weexpack to weex">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/images/a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/images/collection_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/images/loading.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/images/a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/images/collection_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/images/loading.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/component/cell/col.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/component/cell/row.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/component/dropdown/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/component/loading/loading.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/component/tab/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/example/refresf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/foo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/images/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/lib/register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/test/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/annual.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/annualDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/businessInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/copyright.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/copyrightInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/courtAnnouncementDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/courtAnnouncementList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/courtLawSuitDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/courtLawSuitList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/dishonestDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/dishonestInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/invest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/markDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/markInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/patentDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/view/patentInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/webComponent/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/web/webComponent/progressbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/component/cell/col.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/component/cell/row.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/component/dropdown/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/component/loading/loading.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/component/tab/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/example/refresf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/foo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/images/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/lib/register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/test/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/annual.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/annualDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/businessInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/copyright.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/copyrightInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/courtAnnouncementDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/courtAnnouncementList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/courtLawSuitDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/courtLawSuitList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/dishonestDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/dishonestInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/invest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/markDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/markInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/patentDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/view/patentInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/webComponent/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/weex/webComponent/progressbar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/weex.js" afterPath="$PROJECT_DIR$/src/api/weex.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index.vue" afterPath="$PROJECT_DIR$/src/view/index.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,28 +86,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/register.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progressbar.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webComponent/progressbar.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding>
-                <element signature="e#111#2334#2" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="foo.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/foo.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,11 +96,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/index.vue">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://E:/WeexSDK/incubator-weex/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="513">
+                <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weexConfig.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/weexConfig.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -65,7 +142,7 @@
       <file leaf-file-name="weex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/weex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
+            <state relative-caret-position="2565">
               <caret line="138" column="6" lean-forward="false" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -88,8 +165,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="249">
-                <caret line="136" column="39" lean-forward="false" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
+              <first_editor relative-caret-position="722">
+                <caret line="38" column="172" lean-forward="false" selection-start-line="38" selection-start-column="172" selection-end-line="38" selection-end-column="172" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -144,6 +221,7 @@
       <find>no such file or directory,</find>
       <find>image</find>
       <find>stat</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace>pngEntry</replace>
@@ -180,6 +258,7 @@
         <option value="$PROJECT_DIR$/src/foo.vue" />
         <option value="$PROJECT_DIR$/src/api/weex.js" />
         <option value="$PROJECT_DIR$/src/view/index.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -243,92 +322,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weex" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -481,7 +474,8 @@
       <workItem from="1493186930306" duration="7000" />
       <workItem from="1493193263582" duration="7308000" />
       <workItem from="1493200644989" duration="5748000" />
-      <workItem from="1493255686803" duration="18933000" />
+      <workItem from="1493255686803" duration="23790000" />
+      <workItem from="1493342896893" duration="181000" />
     </task>
     <task id="LOCAL-00001" summary="[change] change project from weexpack to weex">
       <created>1493112742977</created>
@@ -553,11 +547,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493278945390</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[test] 下拉刷新测试">
+      <created>1493280065696</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1493280065696</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48154000" />
+    <option name="totallyTimeSpent" value="53192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,17 +572,17 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Weex Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5124594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5124594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36403033" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -610,7 +611,8 @@
     <MESSAGE value="[config] project build config" />
     <MESSAGE value="[update] web support local:/// scheme" />
     <MESSAGE value="[change] fix image Component Vue error" />
-    <option name="LAST_COMMIT_MESSAGE" value="[change] fix image Component Vue error" />
+    <MESSAGE value="[test] 下拉刷新测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="[test] 下拉刷新测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -619,15 +621,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/web/page2.js" />
-    <entry file="file://$PROJECT_DIR$/dist/web/es6/a.js" />
-    <entry file="file://$PROJECT_DIR$/dist/weex/lib/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/web/lib/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -639,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1159">
           <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +654,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="38">
             <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -673,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,15 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,25 +678,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-233">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/images/u=3432487329,2901563519&amp;fm=23&amp;gp=0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/web/images/u=3432487329,2901563519&amp;fm=23&amp;gp=0.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/file-loader/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
           <caret line="118" column="20" lean-forward="false" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,56 +696,24 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="95">
             <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/images/images/a">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/images/a.[ext]">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/web/images/images/a" />
+    <entry file="file://$PROJECT_DIR$/dist/web/images/a.[ext]" />
     <entry file="file://$PROJECT_DIR$/dist/web/webComponent/progressbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1957">
           <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/4465dfe1fa26f89125bc578e6a01e22d.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/a.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/images/4465dfe1fa26f89125bc578e6a01e22d.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/images/a.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/4465dfe1fa26f89125bc578e6a01e22d.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/images/a.jpg" />
+    <entry file="file://$PROJECT_DIR$/dist/images/4465dfe1fa26f89125bc578e6a01e22d.jpg" />
+    <entry file="file://$PROJECT_DIR$/dist/images/a.jpg" />
     <entry file="file://$PROJECT_DIR$/dist/web/images/collection_done.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -795,16 +734,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/images/collection_done.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/web/images/collection_done.jpg" />
     <entry file="file://$PROJECT_DIR$/node_modules/url-loader/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="101" column="22" lean-forward="true" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,23 +746,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/web/images/a">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-267">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/web/images/a" />
     <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/node/NodeOutputFileSystem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,7 +769,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="187">
             <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -855,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="6783" column="6" lean-forward="true" selection-start-line="6783" selection-start-column="6" selection-end-line="6783" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,9 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,9 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <element signature="e#1067#3079#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,34 +852,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#441#1675#0" expanded="false" />
-            <element signature="e#1702#3894#0" expanded="false" />
-            <element signature="e#1881#3252#0" expanded="false" />
-            <element signature="e#3929#4962#0" expanded="false" />
-            <element signature="e#5003#5297#0" expanded="false" />
-            <element signature="e#5331#5683#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="152">
           <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="249">
-            <caret line="136" column="39" lean-forward="false" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -998,7 +889,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/weex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
+        <state relative-caret-position="2565">
           <caret line="138" column="6" lean-forward="false" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1006,10 +897,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/index.vue">
+    <entry file="file://E:/WeexSDK/incubator-weex/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="513">
+            <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/weexConfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="722">
+            <caret line="38" column="172" lean-forward="false" selection-start-line="38" selection-start-column="172" selection-end-line="38" selection-end-column="172" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
       </provider>
