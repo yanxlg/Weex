@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(28)
+	__vue_styles__.push(__webpack_require__(29)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(29)
+	__vue_exports__ = __webpack_require__(30)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(32)
+	var __vue_template__ = __webpack_require__(33)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -91,7 +91,7 @@
 
 /***/ }),
 
-/***/ 28:
+/***/ 29:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -106,7 +106,7 @@
 	    "color": "#666666"
 	  },
 	  "font_orange": {
-	    "color": "#db9561"
+	    "color": "#ffb837"
 	  },
 	  "font_size": {
 	    "fontSize": 28
@@ -141,6 +141,9 @@
 	  },
 	  "flex_row": {
 	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
 	  },
 	  "align_center": {
 	    "alignItems": "center"
@@ -195,7 +198,7 @@
 
 /***/ }),
 
-/***/ 29:
+/***/ 30:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -204,7 +207,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(30);
+	var _weex = __webpack_require__(31);
 
 	exports.default = {
 	    data: function data() {
@@ -270,7 +273,7 @@
 
 /***/ }),
 
-/***/ 30:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -280,7 +283,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(31);
+	var _weexConfig = __webpack_require__(32);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -326,6 +329,15 @@
 	        }
 	    },
 
+	    encodeUTF8: function encodeUTF8(str) {
+	        var temp = "",
+	            rs = "";
+	        for (var i = 0, len = str.length; i < len; i++) {
+	            temp = str.charCodeAt(i).toString(16);
+	            rs += "\\u" + new Array(5 - temp.length).join("0") + temp;
+	        }
+	        return rs;
+	    },
 	    ajax: function ajax( /*String*/type, /*String*/url, /*Object*/params, /*Function*/callback) {
 	        //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
 	        var headers = {
@@ -335,24 +347,23 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
-	            //
-
-
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
-	            params = "from=weex";
 	        } else {
 	            url = _weexConfig.appConfig.host + url;
-	            params.Content.from = "weex";
 	            params = JSON.stringify(params);
 	        }
-	        stream.fetch({
+	        //IOS get不能传递body
+	        var fetchObj = {
 	            method: type.toUpperCase(),
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params,
 	            timeout: 100000
-	        }, function (res) {
+	        };
+	        if (type.toLowerCase() === "post") {
+	            fetchObj.body = params;
+	        }
+	        stream.fetch(fetchObj, function (res) {
 	            callback(res);
 	        });
 	    },
@@ -368,9 +379,11 @@
 	            duration: 1
 	        });
 	    },
-	    alert: function alert( /*String*/msg) {
+	    alert: function alert( /*String*/msg, /*Function*/callback) {
 	        modal.alert({
 	            message: msg
+	        }, function () {
+	            callback && callback();
 	        });
 	    },
 
@@ -433,7 +446,7 @@
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -465,7 +478,7 @@
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -492,7 +505,7 @@
 	      staticClass: ["list_icon"],
 	      attrs: {
 	        "resize": "contain",
-	        "src": "local:///check_more"
+	        "src": "local:///wx_check_more"
 	      }
 	    })])
 	  }))

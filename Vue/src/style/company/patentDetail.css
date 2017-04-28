@@ -48,7 +48,7 @@ body .weex-slider-inner {
   color: #666666;
 }
 .font_orange {
-  color: #db9561;
+  color: #ffb837;
 }
 .font_size {
   font-size: 28px;
@@ -83,6 +83,9 @@ body .weex-slider-inner {
 }
 .flex_row {
   flex-direction: row;
+}
+.flex_col {
+  flex-direction: column;
 }
 .align_center {
   align-items: center;

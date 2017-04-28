@@ -48,7 +48,7 @@ body .weex-slider-inner {
   color: #666666;
 }
 .font_orange {
-  color: #db9561;
+  color: #ffb837;
 }
 .font_size {
   font-size: 28px;
@@ -83,6 +83,9 @@ body .weex-slider-inner {
 }
 .flex_row {
   flex-direction: row;
+}
+.flex_col {
+  flex-direction: column;
 }
 .align_center {
   align-items: center;
@@ -158,7 +161,7 @@ body .weex-slider-inner {
   bottom: 21px;
 }
 .list_left_bar {
-  border-left-color: #DA9461;
+  border-left-color: #fbc143;
   border-left-width: 6px;
 }
 .list_step_dot {
@@ -170,7 +173,7 @@ body .weex-slider-inner {
   top: 0px;
 }
 .bg_orange {
-  background-color: #db9561;
+  background-color: #fbc143;
 }
 .bg_silver {
   background-color: #EDEDED;

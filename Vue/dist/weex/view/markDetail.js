@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(76)
+	__vue_styles__.push(__webpack_require__(77)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(77)
+	__vue_exports__ = __webpack_require__(78)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(78)
+	var __vue_template__ = __webpack_require__(79)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -91,7 +91,7 @@
 
 /***/ }),
 
-/***/ 76:
+/***/ 77:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -106,7 +106,7 @@
 	    "color": "#666666"
 	  },
 	  "font_orange": {
-	    "color": "#db9561"
+	    "color": "#ffb837"
 	  },
 	  "font_size": {
 	    "fontSize": 28
@@ -141,6 +141,9 @@
 	  },
 	  "flex_row": {
 	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
 	  },
 	  "align_center": {
 	    "alignItems": "center"
@@ -199,7 +202,7 @@
 
 /***/ }),
 
-/***/ 77:
+/***/ 78:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -251,7 +254,7 @@
 
 /***/ }),
 
-/***/ 78:
+/***/ 79:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

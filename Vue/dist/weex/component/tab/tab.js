@@ -106,7 +106,7 @@
 	    "color": "#666666"
 	  },
 	  "font_orange": {
-	    "color": "#db9561"
+	    "color": "#ffb837"
 	  },
 	  "font_size": {
 	    "fontSize": 28
@@ -141,6 +141,9 @@
 	  },
 	  "flex_row": {
 	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
 	  },
 	  "align_center": {
 	    "alignItems": "center"
@@ -178,10 +181,9 @@
 	  },
 	  "tab_bar": {
 	    "height": 4,
-	    "backgroundColor": "#FFA500",
+	    "backgroundColor": "#fbc143",
 	    "position": "absolute",
-	    "bottom": 0,
-	    "left": 0
+	    "bottom": 0
 	  },
 	  "bar_title": {
 	    "fontSize": 30,
@@ -230,7 +232,8 @@
 	    },
 	    data: function data() {
 	        return {
-	            index: 0
+	            index: 0,
+	            bar_left: 0
 	        };
 	    },
 	    created: function created() {
@@ -242,14 +245,15 @@
 	        },
 	        anim: function anim(index) {
 	            if (this.index == index) return;
-	            var testEl = this.$refs.tab_bar_id1;
-	            var delX = parseInt(this.sliderWidth) * parseInt(index) + "px";
-	            animation.transition(testEl, {
-	                styles: {
-	                    transform: 'translate(' + delX + ', 0)'
-	                },
-	                duration: 200
-	            });
+	            this.bar_left = parseInt(this.sliderWidth) * parseInt(index);
+	            /*     let testEl = this.$refs.tab_bar_id1;
+	                 var delX=parseInt(this.sliderWidth)*parseInt(index)+"px";
+	                 animation.transition(testEl, {
+	                     styles: {
+	                         transform: 'translate('+delX+', 0)',
+	                     },
+	                     duration: 200
+	                 });*/
 	            this.index = index;
 	        },
 	        changeSlider: function changeSlider(event) {
@@ -286,7 +290,8 @@
 	    ref: "tab_bar_id1",
 	    staticClass: ["tab_bar"],
 	    style: {
-	      width: _vm.sliderWidth + 'px'
+	      width: _vm.sliderWidth + 'px',
+	      left: _vm.bar_left + 'px'
 	    }
 	  })], 2), _c('slider', {
 	    ref: "tab_slider",

@@ -1,22 +1,22 @@
 <!--投资关系-->
 <template>
     <tab tabShowNumber="true" :tabsAdapter="tabsAdapter" :class="['bg_silver',showPage?'visible':'hidden']">
-        <scroller slot="tabContent0" class="all" show-scrollbar="false">
-            <div v-for="li in Investor" class="list list_mt bg_white list_padding flex_row align_center" :key="li.CompanyID" @click="gotoCompany(li.name,li.type)">
+        <scroller slot="tabContent0" show-scrollbar="false">
+            <div v-for="li in Investor" class="list list_mt bg_white list_padding flex_row align_center" :key="li.CompanyID" @click="gotoCompany(li.name,li.type)" style="width: 750px">
                 <div class="list_content">
                     <text class="font_size font_padding">{{li.name}}</text>
                     <text class="font_small font_silver font_padding">{{li.amount>0?(li.amount+"万元"):"未知"}}</text>
                 </div>
-                <image v-if="li.type==1" resize="contain" class="list_icon" src="local:///check_more"></image>
+                <image v-if="li.type==1" resize="contain" class="list_icon" src="local:///wx_check_more"></image>
             </div>
         </scroller>
-        <scroller slot="tabContent1" class="all" show-scrollbar="false">
-            <div v-for="li in Invest" class="list list_mt bg_white list_padding flex_row align_center" @click="gotoCompany(li.name,li.type)">
+        <scroller slot="tabContent1" show-scrollbar="false">
+            <div v-for="li in Invest" class="list list_mt bg_white list_padding flex_row align_center" @click="gotoCompany(li.name,li.type)" style="width: 750px">
                 <div class="list_content">
                     <text class="font_size font_padding">{{li.name}}</text>
                     <text class="font_small font_silver font_padding">{{li.amount>0?(li.amount+"万元"):"未知"}}</text>
                 </div>
-                <image v-if="li.type==1" resize="contain" class="list_icon" src="local:///check_more"></image>
+                <image v-if="li.type==1" resize="contain" class="list_icon" src="local:///wx_check_more"></image>
             </div>
         </scroller>
     </tab>

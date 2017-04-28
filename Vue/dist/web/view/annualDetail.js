@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(48)
+	__webpack_require__(49)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(50),
-	  /* template */
 	  __webpack_require__(51),
+	  /* template */
+	  __webpack_require__(52),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -450,7 +450,7 @@
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -460,7 +460,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(46);
+	var _weexConfig = __webpack_require__(47);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -506,6 +506,15 @@
 	        }
 	    },
 
+	    encodeUTF8: function encodeUTF8(str) {
+	        var temp = "",
+	            rs = "";
+	        for (var i = 0, len = str.length; i < len; i++) {
+	            temp = str.charCodeAt(i).toString(16);
+	            rs += "\\u" + new Array(5 - temp.length).join("0") + temp;
+	        }
+	        return rs;
+	    },
 	    ajax: function ajax( /*String*/type, /*String*/url, /*Object*/params, /*Function*/callback) {
 	        //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
 	        var headers = {
@@ -515,24 +524,23 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
-	            //
-
-
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
-	            params = "from=weex";
 	        } else {
 	            url = _weexConfig.appConfig.host + url;
-	            params.Content.from = "weex";
 	            params = JSON.stringify(params);
 	        }
-	        stream.fetch({
+	        //IOS get不能传递body
+	        var fetchObj = {
 	            method: type.toUpperCase(),
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params,
 	            timeout: 100000
-	        }, function (res) {
+	        };
+	        if (type.toLowerCase() === "post") {
+	            fetchObj.body = params;
+	        }
+	        stream.fetch(fetchObj, function (res) {
 	            callback(res);
 	        });
 	    },
@@ -548,9 +556,11 @@
 	            duration: 1
 	        });
 	    },
-	    alert: function alert( /*String*/msg) {
+	    alert: function alert( /*String*/msg, /*Function*/callback) {
 	        modal.alert({
 	            message: msg
+	        }, function () {
+	            callback && callback();
 	        });
 	    },
 
@@ -613,7 +623,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -645,13 +655,13 @@
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(49);
+	var content = __webpack_require__(50);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -672,7 +682,7 @@
 
 /***/ }),
 
-/***/ 49:
+/***/ 50:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -680,14 +690,14 @@
 
 
 	// module
-	exports.push([module.id, "/**年报详情**/\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用\r\n * 样式能精简就精简，减少bundleJs的大小\r\n */\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * some config data // theme\r\n */\r\n/** only for web**/\nbody,\r\nhtml {\r\n  width: 100%;\r\n  height: 100%;\n}\nbody {\r\n  padding: 0;\r\n  margin: 0;\r\n  display: flex;\n}\nbody:before {\r\n  display: none;\n}\nbody .weex-root {\r\n  background-color: #EDEDED;\n}\nbody .weex-scroller {\r\n  flex: 1;\n}\nbody .font_padding {\r\n  padding-top: 4px !important;\r\n  padding-bottom: 4px !important;\n}\r\n/*fix weeb slider bug*/\nbody .weex-slider-inner {\r\n  width: 100%!important;\n}\r\n/**通用**/\n.font_padding {\r\n  padding-top: 4px;\r\n  padding-bottom: 4px;\n}\n.font_bold {\r\n  font-weight: 700;\n}\n.font_silver {\r\n  color: #666666;\n}\n.font_orange {\r\n  color: #db9561;\n}\n.font_size {\r\n  font-size: 28px;\n}\n.font_small {\r\n  font-size: 23px;\n}\n.font_big {\r\n  font-size: 35px;\n}\n.bg_white {\r\n  background-color: white;\n}\n.bg_silver {\r\n  background-color: #EDEDED;\n}\n.hidden {\r\n  visibility: hidden;\n}\n.visible {\r\n  visibility: visible;\n}\n.gone {\r\n  height: 0.1px;\r\n  overflow: hidden;\n}\n.text_center {\r\n  text-align: center;\n}\n.flex_1 {\r\n  flex: 1;\n}\n.flex_row {\r\n  flex-direction: row;\n}\n.align_center {\r\n  align-items: center;\n}\n.justify_center {\r\n  justify-content: center;\n}\n.justify_start {\r\n  justify-content: flex-start;\n}\n.h2 {\r\n  font-size: 38px;\r\n  font-weight: bold;\r\n  text-align: center;\n}\n.border_top {\r\n  border-top-width: 1px;\r\n  border-top-color: #d5d5d5;\n}\n.border_left {\r\n  border-left-width: 1px;\r\n  border-left-color: #d5d5d5;\n}\n.small_icon {\r\n  width: 28px;\r\n  height: 28px;\n}\n.padding_bottom {\r\n  padding-bottom: 16px;\n}\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * 列表样式基础\r\n */\n.list {\r\n  justify-content: center;\r\n  padding-top: 18px;\r\n  padding-bottom: 18px;\n}\n.list_mt {\r\n  margin-top: 21px;\n}\n.list_padding {\r\n  padding-left: 18px;\r\n  padding-right: 18px;\n}\r\n/**\r\n * Created by yxl79 on 2017/4/8.\r\n * 普通列表样式\r\n */\n.list_content {\r\n  flex: 1;\r\n  justify-content: center;\n}\n.list_icon {\r\n  width: 28px;\r\n  height: 28px;\n}\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * 2列布局列表\r\n */\r\n/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/\n.list .list_line {\r\n  left: 50%;\n}\n.list_line {\r\n  border-style: solid;\r\n  border-left-width: 1px;\r\n  border-color: #d5d5d5;\r\n  position: absolute;\r\n  top: 21px;\r\n  bottom: 21px;\n}\n.list_left_bar {\r\n  border-left-color: #DA9461;\r\n  border-left-width: 6px;\n}\n.list_step_dot {\r\n  width: 35px;\r\n  height: 35px;\r\n  border-radius: 35px;\r\n  position: absolute;\r\n  left: 9px;\r\n  top: 0px;\n}\n.bg_orange {\r\n  background-color: #db9561;\n}\n.bg_silver {\r\n  background-color: #EDEDED;\n}\n.list_step_padding {\r\n  padding-left: 28px;\n}\n.list_step_content_padding {\r\n  padding-left: 19px;\r\n  padding-right: 19px;\n}\n.list_step_content {\r\n  background-color: #EDEDED;\r\n  border-radius: 7px;\n}\n.list_step_bottom {\r\n  padding-bottom: 16px;\n}\r\n", ""]);
+	exports.push([module.id, "/**年报详情**/\n/**\n * Created by yxl79 on 2017/4/10.\n * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用\n * 样式能精简就精简，减少bundleJs的大小\n */\n/**\n * Created by yxl79 on 2017/4/10.\n * some config data // theme\n */\n/** only for web**/\nbody,\nhtml {\n  width: 100%;\n  height: 100%;\n}\nbody {\n  padding: 0;\n  margin: 0;\n  display: flex;\n}\nbody:before {\n  display: none;\n}\nbody .weex-root {\n  background-color: #EDEDED;\n}\nbody .weex-scroller {\n  flex: 1;\n}\nbody .font_padding {\n  padding-top: 4px !important;\n  padding-bottom: 4px !important;\n}\n/*fix weeb slider bug*/\nbody .weex-slider-inner {\n  width: 100%!important;\n}\n/**通用**/\n.font_padding {\n  padding-top: 4px;\n  padding-bottom: 4px;\n}\n.font_bold {\n  font-weight: 700;\n}\n.font_silver {\n  color: #666666;\n}\n.font_orange {\n  color: #ffb837;\n}\n.font_size {\n  font-size: 28px;\n}\n.font_small {\n  font-size: 23px;\n}\n.font_big {\n  font-size: 35px;\n}\n.bg_white {\n  background-color: white;\n}\n.bg_silver {\n  background-color: #EDEDED;\n}\n.hidden {\n  visibility: hidden;\n}\n.visible {\n  visibility: visible;\n}\n.gone {\n  height: 0.1px;\n  overflow: hidden;\n}\n.text_center {\n  text-align: center;\n}\n.flex_1 {\n  flex: 1;\n}\n.flex_row {\n  flex-direction: row;\n}\n.flex_col {\n  flex-direction: column;\n}\n.align_center {\n  align-items: center;\n}\n.justify_center {\n  justify-content: center;\n}\n.justify_start {\n  justify-content: flex-start;\n}\n.h2 {\n  font-size: 38px;\n  font-weight: bold;\n  text-align: center;\n}\n.border_top {\n  border-top-width: 1px;\n  border-top-color: #d5d5d5;\n}\n.border_left {\n  border-left-width: 1px;\n  border-left-color: #d5d5d5;\n}\n.small_icon {\n  width: 28px;\n  height: 28px;\n}\n.padding_bottom {\n  padding-bottom: 16px;\n}\n/**\n * Created by yxl79 on 2017/4/10.\n * 列表样式基础\n */\n.list {\n  justify-content: center;\n  padding-top: 18px;\n  padding-bottom: 18px;\n}\n.list_mt {\n  margin-top: 21px;\n}\n.list_padding {\n  padding-left: 18px;\n  padding-right: 18px;\n}\n/**\n * Created by yxl79 on 2017/4/8.\n * 普通列表样式\n */\n.list_content {\n  flex: 1;\n  justify-content: center;\n}\n.list_icon {\n  width: 28px;\n  height: 28px;\n}\n/**\n * Created by yxl79 on 2017/4/10.\n * 2列布局列表\n */\n/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/\n.list .list_line {\n  left: 50%;\n}\n.list_line {\n  border-style: solid;\n  border-left-width: 1px;\n  border-color: #d5d5d5;\n  position: absolute;\n  top: 21px;\n  bottom: 21px;\n}\n.list_left_bar {\n  border-left-color: #fbc143;\n  border-left-width: 6px;\n}\n.list_step_dot {\n  width: 35px;\n  height: 35px;\n  border-radius: 35px;\n  position: absolute;\n  left: 9px;\n  top: 0px;\n}\n.bg_orange {\n  background-color: #fbc143;\n}\n.bg_silver {\n  background-color: #EDEDED;\n}\n.list_step_padding {\n  padding-left: 28px;\n}\n.list_step_content_padding {\n  padding-left: 19px;\n  padding-right: 19px;\n}\n.list_step_content {\n  background-color: #EDEDED;\n  border-radius: 7px;\n}\n.list_step_bottom {\n  padding-bottom: 16px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ }),
 
-/***/ 50:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -696,7 +706,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(45);
+	var _weex = __webpack_require__(46);
 
 	exports.default = {
 	    data: function data() {
@@ -743,17 +753,19 @@
 	                if (res.ok) {
 	                    if (res.data.Head.Ret == 0) {
 	                        var content = res.data.Content;
-	                        $this.Company_Annualreport = content.Company_Annualreport;
-	                        $this.Company_Annualreport_Shareholder = content.Company_Annualreport_Shareholder;
-	                        $this.Company_Annualreport_WebInfo = content.Company_Annualreport_WebInfo;
-	                        $this.Company_Annualreport_OutboundInvestment = content.Company_Annualreport_OutboundInvestment;
-	                        $this.Company_Annualreport_OutGuaranteeInfo = content.Company_Annualreport_OutGuaranteeInfo;
-	                        $this.Company_Annualreport_EquityChangeInfo = content.Company_Annualreport_EquityChangeInfo;
-	                        $this.Company_Annualreport_ChangeRecord = content.Company_Annualreport_ChangeRecord;
-	                        $this.showPage = true;
-	                        setTimeout(function () {
-	                            _weex.api.closeWaiting();
-	                        }, 200);
+	                        if (content) {
+	                            $this.Company_Annualreport = content.Company_Annualreport;
+	                            $this.Company_Annualreport_Shareholder = content.Company_Annualreport_Shareholder;
+	                            $this.Company_Annualreport_WebInfo = content.Company_Annualreport_WebInfo;
+	                            $this.Company_Annualreport_OutboundInvestment = content.Company_Annualreport_OutboundInvestment;
+	                            $this.Company_Annualreport_OutGuaranteeInfo = content.Company_Annualreport_OutGuaranteeInfo;
+	                            $this.Company_Annualreport_EquityChangeInfo = content.Company_Annualreport_EquityChangeInfo;
+	                            $this.Company_Annualreport_ChangeRecord = content.Company_Annualreport_ChangeRecord;
+	                            $this.showPage = true;
+	                            setTimeout(function () {
+	                                _weex.api.closeWaiting();
+	                            }, 200);
+	                        } else {}
 	                    } else {
 	                        _weex.api.toast("加载异常");
 	                        _weex.api.closeWaiting();
@@ -1074,7 +1086,7 @@
 
 /***/ }),
 
-/***/ 51:
+/***/ 52:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1099,7 +1111,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack0 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack0 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', _vm.listPack0 ? '' : 'gone']
@@ -1168,7 +1180,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack1 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack1 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', _vm.listPack1 ? '' : 'gone']
@@ -1205,7 +1217,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack2 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack2 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack2 ? '' : 'gone']
@@ -1266,7 +1278,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack3 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack3 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack3 ? '' : 'gone']
@@ -1293,7 +1305,7 @@
 	    staticClass: "annual_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack4 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack4 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack4 ? '' : 'gone']
@@ -1322,7 +1334,7 @@
 	    staticClass: "annual_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack5 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack5 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', _vm.listPack5 ? '' : 'gone']
@@ -1405,7 +1417,7 @@
 	    staticClass: "annual_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack6 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack6 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack6 ? '' : 'gone']
@@ -1492,7 +1504,7 @@
 	    staticClass: "annual_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack7 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack7 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack7 ? '' : 'gone']
@@ -1537,7 +1549,7 @@
 	    staticClass: "annual_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack8 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack8 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', 'list_step_bottom', 'border_top', _vm.listPack8 ? '' : 'gone']

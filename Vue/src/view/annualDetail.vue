@@ -5,7 +5,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">基本信息</text>
             </div>
-            <image resize="contain" class="list_icon" :src="listPack0?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image resize="contain" class="list_icon" :src="listPack0?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white',listPack0?'':'gone']">
             <div class="border_top list list_padding">
@@ -48,7 +48,7 @@
             <div class="list_content">
                 <text class="font_padding font_bold font_big">联系方式</text>
             </div>
-            <image resize="contain" class="list_icon" :src="listPack1?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image resize="contain" class="list_icon" :src="listPack1?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white',listPack1?'':'gone']">
             <div class="border_top list list_padding">
@@ -69,7 +69,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold ">股东（发起人）及出资信息</text>
             </div>
-            <image v-if="Company_Annualreport_Shareholder&&Company_Annualreport_Shareholder.length>0" resize="contain" class="list_icon" :src="listPack2?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="Company_Annualreport_Shareholder&&Company_Annualreport_Shareholder.length>0" resize="contain" class="list_icon" :src="listPack2?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack2?'':'gone']">
             <div v-for="(p,_index) in Company_Annualreport_Shareholder" :class="['bg_white',_index!=0?'list_mt':'']">
@@ -106,7 +106,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">网站（网店）信息</text>
             </div>
-            <image v-if="Company_Annualreport_WebInfo.length>0" resize="contain" class="list_icon" :src="listPack3?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="Company_Annualreport_WebInfo.length>0" resize="contain" class="list_icon" :src="listPack3?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack3?'':'gone']">
             <div v-for="(item,index) in Company_Annualreport_WebInfo" :class="['bg_white','border_top', 'list', 'list_padding',index!=0?'list_mt':'']" >
@@ -119,7 +119,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">对外投资信息</text>
             </div>
-            <image v-if="Company_Annualreport_OutboundInvestment.length>0" resize="contain" class="annual_icon" :src="listPack4?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="Company_Annualreport_OutboundInvestment.length>0" resize="contain" class="annual_icon" :src="listPack4?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack4?'':'gone']">
             <div v-for="(p,index) in Company_Annualreport_OutboundInvestment" :class="['bg_white','border_top', 'list', 'list_padding',index!=0?'list_mt':'']" >
@@ -133,7 +133,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">企业资产状况信息</text>
             </div>
-            <image resize="contain" class="annual_icon" :src="listPack5?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image resize="contain" class="annual_icon" :src="listPack5?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white',listPack5?'':'gone']">
             <div class="border_top list flex_row">
@@ -186,7 +186,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">对外提供保证担保信息</text>
             </div>
-            <image v-if="Company_Annualreport_OutGuaranteeInfo.length>0" resize="contain" class="annual_icon" :src="listPack6?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="Company_Annualreport_OutGuaranteeInfo.length>0" resize="contain" class="annual_icon" :src="listPack6?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack6?'':'gone']">
             <div v-for="(p,index) in Company_Annualreport_OutGuaranteeInfo" :class="['bg_white',index!=0?'list_mt':'']">
@@ -241,7 +241,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">股权变更信息</text>
             </div>
-            <image v-if="Company_Annualreport_EquityChangeInfo.length>0" resize="contain" class="annual_icon" :src="listPack7?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="Company_Annualreport_EquityChangeInfo.length>0" resize="contain" class="annual_icon" :src="listPack7?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack7?'':'gone']">
             <div v-for="(p,index) in Company_Annualreport_EquityChangeInfo" :class="['bg_white',index!=0?'list_mt':'']">
@@ -267,7 +267,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">修改记录</text>
             </div>
-            <image v-if="Company_Annualreport_ChangeRecord.length>0" resize="contain" class="annual_icon" :src="listPack8?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="Company_Annualreport_ChangeRecord.length>0" resize="contain" class="annual_icon" :src="listPack8?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white','list_step_bottom','border_top',listPack8?'':'gone']">
             <div v-for="(p,index) in Company_Annualreport_ChangeRecord" :class="['list_step_padding',index==0?'list_mt':'']">
@@ -341,17 +341,21 @@
                     if(res.ok){
                         if(res.data.Head.Ret==0){
                             let content=res.data.Content;
-                            $this.Company_Annualreport=content.Company_Annualreport;
-                            $this.Company_Annualreport_Shareholder=content.Company_Annualreport_Shareholder;
-                            $this.Company_Annualreport_WebInfo=content.Company_Annualreport_WebInfo;
-                            $this.Company_Annualreport_OutboundInvestment=content.Company_Annualreport_OutboundInvestment;
-                            $this.Company_Annualreport_OutGuaranteeInfo=content.Company_Annualreport_OutGuaranteeInfo;
-                            $this.Company_Annualreport_EquityChangeInfo=content.Company_Annualreport_EquityChangeInfo;
-                            $this.Company_Annualreport_ChangeRecord=content.Company_Annualreport_ChangeRecord;
-                            $this.showPage=true;
-                            setTimeout(()=>{
-                                api.closeWaiting();
-                            },200);
+                            if(content){
+                                $this.Company_Annualreport=content.Company_Annualreport;
+                                $this.Company_Annualreport_Shareholder=content.Company_Annualreport_Shareholder;
+                                $this.Company_Annualreport_WebInfo=content.Company_Annualreport_WebInfo;
+                                $this.Company_Annualreport_OutboundInvestment=content.Company_Annualreport_OutboundInvestment;
+                                $this.Company_Annualreport_OutGuaranteeInfo=content.Company_Annualreport_OutGuaranteeInfo;
+                                $this.Company_Annualreport_EquityChangeInfo=content.Company_Annualreport_EquityChangeInfo;
+                                $this.Company_Annualreport_ChangeRecord=content.Company_Annualreport_ChangeRecord;
+                                $this.showPage=true;
+                                setTimeout(()=>{
+                                    api.closeWaiting();
+                                },200);
+                            }else{
+
+                            }
                         }else{
                             api.toast("加载异常");
                             api.closeWaiting();

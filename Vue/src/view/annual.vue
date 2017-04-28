@@ -5,7 +5,7 @@
             <div class="list_content">
                 <text class="font_size font_padding">{{li.reportYear}}年度报告</text>
             </div>
-            <image resize="contain" class="list_icon" src="local:///check_more"></image>
+            <image resize="contain" class="list_icon" src="local:///wx_check_more"></image>
         </div>
     </scroller>
 </template>

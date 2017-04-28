@@ -489,7 +489,7 @@
 
 
 	// module
-	exports.push([module.id, "/**\r\n  * dropdown组件\r\n */\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * some config data // theme\r\n */\n.drop_mask {\r\n  position: fixed;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  flex: 1;\r\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.options {\r\n  position: absolute;\r\n  left: 0;\r\n  right: 0;\r\n  transform-origin: center center;\n}\n.drop_cell {\r\n  flex-direction: row;\r\n  align-items: center;\r\n  height: 90px;\r\n  padding-left: 30px;\r\n  padding-right: 30px;\r\n  border-top-width: 1px;\r\n  border-top-color: #d5d5d5;\n}\n.option_num {\r\n  color: #333;\r\n  font-size: 33px;\n}\n.option_name {\r\n  color: #333;\r\n  font-size: 33px;\r\n  flex: 1;\n}\n.option_selected {\r\n  background-color: #ededed;\n}\n.bg_white {\r\n  background-color: white;\n}\r\n", ""]);
+	exports.push([module.id, "/**\n  * dropdown组件\n */\n/**\n * Created by yxl79 on 2017/4/10.\n * some config data // theme\n */\n.drop_mask {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  flex: 1;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.options {\n  position: absolute;\n  left: 0;\n  right: 0;\n  transform-origin: center center;\n}\n.drop_cell {\n  flex-direction: row;\n  align-items: center;\n  height: 90px;\n  padding-left: 30px;\n  padding-right: 30px;\n  border-top-width: 1px;\n  border-top-color: #d5d5d5;\n}\n.option_num {\n  color: #333;\n  font-size: 33px;\n}\n.option_name {\n  color: #333;\n  font-size: 33px;\n  flex: 1;\n}\n.option_selected {\n  background-color: #ededed;\n}\n.bg_white {\n  background-color: white;\n}\n", ""]);
 
 	// exports
 

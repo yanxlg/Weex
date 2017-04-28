@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(67)
+	__vue_styles__.push(__webpack_require__(68)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(68)
+	__vue_exports__ = __webpack_require__(69)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(72)
+	var __vue_template__ = __webpack_require__(73)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -137,7 +137,7 @@
 
 /***/ }),
 
-/***/ 30:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -147,7 +147,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(31);
+	var _weexConfig = __webpack_require__(32);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -193,6 +193,15 @@
 	        }
 	    },
 
+	    encodeUTF8: function encodeUTF8(str) {
+	        var temp = "",
+	            rs = "";
+	        for (var i = 0, len = str.length; i < len; i++) {
+	            temp = str.charCodeAt(i).toString(16);
+	            rs += "\\u" + new Array(5 - temp.length).join("0") + temp;
+	        }
+	        return rs;
+	    },
 	    ajax: function ajax( /*String*/type, /*String*/url, /*Object*/params, /*Function*/callback) {
 	        //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
 	        var headers = {
@@ -202,24 +211,23 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
-	            //
-
-
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
-	            params = "from=weex";
 	        } else {
 	            url = _weexConfig.appConfig.host + url;
-	            params.Content.from = "weex";
 	            params = JSON.stringify(params);
 	        }
-	        stream.fetch({
+	        //IOS get不能传递body
+	        var fetchObj = {
 	            method: type.toUpperCase(),
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params,
 	            timeout: 100000
-	        }, function (res) {
+	        };
+	        if (type.toLowerCase() === "post") {
+	            fetchObj.body = params;
+	        }
+	        stream.fetch(fetchObj, function (res) {
 	            callback(res);
 	        });
 	    },
@@ -235,9 +243,11 @@
 	            duration: 1
 	        });
 	    },
-	    alert: function alert( /*String*/msg) {
+	    alert: function alert( /*String*/msg, /*Function*/callback) {
 	        modal.alert({
 	            message: msg
+	        }, function () {
+	            callback && callback();
 	        });
 	    },
 
@@ -300,7 +310,7 @@
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -332,7 +342,7 @@
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -347,7 +357,7 @@
 	    "color": "#666666"
 	  },
 	  "font_orange": {
-	    "color": "#db9561"
+	    "color": "#ffb837"
 	  },
 	  "font_size": {
 	    "fontSize": 28
@@ -382,6 +392,9 @@
 	  },
 	  "flex_row": {
 	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
 	  },
 	  "align_center": {
 	    "alignItems": "center"
@@ -511,7 +524,7 @@
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -520,9 +533,9 @@
 	    value: true
 	});
 
-	var _index = __webpack_require__(69);
+	var _index = __webpack_require__(70);
 
-	var _weex = __webpack_require__(30);
+	var _weex = __webpack_require__(31);
 
 	//
 	//
@@ -645,14 +658,9 @@
 	        };
 	    },
 	    created: function created() {
-	        var _this = this;
-
 	        _weex.appConfig.host = this.host;
 	        this.getData();
 	        this.bindClick();
-	        setTimeout(function () {
-	            _weex.api.alert(JSON.stringify(_this.companyId));
-	        }, 1000);
 	    },
 	    components: {
 	        'row': _index.Row,
@@ -894,7 +902,7 @@
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -904,11 +912,11 @@
 	});
 	exports.Col = exports.Row = undefined;
 
-	var _row = __webpack_require__(70);
+	var _row = __webpack_require__(71);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _col = __webpack_require__(71);
+	var _col = __webpack_require__(72);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -922,7 +930,7 @@
 
 /***/ }),
 
-/***/ 70:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
@@ -964,7 +972,7 @@
 
 /***/ }),
 
-/***/ 71:
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
@@ -1006,7 +1014,7 @@
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1036,7 +1044,7 @@
 	    staticClass: ["small_icon"],
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///sight_w"
+	      "src": "local:///wx_sight"
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_silver", "font_small"]
@@ -1047,7 +1055,7 @@
 	    },
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///collection_w"
+	      "src": "local:///wx_collection"
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_silver", "font_small"]
@@ -1084,7 +1092,7 @@
 	    staticClass: ["small_icon"],
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///phonenumber_w"
+	      "src": "local:///wx_phonenumber"
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
@@ -1096,7 +1104,7 @@
 	    staticClass: ["small_icon"],
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///gps_w"
+	      "src": "local:///wx_gps"
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
@@ -1108,7 +1116,7 @@
 	    staticClass: ["small_icon"],
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///email_w"
+	      "src": "local:///wx_email"
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
@@ -1120,7 +1128,7 @@
 	    staticClass: ["small_icon"],
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///website_w"
+	      "src": "local:///wx_website"
 	    }
 	  }), _c('text', {
 	    staticClass: ["font_size", "list_padding", "company_li"]
@@ -1144,7 +1152,7 @@
 	      }, [(it.name) ? _c('image', {
 	        staticClass: ["company_fun_icon"],
 	        attrs: {
-	          "src": 'local:///' + (it.name == 'Company_BusinessInfoCount' ? it.icon : (it.count > 0 ? it.icon : (it.icon + '_gray')))
+	          "src": 'local:///wx_' + (it.name == 'Company_BusinessInfoCount' ? it.icon : (it.count > 0 ? it.icon : (it.icon + '_gray')))
 	        }
 	      }) : _vm._e(), (it.name) ? _c('text', {
 	        staticClass: ["font_size", "font_padding"]

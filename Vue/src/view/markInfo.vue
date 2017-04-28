@@ -13,7 +13,7 @@
                         <text class="mark_status font_padding">申请状态：{{li.status}}</text>
                     </div>
                 </div>
-                <image class="list_icon" resize="contain" src="local:///check_more"></image>
+                <image class="list_icon" resize="contain" src="local:///wx_check_more"></image>
             </div>
             <wx-loading ref="loading" v-if="hasMore">
             </wx-loading>
@@ -55,10 +55,10 @@
                 //下拉
                 //titleIcon需要修改
                 if(this.anchor==="down"){
-                    api.setTitleIcon("arrow_up");
+                    api.setTitleIcon("wx_arrow_up");
                     this.anchor="up";
                 }else{
-                    api.setTitleIcon("arrow_down");
+                    api.setTitleIcon("wx_arrow_down");
                     this.anchor="down";
                 }
                 this.$refs.dropdown.switchView();
@@ -66,7 +66,7 @@
         },
         methods:{
             change:function (item) {
-                api.setTitleIcon("arrow_down");
+                api.setTitleIcon("wx_arrow_down");
                 this.anchor="down";
                 if(item){
                     this.type=item.type;
@@ -97,7 +97,7 @@
                 let $this=this;
                 api.ajax("get","api/CompanyApi/GetCompany_Trademark",{
                     CompanyID:companyId,
-                    type:$this.type,
+                    type:api.encodeUTF8($this.type),
                     pageIndex:this.pageIndex
                 },res=>{
                     if(res.ok){

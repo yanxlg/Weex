@@ -6,7 +6,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">登记信息</text>
             </div>
-            <image resize="contain" class="list_icon" :src="listPack0?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image resize="contain" class="list_icon" :src="listPack0?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack0?'':'gone']">
             <div class="bg_white border_top list flex_row">
@@ -57,7 +57,7 @@
             <div class="bg_white border_top list list_padding">
                 <text class="font_silver font_small font_padding">住所</text>
                 <div class="flex_row align_center">
-                    <image class="list_icon" resize="contain" src="local:///location"></image>
+                    <image class="list_icon" resize="contain" src="local:///wx_location"></image>
                     <text class="font_size font_padding">{{regInfo.base}}</text>
                 </div>
             </div>
@@ -82,11 +82,11 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">主要成员</text>
             </div>
-            <image v-if="companyStaff.length>0" resize="contain" class="list_icon" :src="listPack1?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="companyStaff.length>0" resize="contain" class="list_icon" :src="listPack1?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white',listPack1?'':'gone']">
             <div v-for="(member,index) in companyStaff" class="border_top list list_padding flex_row align_center">
-                <image class="bus_img" src="local:///member" resize="contain"></image>
+                <image class="bus_img" src="local:///wx_member" resize="contain"></image>
                 <div class="list_content">
                     <text class="font_size font_padding">{{member.Name}}</text>
                     <text class="font_silver font_small font_padding">{{member.typeJoin}}</text>
@@ -98,7 +98,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">分支机构</text>
             </div>
-            <image v-if="companyBranch.length>0" resize="contain" class="list_icon" :src="listPack2?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="companyBranch.length>0" resize="contain" class="list_icon" :src="listPack2?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white',listPack2?'':'gone']">
             <div class="border_top list list_padding" v-for="branch in companyBranch">
@@ -110,7 +110,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">变更记录</text>
             </div>
-            <image v-if="changeList.length>0" resize="contain" class="list_icon" :src="listPack3?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="changeList.length>0" resize="contain" class="list_icon" :src="listPack3?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="['bg_white','border_top',listPack3?'':'gone']">
             <div v-for="(p,index) in changeList" :class="['list_step_padding',index==0?'list_mt':'']">
@@ -137,7 +137,7 @@
             <div class="list_content">
                 <text class="font_big font_padding font_bold">经营异常</text>
             </div>
-            <image v-if="abnormalInfo.length>0" resize="contain" class="list_icon" :src="listPack4?'local:///zhankai_icon':'local:///zhankai_gray_icon'"></image>
+            <image v-if="abnormalInfo.length>0" resize="contain" class="list_icon" :src="listPack4?'local:///wx_zhankai':'local:///wx_shouqi'"></image>
         </div>
         <div :class="[listPack4?'':'gone']">
             <div :class="['border_top','bg_white','list_padding',index==0?'':'list_mt']" v-for="(info,index) in abnormalInfo">

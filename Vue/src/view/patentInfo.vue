@@ -11,7 +11,7 @@
                         <text class="mark_status font_padding">{{li.patentType}}</text>
                     </div>
                 </div>
-                <image resize="contain" class="list_icon" src="local:///check_more"></image>
+                <image resize="contain" class="list_icon" src="local:///wx_check_more"></image>
             </div>
             <wx-loading ref="loading" v-if="hasMore">
             </wx-loading>
@@ -52,10 +52,10 @@
             api.addEventListener("title",()=>{
                 //下拉
                 if(this.anchor==="down"){
-                    api.setTitleIcon("arrow_up");
+                    api.setTitleIcon("wx_arrow_up");
                     this.anchor="up";
                 }else{
-                    api.setTitleIcon("arrow_down");
+                    api.setTitleIcon("wx_arrow_down");
                     this.anchor="down";
                 }
                 this.$refs.dropdown.switchView();
@@ -63,7 +63,7 @@
         },
         methods:{
             change:function (item) {
-                api.setTitleIcon("arrow_down");
+                api.setTitleIcon("wx_arrow_down");
                 this.anchor="down";
                 if(item){
                     this.type=item.type;
@@ -94,7 +94,7 @@
                 let $this=this;
                 api.ajax("get","api/CompanyApi/GetCompany_Patent",{
                     CompanyID:companyId,
-                    type:$this.type,
+                    type:api.encodeUTF8($this.type),
                     pageIndex:this.pageIndex
                 },res=>{
                     if(res.ok){

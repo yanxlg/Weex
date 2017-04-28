@@ -7,7 +7,7 @@
                 <text class="font_small font_silver font_padding">{{li.regdate}}</text>
                 <text class="font_small font_silver font_padding">{{li.casecode}}</text>
             </div>
-            <image resize="contain" class="list_icon" src="local:///check_more"></image>
+            <image resize="contain" class="list_icon" src="local:///wx_check_more"></image>
         </div>
         <wx-loading ref="loading" v-if="hasMore">
         </wx-loading>

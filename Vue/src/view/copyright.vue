@@ -8,7 +8,7 @@
                 <text class="font_small font_silver font_padding">登记日期：{{li.regtime}}</text>
                 <text class="font_small font_silver font_padding">发布日期：{{li.publishtime}}</text>
             </div>
-            <image resize="contain" class="list_icon" src="local:///check_more"></image>
+            <image resize="contain" class="list_icon" src="local:///wx_check_more"></image>
         </div>
         <!--封装成模块-->
         <wx-loading ref="loading" v-if="hasMore">

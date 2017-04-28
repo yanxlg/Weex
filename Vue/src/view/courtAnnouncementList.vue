@@ -8,7 +8,7 @@
                 <text class="font_small font_padding font_silver">刊登日期：{{li.publishdate}}</text>
                 <text class="font_small font_padding font_silver">公告类型：{{li.bltntypename}}</text>
             </div>
-            <image resize="contain" src="local:///check_more" class="list_icon"></image>
+            <image resize="contain" src="local:///wx_check_more" class="list_icon"></image>
         </div>
         <wx-loading ref="loading" v-if="hasMore">
         </wx-loading>

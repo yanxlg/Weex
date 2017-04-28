@@ -5,7 +5,7 @@
                 <text class="bar_title" v-if="tabShowNumber=='true'">{{tabItem.type}}（{{tabItem.num}}）</text>
                 <text class="bar_title" v-else>{{tabItem.type}}</text>
             </div>
-            <div ref="tab_bar_id1" class="tab_bar" :style="{width:sliderWidth+'px'}"></div>
+            <div ref="tab_bar_id1" class="tab_bar" :style="{width:sliderWidth+'px',left:bar_left+'px'}"></div>
         </div>
         <slider ref="tab_slider" class="flex_1" auto-play="false" :index="index" @change="changeSlider" scrollable="false">
             <slot v-for="(tabItem,_index) in tabsAdapter" :name="'tabContent'+_index"></slot>
@@ -29,7 +29,8 @@
         },
         data:function () {
           return {
-              index:0
+              index:0,
+              bar_left:0,
           }
         },
         created:function () {
@@ -41,14 +42,15 @@
             },
             anim:function (index) {
                 if(this.index==index) return;
-                let testEl = this.$refs.tab_bar_id1;
+                this.bar_left=parseInt(this.sliderWidth)*parseInt(index);
+           /*     let testEl = this.$refs.tab_bar_id1;
                 var delX=parseInt(this.sliderWidth)*parseInt(index)+"px";
                 animation.transition(testEl, {
                     styles: {
                         transform: 'translate('+delX+', 0)',
                     },
                     duration: 200
-                });
+                });*/
                 this.index=index;
             },
             changeSlider(event){

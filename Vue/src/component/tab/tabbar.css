@@ -51,7 +51,7 @@ body .weex-slider-inner {
   color: #666666;
 }
 .font_orange {
-  color: #db9561;
+  color: #ffb837;
 }
 .font_size {
   font-size: 28px;
@@ -86,6 +86,9 @@ body .weex-slider-inner {
 }
 .flex_row {
   flex-direction: row;
+}
+.flex_col {
+  flex-direction: column;
 }
 .align_center {
   align-items: center;
@@ -123,10 +126,9 @@ body .weex-slider-inner {
 }
 .tab_bar {
   height: 4px;
-  background-color: orange;
+  background-color: #fbc143;
   position: absolute;
   bottom: 0;
-  left: 0;
 }
 .bar_title {
   font-size: 30px;

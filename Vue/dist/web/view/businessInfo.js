@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(52)
+	__webpack_require__(53)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(54),
-	  /* template */
 	  __webpack_require__(55),
+	  /* template */
+	  __webpack_require__(56),
 	  /* scopeId */
 	  "data-v-02def8c6",
 	  /* cssModules */
@@ -450,7 +450,7 @@
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -460,7 +460,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(46);
+	var _weexConfig = __webpack_require__(47);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -506,6 +506,15 @@
 	        }
 	    },
 
+	    encodeUTF8: function encodeUTF8(str) {
+	        var temp = "",
+	            rs = "";
+	        for (var i = 0, len = str.length; i < len; i++) {
+	            temp = str.charCodeAt(i).toString(16);
+	            rs += "\\u" + new Array(5 - temp.length).join("0") + temp;
+	        }
+	        return rs;
+	    },
 	    ajax: function ajax( /*String*/type, /*String*/url, /*Object*/params, /*Function*/callback) {
 	        //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
 	        var headers = {
@@ -515,24 +524,23 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
-	            //
-
-
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
-	            params = "from=weex";
 	        } else {
 	            url = _weexConfig.appConfig.host + url;
-	            params.Content.from = "weex";
 	            params = JSON.stringify(params);
 	        }
-	        stream.fetch({
+	        //IOS get不能传递body
+	        var fetchObj = {
 	            method: type.toUpperCase(),
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params,
 	            timeout: 100000
-	        }, function (res) {
+	        };
+	        if (type.toLowerCase() === "post") {
+	            fetchObj.body = params;
+	        }
+	        stream.fetch(fetchObj, function (res) {
 	            callback(res);
 	        });
 	    },
@@ -548,9 +556,11 @@
 	            duration: 1
 	        });
 	    },
-	    alert: function alert( /*String*/msg) {
+	    alert: function alert( /*String*/msg, /*Function*/callback) {
 	        modal.alert({
 	            message: msg
+	        }, function () {
+	            callback && callback();
 	        });
 	    },
 
@@ -613,7 +623,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -645,13 +655,13 @@
 
 /***/ }),
 
-/***/ 52:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -672,7 +682,7 @@
 
 /***/ }),
 
-/***/ 53:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -680,14 +690,14 @@
 
 
 	// module
-	exports.push([module.id, "/**\r\n * Created by yxl79 on 2017/4/8.\r\n 工商信息\r\n */\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用\r\n * 样式能精简就精简，减少bundleJs的大小\r\n */\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * some config data // theme\r\n */\r\n/** only for web**/\nbody[data-v-02def8c6],\r\nhtml[data-v-02def8c6] {\r\n  width: 100%;\r\n  height: 100%;\n}\nbody[data-v-02def8c6] {\r\n  padding: 0;\r\n  margin: 0;\r\n  display: flex;\n}\nbody[data-v-02def8c6]:before {\r\n  display: none;\n}\nbody .weex-root[data-v-02def8c6] {\r\n  background-color: #EDEDED;\n}\nbody .weex-scroller[data-v-02def8c6] {\r\n  flex: 1;\n}\nbody .font_padding[data-v-02def8c6] {\r\n  padding-top: 4px !important;\r\n  padding-bottom: 4px !important;\n}\r\n/*fix weeb slider bug*/\nbody .weex-slider-inner[data-v-02def8c6] {\r\n  width: 100%!important;\n}\r\n/**通用**/\n.font_padding[data-v-02def8c6] {\r\n  padding-top: 4px;\r\n  padding-bottom: 4px;\n}\n.font_bold[data-v-02def8c6] {\r\n  font-weight: 700;\n}\n.font_silver[data-v-02def8c6] {\r\n  color: #666666;\n}\n.font_orange[data-v-02def8c6] {\r\n  color: #db9561;\n}\n.font_size[data-v-02def8c6] {\r\n  font-size: 28px;\n}\n.font_small[data-v-02def8c6] {\r\n  font-size: 23px;\n}\n.font_big[data-v-02def8c6] {\r\n  font-size: 35px;\n}\n.bg_white[data-v-02def8c6] {\r\n  background-color: white;\n}\n.bg_silver[data-v-02def8c6] {\r\n  background-color: #EDEDED;\n}\n.hidden[data-v-02def8c6] {\r\n  visibility: hidden;\n}\n.visible[data-v-02def8c6] {\r\n  visibility: visible;\n}\n.gone[data-v-02def8c6] {\r\n  height: 0.1px;\r\n  overflow: hidden;\n}\n.text_center[data-v-02def8c6] {\r\n  text-align: center;\n}\n.flex_1[data-v-02def8c6] {\r\n  flex: 1;\n}\n.flex_row[data-v-02def8c6] {\r\n  flex-direction: row;\n}\n.align_center[data-v-02def8c6] {\r\n  align-items: center;\n}\n.justify_center[data-v-02def8c6] {\r\n  justify-content: center;\n}\n.justify_start[data-v-02def8c6] {\r\n  justify-content: flex-start;\n}\n.h2[data-v-02def8c6] {\r\n  font-size: 38px;\r\n  font-weight: bold;\r\n  text-align: center;\n}\n.border_top[data-v-02def8c6] {\r\n  border-top-width: 1px;\r\n  border-top-color: #d5d5d5;\n}\n.border_left[data-v-02def8c6] {\r\n  border-left-width: 1px;\r\n  border-left-color: #d5d5d5;\n}\n.small_icon[data-v-02def8c6] {\r\n  width: 28px;\r\n  height: 28px;\n}\n.padding_bottom[data-v-02def8c6] {\r\n  padding-bottom: 16px;\n}\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * 列表样式基础\r\n */\n.list[data-v-02def8c6] {\r\n  justify-content: center;\r\n  padding-top: 18px;\r\n  padding-bottom: 18px;\n}\n.list_mt[data-v-02def8c6] {\r\n  margin-top: 21px;\n}\n.list_padding[data-v-02def8c6] {\r\n  padding-left: 18px;\r\n  padding-right: 18px;\n}\r\n/**\r\n * Created by yxl79 on 2017/4/8.\r\n * 普通列表样式\r\n */\n.list_content[data-v-02def8c6] {\r\n  flex: 1;\r\n  justify-content: center;\n}\n.list_icon[data-v-02def8c6] {\r\n  width: 28px;\r\n  height: 28px;\n}\r\n/**\r\n * Created by yxl79 on 2017/4/10.\r\n * 2列布局列表\r\n */\r\n/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/\n.list .list_line[data-v-02def8c6] {\r\n  left: 50%;\n}\n.list_line[data-v-02def8c6] {\r\n  border-style: solid;\r\n  border-left-width: 1px;\r\n  border-color: #d5d5d5;\r\n  position: absolute;\r\n  top: 21px;\r\n  bottom: 21px;\n}\n.list_left_bar[data-v-02def8c6] {\r\n  border-left-color: #DA9461;\r\n  border-left-width: 6px;\n}\n.list_step_dot[data-v-02def8c6] {\r\n  width: 35px;\r\n  height: 35px;\r\n  border-radius: 35px;\r\n  position: absolute;\r\n  left: 9px;\r\n  top: 0px;\n}\n.bg_orange[data-v-02def8c6] {\r\n  background-color: #db9561;\n}\n.bg_silver[data-v-02def8c6] {\r\n  background-color: #EDEDED;\n}\n.list_step_padding[data-v-02def8c6] {\r\n  padding-left: 28px;\n}\n.list_step_content_padding[data-v-02def8c6] {\r\n  padding-left: 19px;\r\n  padding-right: 19px;\n}\n.list_step_content[data-v-02def8c6] {\r\n  background-color: #EDEDED;\r\n  border-radius: 7px;\n}\n.list_step_bottom[data-v-02def8c6] {\r\n  padding-bottom: 16px;\n}\n.bus_img[data-v-02def8c6] {\r\n  width: 94px;\r\n  height: 94px;\r\n  border-radius: 94px;\n}\r\n", ""]);
+	exports.push([module.id, "/**\n * Created by yxl79 on 2017/4/8.\n 工商信息\n */\n/**\n * Created by yxl79 on 2017/4/10.\n * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用\n * 样式能精简就精简，减少bundleJs的大小\n */\n/**\n * Created by yxl79 on 2017/4/10.\n * some config data // theme\n */\n/** only for web**/\nbody[data-v-02def8c6],\nhtml[data-v-02def8c6] {\n  width: 100%;\n  height: 100%;\n}\nbody[data-v-02def8c6] {\n  padding: 0;\n  margin: 0;\n  display: flex;\n}\nbody[data-v-02def8c6]:before {\n  display: none;\n}\nbody .weex-root[data-v-02def8c6] {\n  background-color: #EDEDED;\n}\nbody .weex-scroller[data-v-02def8c6] {\n  flex: 1;\n}\nbody .font_padding[data-v-02def8c6] {\n  padding-top: 4px !important;\n  padding-bottom: 4px !important;\n}\n/*fix weeb slider bug*/\nbody .weex-slider-inner[data-v-02def8c6] {\n  width: 100%!important;\n}\n/**通用**/\n.font_padding[data-v-02def8c6] {\n  padding-top: 4px;\n  padding-bottom: 4px;\n}\n.font_bold[data-v-02def8c6] {\n  font-weight: 700;\n}\n.font_silver[data-v-02def8c6] {\n  color: #666666;\n}\n.font_orange[data-v-02def8c6] {\n  color: #ffb837;\n}\n.font_size[data-v-02def8c6] {\n  font-size: 28px;\n}\n.font_small[data-v-02def8c6] {\n  font-size: 23px;\n}\n.font_big[data-v-02def8c6] {\n  font-size: 35px;\n}\n.bg_white[data-v-02def8c6] {\n  background-color: white;\n}\n.bg_silver[data-v-02def8c6] {\n  background-color: #EDEDED;\n}\n.hidden[data-v-02def8c6] {\n  visibility: hidden;\n}\n.visible[data-v-02def8c6] {\n  visibility: visible;\n}\n.gone[data-v-02def8c6] {\n  height: 0.1px;\n  overflow: hidden;\n}\n.text_center[data-v-02def8c6] {\n  text-align: center;\n}\n.flex_1[data-v-02def8c6] {\n  flex: 1;\n}\n.flex_row[data-v-02def8c6] {\n  flex-direction: row;\n}\n.flex_col[data-v-02def8c6] {\n  flex-direction: column;\n}\n.align_center[data-v-02def8c6] {\n  align-items: center;\n}\n.justify_center[data-v-02def8c6] {\n  justify-content: center;\n}\n.justify_start[data-v-02def8c6] {\n  justify-content: flex-start;\n}\n.h2[data-v-02def8c6] {\n  font-size: 38px;\n  font-weight: bold;\n  text-align: center;\n}\n.border_top[data-v-02def8c6] {\n  border-top-width: 1px;\n  border-top-color: #d5d5d5;\n}\n.border_left[data-v-02def8c6] {\n  border-left-width: 1px;\n  border-left-color: #d5d5d5;\n}\n.small_icon[data-v-02def8c6] {\n  width: 28px;\n  height: 28px;\n}\n.padding_bottom[data-v-02def8c6] {\n  padding-bottom: 16px;\n}\n/**\n * Created by yxl79 on 2017/4/10.\n * 列表样式基础\n */\n.list[data-v-02def8c6] {\n  justify-content: center;\n  padding-top: 18px;\n  padding-bottom: 18px;\n}\n.list_mt[data-v-02def8c6] {\n  margin-top: 21px;\n}\n.list_padding[data-v-02def8c6] {\n  padding-left: 18px;\n  padding-right: 18px;\n}\n/**\n * Created by yxl79 on 2017/4/8.\n * 普通列表样式\n */\n.list_content[data-v-02def8c6] {\n  flex: 1;\n  justify-content: center;\n}\n.list_icon[data-v-02def8c6] {\n  width: 28px;\n  height: 28px;\n}\n/**\n * Created by yxl79 on 2017/4/10.\n * 2列布局列表\n */\n/**fix web中absolute相对于父容器而不是相对于屏幕的问题**/\n.list .list_line[data-v-02def8c6] {\n  left: 50%;\n}\n.list_line[data-v-02def8c6] {\n  border-style: solid;\n  border-left-width: 1px;\n  border-color: #d5d5d5;\n  position: absolute;\n  top: 21px;\n  bottom: 21px;\n}\n.list_left_bar[data-v-02def8c6] {\n  border-left-color: #fbc143;\n  border-left-width: 6px;\n}\n.list_step_dot[data-v-02def8c6] {\n  width: 35px;\n  height: 35px;\n  border-radius: 35px;\n  position: absolute;\n  left: 9px;\n  top: 0px;\n}\n.bg_orange[data-v-02def8c6] {\n  background-color: #fbc143;\n}\n.bg_silver[data-v-02def8c6] {\n  background-color: #EDEDED;\n}\n.list_step_padding[data-v-02def8c6] {\n  padding-left: 28px;\n}\n.list_step_content_padding[data-v-02def8c6] {\n  padding-left: 19px;\n  padding-right: 19px;\n}\n.list_step_content[data-v-02def8c6] {\n  background-color: #EDEDED;\n  border-radius: 7px;\n}\n.list_step_bottom[data-v-02def8c6] {\n  padding-bottom: 16px;\n}\n.bus_img[data-v-02def8c6] {\n  width: 94px;\n  height: 94px;\n  border-radius: 94px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ }),
 
-/***/ 54:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -696,7 +706,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(45);
+	var _weex = __webpack_require__(46);
 
 	exports.default = {
 	    data: function data() {
@@ -929,7 +939,7 @@
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -954,7 +964,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack0 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack0 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack0 ? '' : 'gone']
@@ -1034,7 +1044,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": "local:///location"
+	      "src": "local:///wx_location"
 	    }
 	  }), _vm._v(" "), _c('text', {
 	    staticClass: "font_size font_padding"
@@ -1075,7 +1085,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack1 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack1 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', _vm.listPack1 ? '' : 'gone']
@@ -1085,7 +1095,7 @@
 	    }, [_c('image', {
 	      staticClass: "bus_img",
 	      attrs: {
-	        "src": "local:///member",
+	        "src": "local:///wx_member",
 	        "resize": "contain"
 	      }
 	    }), _vm._v(" "), _c('div', {
@@ -1110,7 +1120,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack2 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack2 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', _vm.listPack2 ? '' : 'gone']
@@ -1135,7 +1145,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack3 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack3 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: ['bg_white', 'border_top', _vm.listPack3 ? '' : 'gone']
@@ -1182,7 +1192,7 @@
 	    staticClass: "list_icon",
 	    attrs: {
 	      "resize": "contain",
-	      "src": _vm.listPack4 ? 'local:///zhankai_icon' : 'local:///zhankai_gray_icon'
+	      "src": _vm.listPack4 ? 'local:///wx_zhankai' : 'local:///wx_shouqi'
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('div', {
 	    class: [_vm.listPack4 ? '' : 'gone']

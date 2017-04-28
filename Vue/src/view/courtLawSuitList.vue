@@ -7,7 +7,7 @@
                 <text class="font_small font_padding font_silver">判决案号：{{li.caseno}}</text>
                 <text class="font_small font_padding font_silver">发布日期：{{li.submittime}}</text>
             </div>
-            <image resize="contain" src="local:///check_more" class="list_icon"></image>
+            <image resize="contain" src="local:///wx_check_more" class="list_icon"></image>
         </div>
         <wx-loading ref="loading" v-if="hasMore">
         </wx-loading>

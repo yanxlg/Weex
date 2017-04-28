@@ -42,6 +42,14 @@ let api={
             return "";
         }
     },
+    encodeUTF8:function (str) {
+        let temp = "",rs = "";
+        for( let i=0 , len = str.length; i < len; i++ ){
+            temp = str.charCodeAt(i).toString(16);
+            rs  += "\\u"+ new Array(5-temp.length).join("0") + temp;
+        }
+        return rs;
+    },
     ajax:function (/*String*/type,/*String*/url,/*Object*/params,/*Function*/callback) {
         //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
         let headers={
@@ -51,24 +59,23 @@ let api={
             headers["Content-Type"]="application/json";
         }
         if(type.toLowerCase()==="get"){
-            //
-
-
             url=appConfig.host+url+(params?("?"+this.serialize(params)):"");
-            params="from=weex";
         }else{
             url=appConfig.host+url;
-            params.Content.from="weex";
             params=JSON.stringify(params);
         }
-        stream.fetch({
+        //IOS get不能传递body
+        let fetchObj={
             method:type.toUpperCase(),
             type: 'json',
             headers:headers,
             url:url,
-            body:params,
             timeout:100000
-        }, res=>{
+        };
+        if(type.toLowerCase()==="post"){
+            fetchObj.body=params;
+        }
+        stream.fetch(fetchObj, res=>{
             callback(res);
         })
     },
@@ -84,9 +91,11 @@ let api={
             duration:1
         })
     },
-    alert(/*String*/msg){
+    alert(/*String*/msg,/*Function*/ callback){
         modal.alert({
             message:msg
+        },()=>{
+            callback&&callback();
         })
     },
     setTitle:function (/*String*/title) {

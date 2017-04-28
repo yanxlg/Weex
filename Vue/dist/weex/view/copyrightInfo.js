@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(46)
+	__vue_styles__.push(__webpack_require__(47)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(47)
+	__vue_exports__ = __webpack_require__(48)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(48)
+	var __vue_template__ = __webpack_require__(49)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -106,7 +106,7 @@
 	    "color": "#666666"
 	  },
 	  "font_orange": {
-	    "color": "#db9561"
+	    "color": "#ffb837"
 	  },
 	  "font_size": {
 	    "fontSize": 28
@@ -141,6 +141,9 @@
 	  },
 	  "flex_row": {
 	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
 	  },
 	  "align_center": {
 	    "alignItems": "center"
@@ -178,10 +181,9 @@
 	  },
 	  "tab_bar": {
 	    "height": 4,
-	    "backgroundColor": "#FFA500",
+	    "backgroundColor": "#fbc143",
 	    "position": "absolute",
-	    "bottom": 0,
-	    "left": 0
+	    "bottom": 0
 	  },
 	  "bar_title": {
 	    "fontSize": 30,
@@ -230,7 +232,8 @@
 	    },
 	    data: function data() {
 	        return {
-	            index: 0
+	            index: 0,
+	            bar_left: 0
 	        };
 	    },
 	    created: function created() {
@@ -242,14 +245,15 @@
 	        },
 	        anim: function anim(index) {
 	            if (this.index == index) return;
-	            var testEl = this.$refs.tab_bar_id1;
-	            var delX = parseInt(this.sliderWidth) * parseInt(index) + "px";
-	            animation.transition(testEl, {
-	                styles: {
-	                    transform: 'translate(' + delX + ', 0)'
-	                },
-	                duration: 200
-	            });
+	            this.bar_left = parseInt(this.sliderWidth) * parseInt(index);
+	            /*     let testEl = this.$refs.tab_bar_id1;
+	                 var delX=parseInt(this.sliderWidth)*parseInt(index)+"px";
+	                 animation.transition(testEl, {
+	                     styles: {
+	                         transform: 'translate('+delX+', 0)',
+	                     },
+	                     duration: 200
+	                 });*/
 	            this.index = index;
 	        },
 	        changeSlider: function changeSlider(event) {
@@ -286,7 +290,8 @@
 	    ref: "tab_bar_id1",
 	    staticClass: ["tab_bar"],
 	    style: {
-	      width: _vm.sliderWidth + 'px'
+	      width: _vm.sliderWidth + 'px',
+	      left: _vm.bar_left + 'px'
 	    }
 	  })], 2), _c('slider', {
 	    ref: "tab_slider",
@@ -307,7 +312,7 @@
 
 /***/ }),
 
-/***/ 30:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -317,7 +322,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(31);
+	var _weexConfig = __webpack_require__(32);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -363,6 +368,15 @@
 	        }
 	    },
 
+	    encodeUTF8: function encodeUTF8(str) {
+	        var temp = "",
+	            rs = "";
+	        for (var i = 0, len = str.length; i < len; i++) {
+	            temp = str.charCodeAt(i).toString(16);
+	            rs += "\\u" + new Array(5 - temp.length).join("0") + temp;
+	        }
+	        return rs;
+	    },
 	    ajax: function ajax( /*String*/type, /*String*/url, /*Object*/params, /*Function*/callback) {
 	        //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
 	        var headers = {
@@ -372,24 +386,23 @@
 	            headers["Content-Type"] = "application/json";
 	        }
 	        if (type.toLowerCase() === "get") {
-	            //
-
-
 	            url = _weexConfig.appConfig.host + url + (params ? "?" + this.serialize(params) : "");
-	            params = "from=weex";
 	        } else {
 	            url = _weexConfig.appConfig.host + url;
-	            params.Content.from = "weex";
 	            params = JSON.stringify(params);
 	        }
-	        stream.fetch({
+	        //IOS get不能传递body
+	        var fetchObj = {
 	            method: type.toUpperCase(),
 	            type: 'json',
 	            headers: headers,
 	            url: url,
-	            body: params,
 	            timeout: 100000
-	        }, function (res) {
+	        };
+	        if (type.toLowerCase() === "post") {
+	            fetchObj.body = params;
+	        }
+	        stream.fetch(fetchObj, function (res) {
 	            callback(res);
 	        });
 	    },
@@ -405,9 +418,11 @@
 	            duration: 1
 	        });
 	    },
-	    alert: function alert( /*String*/msg) {
+	    alert: function alert( /*String*/msg, /*Function*/callback) {
 	        modal.alert({
 	            message: msg
+	        }, function () {
+	            callback && callback();
 	        });
 	    },
 
@@ -470,7 +485,7 @@
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -502,7 +517,7 @@
 
 /***/ }),
 
-/***/ 41:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -512,7 +527,7 @@
 	});
 	exports.Tab = undefined;
 
-	var _tab = __webpack_require__(42);
+	var _tab = __webpack_require__(43);
 
 	var _tab2 = _interopRequireDefault(_tab);
 
@@ -525,7 +540,7 @@
 
 /***/ }),
 
-/***/ 42:
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
@@ -570,7 +585,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -585,7 +600,7 @@
 	    "color": "#666666"
 	  },
 	  "font_orange": {
-	    "color": "#db9561"
+	    "color": "#ffb837"
 	  },
 	  "font_size": {
 	    "fontSize": 28
@@ -620,6 +635,9 @@
 	  },
 	  "flex_row": {
 	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
 	  },
 	  "align_center": {
 	    "alignItems": "center"
@@ -674,7 +692,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -683,9 +701,9 @@
 	    value: true
 	});
 
-	var _index = __webpack_require__(41);
+	var _index = __webpack_require__(42);
 
-	var _weex = __webpack_require__(30);
+	var _weex = __webpack_require__(31);
 
 	//
 	//
@@ -747,7 +765,7 @@
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
