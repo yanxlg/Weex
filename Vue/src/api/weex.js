@@ -26,6 +26,11 @@ let api={
             animated:"true"
         })
     },
+    closeActivity:function () {
+        navigator.pop({
+            animated:"true"
+        })
+    },
     serialize(/*Object*/ json,/*boolean*/encode){
         if(arguments.length===1){
             encode=false;
@@ -76,7 +81,19 @@ let api={
             fetchObj.body=params;
         }
         stream.fetch(fetchObj, res=>{
-            callback(res);
+            if(res.ok){
+                if(res.data.Head.Ret == 0){
+                    callback(res);
+                }else{
+                    api.alert(res.data.Head.Msg,()=>{
+                        api.closeActivity();
+                    })
+                }
+            }else{
+                api.alert(res.statusText,()=>{
+                    api.closeActivity();
+                })
+            }
         })
     },
     showWaiting:function () {

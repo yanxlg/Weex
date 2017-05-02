@@ -2,125 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f24bd2b-2b16-41b4-a238-6738b740aa43" name="Default" comment="[change] change project from weexpack to weex">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_beizhixingren.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_beizhixingren_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_check_more.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_collection.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_email.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_fayuanpanjue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_fayuanpanjue_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_gongshangxinxi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_gps.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_member.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_phonenumber.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_qiyenianbao.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_qiyenianbao_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_shangbiaoxinxi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_shangbiaoxinxi_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_shixinxinxi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_shixinxinxi_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_shouqi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_sight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_touziguanxi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_touziguanxi_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_website.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_zhankai.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_zhuanlixinxi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_zhuanlixinxi_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_zhuzuoquan.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/wx_zhuzuoquan_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/imgtest.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/weex/images/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/weex/images/a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/weex/images/collection_done.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/weex/images/loading.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/loading.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/component/dropdown/dropdown.js" afterPath="$PROJECT_DIR$/dist/web/component/dropdown/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/component/tab/tab.js" afterPath="$PROJECT_DIR$/dist/web/component/tab/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/test/test.js" afterPath="$PROJECT_DIR$/dist/web/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/annual.js" afterPath="$PROJECT_DIR$/dist/web/view/annual.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/annualDetail.js" afterPath="$PROJECT_DIR$/dist/web/view/annualDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/businessInfo.js" afterPath="$PROJECT_DIR$/dist/web/view/businessInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/copyright.js" afterPath="$PROJECT_DIR$/dist/web/view/copyright.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/copyrightInfo.js" afterPath="$PROJECT_DIR$/dist/web/view/copyrightInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/courtAnnouncementDetail.js" afterPath="$PROJECT_DIR$/dist/web/view/courtAnnouncementDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/courtAnnouncementList.js" afterPath="$PROJECT_DIR$/dist/web/view/courtAnnouncementList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/courtLawSuitDetail.js" afterPath="$PROJECT_DIR$/dist/web/view/courtLawSuitDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/courtLawSuitList.js" afterPath="$PROJECT_DIR$/dist/web/view/courtLawSuitList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/dishonestDetail.js" afterPath="$PROJECT_DIR$/dist/web/view/dishonestDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/dishonestInfo.js" afterPath="$PROJECT_DIR$/dist/web/view/dishonestInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/index.js" afterPath="$PROJECT_DIR$/dist/web/view/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/invest.js" afterPath="$PROJECT_DIR$/dist/web/view/invest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/markDetail.js" afterPath="$PROJECT_DIR$/dist/web/view/markDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/markInfo.js" afterPath="$PROJECT_DIR$/dist/web/view/markInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/patentDetail.js" afterPath="$PROJECT_DIR$/dist/web/view/patentDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/view/patentInfo.js" afterPath="$PROJECT_DIR$/dist/web/view/patentInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/webComponent/image.js" afterPath="$PROJECT_DIR$/dist/web/webComponent/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/web/webComponent/progressbar.js" afterPath="$PROJECT_DIR$/dist/web/webComponent/progressbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/component/tab/tab.js" afterPath="$PROJECT_DIR$/dist/weex/component/tab/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/test/test.js" afterPath="$PROJECT_DIR$/dist/weex/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/annual.js" afterPath="$PROJECT_DIR$/dist/weex/view/annual.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/annualDetail.js" afterPath="$PROJECT_DIR$/dist/weex/view/annualDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/businessInfo.js" afterPath="$PROJECT_DIR$/dist/weex/view/businessInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/copyright.js" afterPath="$PROJECT_DIR$/dist/weex/view/copyright.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/copyrightInfo.js" afterPath="$PROJECT_DIR$/dist/weex/view/copyrightInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/courtAnnouncementDetail.js" afterPath="$PROJECT_DIR$/dist/weex/view/courtAnnouncementDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/courtAnnouncementList.js" afterPath="$PROJECT_DIR$/dist/weex/view/courtAnnouncementList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/courtLawSuitDetail.js" afterPath="$PROJECT_DIR$/dist/weex/view/courtLawSuitDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/courtLawSuitList.js" afterPath="$PROJECT_DIR$/dist/weex/view/courtLawSuitList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/dishonestDetail.js" afterPath="$PROJECT_DIR$/dist/weex/view/dishonestDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/dishonestInfo.js" afterPath="$PROJECT_DIR$/dist/weex/view/dishonestInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/index.js" afterPath="$PROJECT_DIR$/dist/weex/view/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/invest.js" afterPath="$PROJECT_DIR$/dist/weex/view/invest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/markDetail.js" afterPath="$PROJECT_DIR$/dist/weex/view/markDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/markInfo.js" afterPath="$PROJECT_DIR$/dist/weex/view/markInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/patentDetail.js" afterPath="$PROJECT_DIR$/dist/weex/view/patentDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/weex/view/patentInfo.js" afterPath="$PROJECT_DIR$/dist/weex/view/patentInfo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/weex.js" afterPath="$PROJECT_DIR$/src/api/weex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/tab/tab.vue" afterPath="$PROJECT_DIR$/src/component/tab/tab.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/tab/tabbar.css" afterPath="$PROJECT_DIR$/src/component/tab/tabbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/tab/tabbar.less" afterPath="$PROJECT_DIR$/src/component/tab/tabbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/annual.css" afterPath="$PROJECT_DIR$/src/style/company/annual.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/annualDetail.css" afterPath="$PROJECT_DIR$/src/style/company/annualDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/businessInfo.css" afterPath="$PROJECT_DIR$/src/style/company/businessInfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/company.css" afterPath="$PROJECT_DIR$/src/style/company/company.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/copyright.css" afterPath="$PROJECT_DIR$/src/style/company/copyright.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/courtAnnouncementDetail.css" afterPath="$PROJECT_DIR$/src/style/company/courtAnnouncementDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/courtAnnouncementList.css" afterPath="$PROJECT_DIR$/src/style/company/courtAnnouncementList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/courtLawSuitDetail.css" afterPath="$PROJECT_DIR$/src/style/company/courtLawSuitDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/courtLawSuitList.css" afterPath="$PROJECT_DIR$/src/style/company/courtLawSuitList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/dishonestDetail.css" afterPath="$PROJECT_DIR$/src/style/company/dishonestDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/dishonestInfo.css" afterPath="$PROJECT_DIR$/src/style/company/dishonestInfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/invest.css" afterPath="$PROJECT_DIR$/src/style/company/invest.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/markDetail.css" afterPath="$PROJECT_DIR$/src/style/company/markDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/markInfo.css" afterPath="$PROJECT_DIR$/src/style/company/markInfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/company/patentDetail.css" afterPath="$PROJECT_DIR$/src/style/company/patentDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/config.css" afterPath="$PROJECT_DIR$/src/style/config.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/config.less" afterPath="$PROJECT_DIR$/src/style/config.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/dropdown/dropdown.css" afterPath="$PROJECT_DIR$/src/style/dropdown/dropdown.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/framework.css" afterPath="$PROJECT_DIR$/src/style/framework.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/framework.less" afterPath="$PROJECT_DIR$/src/style/framework.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/list/base.css" afterPath="$PROJECT_DIR$/src/style/list/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/list/list-cols-2.css" afterPath="$PROJECT_DIR$/src/style/list/list-cols-2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/list/list-cols-3.css" afterPath="$PROJECT_DIR$/src/style/list/list-cols-3.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/list/list.css" afterPath="$PROJECT_DIR$/src/style/list/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/annual.vue" afterPath="$PROJECT_DIR$/src/view/annual.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/annualDetail.vue" afterPath="$PROJECT_DIR$/src/view/annualDetail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/businessInfo.vue" afterPath="$PROJECT_DIR$/src/view/businessInfo.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/copyright.vue" afterPath="$PROJECT_DIR$/src/view/copyright.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/courtAnnouncementList.vue" afterPath="$PROJECT_DIR$/src/view/courtAnnouncementList.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/courtLawSuitList.vue" afterPath="$PROJECT_DIR$/src/view/courtLawSuitList.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/dishonestInfo.vue" afterPath="$PROJECT_DIR$/src/view/dishonestInfo.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index.vue" afterPath="$PROJECT_DIR$/src/view/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/invest.vue" afterPath="$PROJECT_DIR$/src/view/invest.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/markInfo.vue" afterPath="$PROJECT_DIR$/src/view/markInfo.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/patentInfo.vue" afterPath="$PROJECT_DIR$/src/view/patentInfo.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weex.html" afterPath="$PROJECT_DIR$/weex.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -135,26 +20,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tab.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/tab/tab.vue">
+      <file leaf-file-name="courtAnnouncementDetail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementDetail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="43" column="45" lean-forward="false" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="399">
+              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invest.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/invest.vue">
+      <file leaf-file-name="copyrightInfo.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/copyrightInfo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#scroller#0;n#tab#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#scroller#1;n#tab#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1550#1593#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="513">
+              <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weex.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/api/weex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="110" column="47" lean-forward="true" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,8 +53,8 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="151" column="59" lean-forward="false" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="151" column="56" lean-forward="false" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#image#1;n#div#2;n#div#0;n#scroller#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#text#0;n#div#2;n#div#0;n#div#1;n#scroller#0;n#template#0;n#!!top" expanded="true" />
@@ -173,21 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="annualDetail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/annualDetail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patentInfo.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="patentInfo.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/patentInfo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="110" column="29" lean-forward="true" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+            <state relative-caret-position="498">
+              <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
               <folding>
                 <element signature="e#1336#1378#0" expanded="true" />
               </folding>
@@ -198,8 +79,8 @@
       <file leaf-file-name="markInfo.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/markInfo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="99" column="52" lean-forward="false" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
+            <state relative-caret-position="458">
+              <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
               <folding>
                 <element signature="e#1413#1455#0" expanded="true" />
               </folding>
@@ -207,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weex.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/weex.js">
+      <file leaf-file-name="copyright.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/copyright.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="475">
+              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -220,28 +101,28 @@
       <file leaf-file-name="businessInfo.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/businessInfo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="200" column="42" lean-forward="false" selection-start-line="200" selection-start-column="42" selection-end-line="200" selection-end-column="42" />
+            <state relative-caret-position="3382">
+              <caret line="178" column="24" lean-forward="false" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="framework.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/style/framework.less">
+      <file leaf-file-name="annualDetail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/annualDetail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="9" />
+            <state relative-caret-position="2774">
+              <caret line="146" column="86" lean-forward="false" selection-start-line="146" selection-start-column="86" selection-end-line="146" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weex.html">
+      <file leaf-file-name="annual.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/annual.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="30" selection-end-column="18" />
+            <state relative-caret-position="285">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -260,8 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>path.resolve</find>
-      <find>patterns</find>
       <find>__dirname</find>
       <find>no such file or directory,</find>
       <find>image</find>
@@ -284,12 +163,14 @@
       <find>变更</find>
       <find>all</find>
       <find>arrow_up</find>
-      <find>alert</find>
       <find>arrow_down</find>
       <find>local</find>
       <find>arrow_</find>
-      <find>ajax</find>
       <find>type</find>
+      <find>ajax</find>
+      <find>alert</find>
+      <find>navigator</find>
+      <find>arrow</find>
     </findStrings>
     <replaceStrings>
       <replace>pngEntry</replace>
@@ -298,8 +179,8 @@
       <replace>wx_zhankai</replace>
       <replace>wx_shouqi</replace>
       <replace>wex_arrow_up</replace>
-      <replace>local:///wx_</replace>
       <replace>wex_arrow_down</replace>
+      <replace>local:///wx_</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -345,12 +226,12 @@
         <option value="$PROJECT_DIR$/src/view/invest.vue" />
         <option value="$PROJECT_DIR$/src/component/tab/tabbar.less" />
         <option value="$PROJECT_DIR$/src/component/tab/tab.vue" />
-        <option value="$PROJECT_DIR$/src/view/index.vue" />
         <option value="$PROJECT_DIR$/src/view/annualDetail.vue" />
-        <option value="$PROJECT_DIR$/weex.html" />
-        <option value="$PROJECT_DIR$/src/api/weex.js" />
         <option value="$PROJECT_DIR$/src/view/markInfo.vue" />
         <option value="$PROJECT_DIR$/src/view/patentInfo.vue" />
+        <option value="$PROJECT_DIR$/weex.html" />
+        <option value="$PROJECT_DIR$/src/view/index.vue" />
+        <option value="$PROJECT_DIR$/src/api/weex.js" />
       </list>
     </option>
   </component>
@@ -404,6 +285,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -464,28 +346,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="component" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tab" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,7 +441,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -715,7 +574,8 @@
       <workItem from="1493193263582" duration="7308000" />
       <workItem from="1493200644989" duration="5748000" />
       <workItem from="1493255686803" duration="23790000" />
-      <workItem from="1493342896893" duration="25536000" />
+      <workItem from="1493342896893" duration="27671000" />
+      <workItem from="1493687747528" duration="1039000" />
     </task>
     <task id="LOCAL-00001" summary="[change] change project from weexpack to weex">
       <created>1493112742977</created>
@@ -801,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493343093752</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[change] change project from weexpack to weex">
+      <created>1493378564042</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1493378564042</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78547000" />
+    <option name="totallyTimeSpent" value="81721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -819,24 +686,24 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Weex Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5124594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3629469" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Weex Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -849,7 +716,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="[change] change project from weexpack to weex" />
     <MESSAGE value="[change] config update" />
     <MESSAGE value="工程编译配置" />
     <MESSAGE value="[update] doc" />
@@ -860,7 +726,8 @@
     <MESSAGE value="[change] fix image Component Vue error" />
     <MESSAGE value="[test] 下拉刷新测试" />
     <MESSAGE value="[add] add dist" />
-    <option name="LAST_COMMIT_MESSAGE" value="[add] add dist" />
+    <MESSAGE value="[change] change project from weexpack to weex" />
+    <option name="LAST_COMMIT_MESSAGE" value="[change] change project from weexpack to weex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40756">
           <caret line="2191" column="32" lean-forward="true" selection-start-line="2191" selection-start-column="32" selection-end-line="2191" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,9 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="60" column="94" lean-forward="false" selection-start-line="60" selection-start-column="94" selection-end-line="60" selection-end-column="94" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -919,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -927,11 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#image#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#image#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#image#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -939,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="98" column="95" lean-forward="false" selection-start-line="98" selection-start-column="95" selection-end-line="98" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
           <caret line="41" column="0" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,106 +830,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="223" column="59" lean-forward="false" selection-start-line="223" selection-start-column="59" selection-end-line="223" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/wx_collectionicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/wx_collectionicon.png" />
     <entry file="file://$PROJECT_DIR$/src/images/wx_collection.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/markDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/patentDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="86" column="31" lean-forward="true" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/dishonestInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="e#890#932#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding>
-            <element signature="e#934#976#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding>
-            <element signature="e#1026#1068#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="16" column="89" lean-forward="true" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/copyrightInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/copyright.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding>
-            <element signature="e#1049#1092#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/images/wx_zhankai.png">
@@ -1132,7 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,15 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/annual.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,7 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,14 +939,147 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="43" column="45" lean-forward="false" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/patentDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="80" column="35" lean-forward="true" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/markDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/invest.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/dishonestInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/courtLawSuitDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/courtAnnouncementDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/copyrightInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/copyright.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/businessInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3382">
+          <caret line="178" column="24" lean-forward="false" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/annualDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2774">
+          <caret line="146" column="86" lean-forward="false" selection-start-line="146" selection-start-column="86" selection-end-line="146" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/annual.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/patentInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding>
+            <element signature="e#1336#1378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/markInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+          <folding>
+            <element signature="e#1413#1455#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="151" column="59" lean-forward="false" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
+        <state relative-caret-position="240">
+          <caret line="151" column="56" lean-forward="false" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#image#1;n#div#2;n#div#0;n#scroller#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#text#0;n#div#2;n#div#0;n#div#1;n#scroller#0;n#template#0;n#!!top" expanded="true" />
@@ -1212,67 +1088,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/annualDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/invest.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#scroller#0;n#tab#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#scroller#1;n#tab#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1550#1593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="30" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/businessInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="200" column="42" lean-forward="false" selection-start-line="200" selection-start-column="42" selection-end-line="200" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/weex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="608">
+          <caret line="110" column="47" lean-forward="true" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/markInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="99" column="52" lean-forward="false" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
-          <folding>
-            <element signature="e#1413#1455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/patentInfo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="110" column="29" lean-forward="true" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
-          <folding>
-            <element signature="e#1336#1378#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
