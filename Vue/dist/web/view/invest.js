@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(110)
+	__webpack_require__(112)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(112),
+	  __webpack_require__(114),
 	  /* template */
-	  __webpack_require__(113),
+	  __webpack_require__(115),
 	  /* scopeId */
 	  "data-v-7fb74cad",
 	  /* cssModules */
@@ -492,7 +492,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -502,7 +502,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(47);
+	var _weexConfig = __webpack_require__(49);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -528,6 +528,11 @@
 	        }
 	        navigator.push({
 	            url: url,
+	            animated: "true"
+	        });
+	    },
+	    closeActivity: function closeActivity() {
+	        navigator.pop({
 	            animated: "true"
 	        });
 	    },
@@ -583,7 +588,19 @@
 	            fetchObj.body = params;
 	        }
 	        stream.fetch(fetchObj, function (res) {
-	            callback(res);
+	            if (res.ok) {
+	                if (res.data.Head.Ret == 0) {
+	                    callback(res);
+	                } else {
+	                    api.alert(res.data.Head.Msg, function () {
+	                        api.closeActivity();
+	                    });
+	                }
+	            } else {
+	                api.alert(res.statusText, function () {
+	                    api.closeActivity();
+	                });
+	            }
 	        });
 	    },
 	    showWaiting: function showWaiting() {
@@ -665,7 +682,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -697,7 +714,7 @@
 
 /***/ }),
 
-/***/ 60:
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -707,7 +724,7 @@
 	});
 	exports.Tab = undefined;
 
-	var _tab = __webpack_require__(61);
+	var _tab = __webpack_require__(63);
 
 	var _tab2 = _interopRequireDefault(_tab);
 
@@ -720,7 +737,7 @@
 
 /***/ }),
 
-/***/ 61:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -729,9 +746,9 @@
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(62),
+	  __webpack_require__(64),
 	  /* template */
-	  __webpack_require__(63),
+	  __webpack_require__(65),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -759,7 +776,7 @@
 
 /***/ }),
 
-/***/ 62:
+/***/ 64:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -830,7 +847,7 @@
 
 /***/ }),
 
-/***/ 63:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -884,13 +901,13 @@
 
 /***/ }),
 
-/***/ 110:
+/***/ 112:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(111);
+	var content = __webpack_require__(113);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -911,7 +928,7 @@
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -926,7 +943,7 @@
 
 /***/ }),
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -935,9 +952,9 @@
 	    value: true
 	});
 
-	var _index = __webpack_require__(60);
+	var _index = __webpack_require__(62);
 
-	var _weex = __webpack_require__(46);
+	var _weex = __webpack_require__(48);
 
 	//
 	//
@@ -1038,7 +1055,7 @@
 
 /***/ }),
 
-/***/ 113:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

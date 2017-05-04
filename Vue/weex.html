@@ -16,21 +16,9 @@
 </head>
 <body>
   <div id="root">
-    <progressbar></progressbar>
   </div>
   <!--全局注册Web 组件-->
   <script src="./dist/web/lib/register.js"></script>
   <script src="./dist/web/app.js"></script>
-<script>
-    function encodeUTF8(str){
-        var temp = "",rs = "";
-        for( var i=0 , len = str.length; i < len; i++ ){
-            temp = str.charCodeAt(i).toString(16);
-            rs  += "\\u"+ new Array(5-temp.length).join("0") + temp;
-        }
-        return rs;
-    }
-    alert(encodeUTF8("全部"));
-</script>
 </body>
 </html>

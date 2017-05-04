@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(97)
+	__webpack_require__(99)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(99),
+	  __webpack_require__(101),
 	  /* template */
-	  __webpack_require__(109),
+	  __webpack_require__(111),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -450,7 +450,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -460,7 +460,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(47);
+	var _weexConfig = __webpack_require__(49);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -486,6 +486,11 @@
 	        }
 	        navigator.push({
 	            url: url,
+	            animated: "true"
+	        });
+	    },
+	    closeActivity: function closeActivity() {
+	        navigator.pop({
 	            animated: "true"
 	        });
 	    },
@@ -541,7 +546,19 @@
 	            fetchObj.body = params;
 	        }
 	        stream.fetch(fetchObj, function (res) {
-	            callback(res);
+	            if (res.ok) {
+	                if (res.data.Head.Ret == 0) {
+	                    callback(res);
+	                } else {
+	                    api.alert(res.data.Head.Msg, function () {
+	                        api.closeActivity();
+	                    });
+	                }
+	            } else {
+	                api.alert(res.statusText, function () {
+	                    api.closeActivity();
+	                });
+	            }
 	        });
 	    },
 	    showWaiting: function showWaiting() {
@@ -623,7 +640,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -655,13 +672,13 @@
 
 /***/ }),
 
-/***/ 97:
+/***/ 99:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(98);
+	var content = __webpack_require__(100);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -682,7 +699,7 @@
 
 /***/ }),
 
-/***/ 98:
+/***/ 100:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -697,7 +714,7 @@
 
 /***/ }),
 
-/***/ 99:
+/***/ 101:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -706,9 +723,9 @@
 	    value: true
 	});
 
-	var _index = __webpack_require__(100);
+	var _index = __webpack_require__(102);
 
-	var _weex = __webpack_require__(46);
+	var _weex = __webpack_require__(48);
 
 	//
 	//
@@ -1075,7 +1092,7 @@
 
 /***/ }),
 
-/***/ 100:
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1085,11 +1102,11 @@
 	});
 	exports.Col = exports.Row = undefined;
 
-	var _row = __webpack_require__(101);
+	var _row = __webpack_require__(103);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _col = __webpack_require__(105);
+	var _col = __webpack_require__(107);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -1103,18 +1120,18 @@
 
 /***/ }),
 
-/***/ 101:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(102)
+	__webpack_require__(104)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
 	  null,
 	  /* template */
-	  __webpack_require__(104),
+	  __webpack_require__(106),
 	  /* scopeId */
 	  "data-v-a7ce483e",
 	  /* cssModules */
@@ -1142,13 +1159,13 @@
 
 /***/ }),
 
-/***/ 102:
+/***/ 104:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(103);
+	var content = __webpack_require__(105);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -1169,7 +1186,7 @@
 
 /***/ }),
 
-/***/ 103:
+/***/ 105:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1184,7 +1201,7 @@
 
 /***/ }),
 
-/***/ 104:
+/***/ 106:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1202,18 +1219,18 @@
 
 /***/ }),
 
-/***/ 105:
+/***/ 107:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(106)
+	__webpack_require__(108)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
 	  null,
 	  /* template */
-	  __webpack_require__(108),
+	  __webpack_require__(110),
 	  /* scopeId */
 	  "data-v-dbff3ef2",
 	  /* cssModules */
@@ -1241,13 +1258,13 @@
 
 /***/ }),
 
-/***/ 106:
+/***/ 108:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(107);
+	var content = __webpack_require__(109);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -1268,7 +1285,7 @@
 
 /***/ }),
 
-/***/ 107:
+/***/ 109:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1283,7 +1300,7 @@
 
 /***/ }),
 
-/***/ 108:
+/***/ 110:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1301,7 +1318,7 @@
 
 /***/ }),
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

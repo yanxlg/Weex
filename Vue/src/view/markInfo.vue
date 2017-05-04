@@ -55,10 +55,10 @@
                 //下拉
                 //titleIcon需要修改
                 if(this.anchor==="down"){
-                    api.setTitleIcon("wx_arrow_up");
+                    api.setTitleIcon("arrow_up");
                     this.anchor="up";
                 }else{
-                    api.setTitleIcon("wx_arrow_down");
+                    api.setTitleIcon("arrow_down");
                     this.anchor="down";
                 }
                 this.$refs.dropdown.switchView();
@@ -66,7 +66,7 @@
         },
         methods:{
             change:function (item) {
-                api.setTitleIcon("wx_arrow_down");
+                api.setTitleIcon("arrow_down");
                 this.anchor="down";
                 if(item){
                     this.type=item.type;

@@ -328,12 +328,12 @@
                             //需要传递typeList，使用storage传递
                             api.store("typeList", JSON.stringify($this.baseCountInfo[ev.index]["typelist"]));
                             url = "company/markInfo.js";
-                            param.titleIcon = "wx_arrow_down";
+                            param.titleIcon = "arrow_down";
                             break;
                         case "Company_PatentCount": //专利信息
                             api.store("typeList", JSON.stringify($this.baseCountInfo[ev.index]["typelist"]));
                             url = "company/patentInfo.js";
-                            param.titleIcon = "wx_arrow_down";
+                            param.titleIcon = "arrow_down";
                             break;
                         case "Company_CopyRightCount": //著作权
                             url = 'company/copyright.js';

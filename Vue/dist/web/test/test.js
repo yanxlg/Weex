@@ -49,9 +49,9 @@
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(41),
+	  __webpack_require__(43),
 	  /* template */
-	  __webpack_require__(42),
+	  __webpack_require__(44),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -133,7 +133,7 @@
 
 /***/ }),
 
-/***/ 41:
+/***/ 43:
 /***/ (function(module, exports) {
 
 	//
@@ -145,7 +145,7 @@
 
 /***/ }),
 
-/***/ 42:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

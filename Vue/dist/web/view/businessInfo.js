@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(53)
+	__webpack_require__(55)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(55),
+	  __webpack_require__(57),
 	  /* template */
-	  __webpack_require__(56),
+	  __webpack_require__(58),
 	  /* scopeId */
 	  "data-v-02def8c6",
 	  /* cssModules */
@@ -450,7 +450,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -460,7 +460,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(47);
+	var _weexConfig = __webpack_require__(49);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -486,6 +486,11 @@
 	        }
 	        navigator.push({
 	            url: url,
+	            animated: "true"
+	        });
+	    },
+	    closeActivity: function closeActivity() {
+	        navigator.pop({
 	            animated: "true"
 	        });
 	    },
@@ -541,7 +546,19 @@
 	            fetchObj.body = params;
 	        }
 	        stream.fetch(fetchObj, function (res) {
-	            callback(res);
+	            if (res.ok) {
+	                if (res.data.Head.Ret == 0) {
+	                    callback(res);
+	                } else {
+	                    api.alert(res.data.Head.Msg, function () {
+	                        api.closeActivity();
+	                    });
+	                }
+	            } else {
+	                api.alert(res.statusText, function () {
+	                    api.closeActivity();
+	                });
+	            }
 	        });
 	    },
 	    showWaiting: function showWaiting() {
@@ -623,7 +640,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -655,13 +672,13 @@
 
 /***/ }),
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(54);
+	var content = __webpack_require__(56);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -682,7 +699,7 @@
 
 /***/ }),
 
-/***/ 54:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -697,7 +714,7 @@
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -706,7 +723,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(46);
+	var _weex = __webpack_require__(48);
 
 	exports.default = {
 	    data: function data() {
@@ -939,7 +956,7 @@
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

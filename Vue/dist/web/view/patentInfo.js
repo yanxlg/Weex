@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(130)
+	__webpack_require__(132)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(132),
+	  __webpack_require__(134),
 	  /* template */
-	  __webpack_require__(133),
+	  __webpack_require__(135),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -492,7 +492,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -502,7 +502,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(47);
+	var _weexConfig = __webpack_require__(49);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -528,6 +528,11 @@
 	        }
 	        navigator.push({
 	            url: url,
+	            animated: "true"
+	        });
+	    },
+	    closeActivity: function closeActivity() {
+	        navigator.pop({
 	            animated: "true"
 	        });
 	    },
@@ -583,7 +588,19 @@
 	            fetchObj.body = params;
 	        }
 	        stream.fetch(fetchObj, function (res) {
-	            callback(res);
+	            if (res.ok) {
+	                if (res.data.Head.Ret == 0) {
+	                    callback(res);
+	                } else {
+	                    api.alert(res.data.Head.Msg, function () {
+	                        api.closeActivity();
+	                    });
+	                }
+	            } else {
+	                api.alert(res.statusText, function () {
+	                    api.closeActivity();
+	                });
+	            }
 	        });
 	    },
 	    showWaiting: function showWaiting() {
@@ -665,7 +682,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -697,7 +714,7 @@
 
 /***/ }),
 
-/***/ 64:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -707,7 +724,7 @@
 	});
 	exports.Loading = undefined;
 
-	var _loading = __webpack_require__(65);
+	var _loading = __webpack_require__(67);
 
 	var _loading2 = _interopRequireDefault(_loading);
 
@@ -719,14 +736,14 @@
 
 /***/ }),
 
-/***/ 65:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(66),
+	  __webpack_require__(68),
 	  /* template */
-	  __webpack_require__(67),
+	  __webpack_require__(69),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -754,7 +771,7 @@
 
 /***/ }),
 
-/***/ 66:
+/***/ 68:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -807,7 +824,7 @@
 
 /***/ }),
 
-/***/ 67:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -865,7 +882,7 @@
 
 /***/ }),
 
-/***/ 121:
+/***/ 123:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -875,7 +892,7 @@
 	});
 	exports.dropdown = undefined;
 
-	var _dropdown = __webpack_require__(122);
+	var _dropdown = __webpack_require__(124);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -887,7 +904,7 @@
 
 /***/ }),
 
-/***/ 122:
+/***/ 124:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -896,9 +913,9 @@
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(123),
+	  __webpack_require__(125),
 	  /* template */
-	  __webpack_require__(124),
+	  __webpack_require__(126),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -926,7 +943,7 @@
 
 /***/ }),
 
-/***/ 123:
+/***/ 125:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1014,7 +1031,7 @@
 
 /***/ }),
 
-/***/ 124:
+/***/ 126:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1067,13 +1084,13 @@
 
 /***/ }),
 
-/***/ 130:
+/***/ 132:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(131);
+	var content = __webpack_require__(133);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -1094,7 +1111,7 @@
 
 /***/ }),
 
-/***/ 131:
+/***/ 133:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1109,7 +1126,7 @@
 
 /***/ }),
 
-/***/ 132:
+/***/ 134:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1118,11 +1135,11 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(46);
+	var _weex = __webpack_require__(48);
 
-	var _index = __webpack_require__(64);
+	var _index = __webpack_require__(66);
 
-	var _index2 = __webpack_require__(121);
+	var _index2 = __webpack_require__(123);
 
 	//debug companyId:"145351189"   会造成Android动画卡顿，需要解决
 	exports.default = {
@@ -1155,10 +1172,10 @@
 	        _weex.api.addEventListener("title", function () {
 	            //下拉
 	            if (_this.anchor === "down") {
-	                _weex.api.setTitleIcon("wx_arrow_up");
+	                _weex.api.setTitleIcon("arrow_up");
 	                _this.anchor = "up";
 	            } else {
-	                _weex.api.setTitleIcon("wx_arrow_down");
+	                _weex.api.setTitleIcon("arrow_down");
 	                _this.anchor = "down";
 	            }
 	            _this.$refs.dropdown.switchView();
@@ -1166,7 +1183,7 @@
 	    },
 	    methods: {
 	        change: function change(item) {
-	            _weex.api.setTitleIcon("wx_arrow_down");
+	            _weex.api.setTitleIcon("arrow_down");
 	            this.anchor = "down";
 	            if (item) {
 	                this.type = item.type;
@@ -1293,7 +1310,7 @@
 
 /***/ }),
 
-/***/ 133:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

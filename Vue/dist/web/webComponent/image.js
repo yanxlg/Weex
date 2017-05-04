@@ -49,9 +49,9 @@
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(134),
+	  __webpack_require__(136),
 	  /* template */
-	  __webpack_require__(135),
+	  __webpack_require__(137),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -133,7 +133,7 @@
 
 /***/ }),
 
-/***/ 134:
+/***/ 136:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -171,13 +171,13 @@
 	        if (src.indexOf("local") >= 0) {
 	            src = src.replace("local:///", "dist/web/images/");
 	        }
-	        this.img = "url('" + src + "')";
+	        this.img = "url('" + src + ".png')";
 	    }
 	};
 
 /***/ }),
 
-/***/ 135:
+/***/ 137:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

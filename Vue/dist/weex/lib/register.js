@@ -279,7 +279,7 @@
 	        if (src.indexOf("local") >= 0) {
 	            src = src.replace("local:///", "dist/web/images/");
 	        }
-	        this.img = "url('" + src + "')";
+	        this.img = "url('" + src + ".png')";
 	    }
 	};
 
