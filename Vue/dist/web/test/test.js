@@ -49,9 +49,9 @@
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(43),
+	  __webpack_require__(47),
 	  /* template */
-	  __webpack_require__(44),
+	  __webpack_require__(48),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -133,19 +133,22 @@
 
 /***/ }),
 
-/***/ 43:
+/***/ 47:
 /***/ (function(module, exports) {
+
+	"use strict";
 
 	//
 	//
 	//
 	//
 	//
-	"use strict";
+
+	console.log(encode("上海巨荣投资管理合伙企业（有限合伙）"));
 
 /***/ }),
 
-/***/ 44:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

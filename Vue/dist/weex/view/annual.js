@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(31)
+	__vue_styles__.push(__webpack_require__(35)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(32)
+	__vue_exports__ = __webpack_require__(36)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(35)
+	var __vue_template__ = __webpack_require__(37)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -91,189 +91,7 @@
 
 /***/ }),
 
-/***/ 31:
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "font_padding": {
-	    "paddingTop": 4,
-	    "paddingBottom": 4
-	  },
-	  "font_bold": {
-	    "fontWeight": "700"
-	  },
-	  "font_silver": {
-	    "color": "#666666"
-	  },
-	  "font_orange": {
-	    "color": "#ffb837"
-	  },
-	  "font_size": {
-	    "fontSize": 28
-	  },
-	  "font_small": {
-	    "fontSize": 23
-	  },
-	  "font_big": {
-	    "fontSize": 35
-	  },
-	  "bg_white": {
-	    "backgroundColor": "#FFFFFF"
-	  },
-	  "bg_silver": {
-	    "backgroundColor": "#EDEDED"
-	  },
-	  "hidden": {
-	    "visibility": "hidden"
-	  },
-	  "visible": {
-	    "visibility": "visible"
-	  },
-	  "gone": {
-	    "height": 0.1,
-	    "overflow": "hidden"
-	  },
-	  "text_center": {
-	    "textAlign": "center"
-	  },
-	  "flex_1": {
-	    "flex": 1
-	  },
-	  "flex_row": {
-	    "flexDirection": "row"
-	  },
-	  "flex_col": {
-	    "flexDirection": "column"
-	  },
-	  "align_center": {
-	    "alignItems": "center"
-	  },
-	  "justify_center": {
-	    "justifyContent": "center"
-	  },
-	  "justify_start": {
-	    "justifyContent": "flex-start"
-	  },
-	  "h2": {
-	    "fontSize": 38,
-	    "fontWeight": "bold",
-	    "textAlign": "center"
-	  },
-	  "border_top": {
-	    "borderTopWidth": 1,
-	    "borderTopColor": "#d5d5d5"
-	  },
-	  "border_left": {
-	    "borderLeftWidth": 1,
-	    "borderLeftColor": "#d5d5d5"
-	  },
-	  "small_icon": {
-	    "width": 28,
-	    "height": 28
-	  },
-	  "padding_bottom": {
-	    "paddingBottom": 16
-	  },
-	  "list": {
-	    "justifyContent": "center",
-	    "paddingTop": 18,
-	    "paddingBottom": 18
-	  },
-	  "list_mt": {
-	    "marginTop": 21
-	  },
-	  "list_padding": {
-	    "paddingLeft": 18,
-	    "paddingRight": 18
-	  },
-	  "list_content": {
-	    "flex": 1,
-	    "justifyContent": "center"
-	  },
-	  "list_icon": {
-	    "width": 28,
-	    "height": 28
-	  }
-	}
-
-/***/ }),
-
-/***/ 32:
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _weex = __webpack_require__(33);
-
-	exports.default = {
-	    data: function data() {
-	        return {
-	            companyId: "",
-	            listAdapter: [],
-	            showPage: false
-	        };
-	    },
-	    created: function created() {
-	        _weex.appConfig.host = this.host;
-	        this.getList();
-	    },
-	    methods: {
-	        getList: function getList() {
-	            var _this = this;
-
-	            var $this = this;
-	            _weex.api.ajax("get", "api/CompanyApi/GetAnnualreportYearList", {
-	                CompanyID: this.companyId
-	            }, function (res) {
-	                if (res.ok) {
-	                    if (res.data.Head.Ret == 0) {
-	                        $this.listAdapter = res.data.Content;
-	                        _this.showPage = true;
-	                        setTimeout(function () {
-	                            _weex.api.closeWaiting();
-	                        }, 200);
-	                    } else {
-	                        _weex.api.toast("加载异常");
-	                        _weex.api.closeWaiting();
-	                    }
-	                } else {
-	                    _weex.api.toast("加载数据异常，请稍后再试");
-	                    _weex.api.closeWaiting();
-	                }
-	            });
-	        },
-	        gotoDetail: function gotoDetail(li) {
-	            var id = li.AnnualreportID;
-	            var title = li.reportYear + "年报详情";
-	            _weex.api.startActivity("company/annualDetail.js", {
-	                title: title,
-	                annualreportID: id,
-	                icons: "share_black"
-	            });
-	        }
-	    }
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	//debug companyId:"2973638108"
-
-/***/ }),
-
-/***/ 33:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -283,7 +101,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(34);
+	var _weexConfig = __webpack_require__(29);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -325,7 +143,7 @@
 	            var paramArray = [];
 	            for (var key in json) {
 	                var val = json[key];
-	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                var value = encode ? encodeURIComponent(val) : encodeURI(val);
 	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
@@ -463,7 +281,7 @@
 
 /***/ }),
 
-/***/ 34:
+/***/ 29:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -496,6 +314,188 @@
 /***/ }),
 
 /***/ 35:
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "font_padding": {
+	    "paddingTop": 4,
+	    "paddingBottom": 4
+	  },
+	  "font_bold": {
+	    "fontWeight": "700"
+	  },
+	  "font_silver": {
+	    "color": "#666666"
+	  },
+	  "font_orange": {
+	    "color": "#ffb837"
+	  },
+	  "font_size": {
+	    "fontSize": 28
+	  },
+	  "font_small": {
+	    "fontSize": 23
+	  },
+	  "font_big": {
+	    "fontSize": 35
+	  },
+	  "bg_white": {
+	    "backgroundColor": "#FFFFFF"
+	  },
+	  "bg_silver": {
+	    "backgroundColor": "#EDEDED"
+	  },
+	  "hidden": {
+	    "visibility": "hidden"
+	  },
+	  "visible": {
+	    "visibility": "visible"
+	  },
+	  "gone": {
+	    "height": 0.1,
+	    "overflow": "hidden"
+	  },
+	  "text_center": {
+	    "textAlign": "center"
+	  },
+	  "flex_1": {
+	    "flex": 1
+	  },
+	  "flex_row": {
+	    "flexDirection": "row"
+	  },
+	  "flex_col": {
+	    "flexDirection": "column"
+	  },
+	  "align_center": {
+	    "alignItems": "center"
+	  },
+	  "justify_center": {
+	    "justifyContent": "center"
+	  },
+	  "justify_start": {
+	    "justifyContent": "flex-start"
+	  },
+	  "h2": {
+	    "fontSize": 38,
+	    "fontWeight": "bold",
+	    "textAlign": "center"
+	  },
+	  "border_top": {
+	    "borderTopWidth": 1,
+	    "borderTopColor": "#d5d5d5"
+	  },
+	  "border_left": {
+	    "borderLeftWidth": 1,
+	    "borderLeftColor": "#d5d5d5"
+	  },
+	  "small_icon": {
+	    "width": 28,
+	    "height": 28
+	  },
+	  "padding_bottom": {
+	    "paddingBottom": 16
+	  },
+	  "list": {
+	    "justifyContent": "center",
+	    "paddingTop": 18,
+	    "paddingBottom": 18
+	  },
+	  "list_mt": {
+	    "marginTop": 21
+	  },
+	  "list_padding": {
+	    "paddingLeft": 18,
+	    "paddingRight": 18
+	  },
+	  "list_content": {
+	    "flex": 1,
+	    "justifyContent": "center"
+	  },
+	  "list_icon": {
+	    "width": 28,
+	    "height": 28
+	  }
+	}
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _weex = __webpack_require__(28);
+
+	exports.default = {
+	    data: function data() {
+	        return {
+	            companyId: "",
+	            listAdapter: [],
+	            showPage: false
+	        };
+	    },
+	    created: function created() {
+	        _weex.appConfig.host = this.host;
+	        this.getList();
+	    },
+	    methods: {
+	        getList: function getList() {
+	            var _this = this;
+
+	            var $this = this;
+	            _weex.api.ajax("get", "api/CompanyApi/GetAnnualreportYearList", {
+	                CompanyID: this.companyId
+	            }, function (res) {
+	                if (res.ok) {
+	                    if (res.data.Head.Ret == 0) {
+	                        $this.listAdapter = res.data.Content;
+	                        _this.showPage = true;
+	                        setTimeout(function () {
+	                            _weex.api.closeWaiting();
+	                        }, 200);
+	                    } else {
+	                        _weex.api.toast("加载异常");
+	                        _weex.api.closeWaiting();
+	                    }
+	                } else {
+	                    _weex.api.toast("加载数据异常，请稍后再试");
+	                    _weex.api.closeWaiting();
+	                }
+	            });
+	        },
+	        gotoDetail: function gotoDetail(li) {
+	            var id = li.AnnualreportID;
+	            var title = li.reportYear + "年报详情";
+	            _weex.api.startActivity("company/annualDetail.js", {
+	                title: title,
+	                annualreportID: id,
+	                icons: "share_black"
+	            });
+	        }
+	    }
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	//debug companyId:"2973638108"
+
+/***/ }),
+
+/***/ 37:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

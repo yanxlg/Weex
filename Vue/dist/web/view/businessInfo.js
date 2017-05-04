@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(55)
+	__webpack_require__(57)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(57),
+	  __webpack_require__(59),
 	  /* template */
-	  __webpack_require__(58),
+	  __webpack_require__(60),
 	  /* scopeId */
 	  "data-v-02def8c6",
 	  /* cssModules */
@@ -450,7 +450,7 @@
 
 /***/ }),
 
-/***/ 48:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -460,7 +460,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(49);
+	var _weexConfig = __webpack_require__(43);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -502,7 +502,7 @@
 	            var paramArray = [];
 	            for (var key in json) {
 	                var val = json[key];
-	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                var value = encode ? encodeURIComponent(val) : encodeURI(val);
 	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
@@ -640,7 +640,7 @@
 
 /***/ }),
 
-/***/ 49:
+/***/ 43:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -672,13 +672,13 @@
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(56);
+	var content = __webpack_require__(58);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -699,7 +699,7 @@
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -714,7 +714,7 @@
 
 /***/ }),
 
-/***/ 57:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -723,7 +723,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(48);
+	var _weex = __webpack_require__(42);
 
 	exports.default = {
 	    data: function data() {
@@ -956,7 +956,7 @@
 
 /***/ }),
 
-/***/ 58:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

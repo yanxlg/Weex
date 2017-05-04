@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(99)
+	__webpack_require__(101)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(101),
+	  __webpack_require__(103),
 	  /* template */
-	  __webpack_require__(111),
+	  __webpack_require__(113),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -450,7 +450,7 @@
 
 /***/ }),
 
-/***/ 48:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -460,7 +460,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(49);
+	var _weexConfig = __webpack_require__(43);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -502,7 +502,7 @@
 	            var paramArray = [];
 	            for (var key in json) {
 	                var val = json[key];
-	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                var value = encode ? encodeURIComponent(val) : encodeURI(val);
 	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
@@ -640,7 +640,7 @@
 
 /***/ }),
 
-/***/ 49:
+/***/ 43:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -672,13 +672,13 @@
 
 /***/ }),
 
-/***/ 99:
+/***/ 101:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(100);
+	var content = __webpack_require__(102);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -699,7 +699,7 @@
 
 /***/ }),
 
-/***/ 100:
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -714,7 +714,7 @@
 
 /***/ }),
 
-/***/ 101:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -723,9 +723,9 @@
 	    value: true
 	});
 
-	var _index = __webpack_require__(102);
+	var _index = __webpack_require__(104);
 
-	var _weex = __webpack_require__(48);
+	var _weex = __webpack_require__(42);
 
 	//
 	//
@@ -1092,7 +1092,7 @@
 
 /***/ }),
 
-/***/ 102:
+/***/ 104:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1102,11 +1102,11 @@
 	});
 	exports.Col = exports.Row = undefined;
 
-	var _row = __webpack_require__(103);
+	var _row = __webpack_require__(105);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _col = __webpack_require__(107);
+	var _col = __webpack_require__(109);
 
 	var _col2 = _interopRequireDefault(_col);
 
@@ -1120,18 +1120,18 @@
 
 /***/ }),
 
-/***/ 103:
+/***/ 105:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(104)
+	__webpack_require__(106)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
 	  null,
 	  /* template */
-	  __webpack_require__(106),
+	  __webpack_require__(108),
 	  /* scopeId */
 	  "data-v-a7ce483e",
 	  /* cssModules */
@@ -1159,13 +1159,13 @@
 
 /***/ }),
 
-/***/ 104:
+/***/ 106:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(105);
+	var content = __webpack_require__(107);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -1186,7 +1186,7 @@
 
 /***/ }),
 
-/***/ 105:
+/***/ 107:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1201,7 +1201,7 @@
 
 /***/ }),
 
-/***/ 106:
+/***/ 108:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1219,18 +1219,18 @@
 
 /***/ }),
 
-/***/ 107:
+/***/ 109:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(108)
+	__webpack_require__(110)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
 	  null,
 	  /* template */
-	  __webpack_require__(110),
+	  __webpack_require__(112),
 	  /* scopeId */
 	  "data-v-dbff3ef2",
 	  /* cssModules */
@@ -1258,13 +1258,13 @@
 
 /***/ }),
 
-/***/ 108:
+/***/ 110:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(109);
+	var content = __webpack_require__(111);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -1285,7 +1285,7 @@
 
 /***/ }),
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1300,7 +1300,7 @@
 
 /***/ }),
 
-/***/ 110:
+/***/ 112:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1318,7 +1318,7 @@
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

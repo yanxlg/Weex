@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(64)
+	__vue_styles__.push(__webpack_require__(66)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(65)
+	__vue_exports__ = __webpack_require__(67)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(66)
+	var __vue_template__ = __webpack_require__(68)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -91,7 +91,7 @@
 
 /***/ }),
 
-/***/ 33:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -101,7 +101,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(34);
+	var _weexConfig = __webpack_require__(29);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -143,7 +143,7 @@
 	            var paramArray = [];
 	            for (var key in json) {
 	                var val = json[key];
-	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                var value = encode ? encodeURIComponent(val) : encodeURI(val);
 	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
@@ -281,7 +281,7 @@
 
 /***/ }),
 
-/***/ 34:
+/***/ 29:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -313,7 +313,7 @@
 
 /***/ }),
 
-/***/ 64:
+/***/ 66:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -420,7 +420,7 @@
 
 /***/ }),
 
-/***/ 65:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -429,7 +429,7 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(33);
+	var _weex = __webpack_require__(28);
 
 	//debug   dishonestID:1
 	exports.default = {
@@ -530,7 +530,7 @@
 
 /***/ }),
 
-/***/ 66:
+/***/ 68:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

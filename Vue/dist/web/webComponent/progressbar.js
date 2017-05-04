@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(138)
+	__webpack_require__(140)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(140),
+	  __webpack_require__(142),
 	  /* template */
-	  __webpack_require__(141),
+	  __webpack_require__(143),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -450,13 +450,13 @@
 
 /***/ }),
 
-/***/ 138:
+/***/ 140:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(139);
+	var content = __webpack_require__(141);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -477,7 +477,7 @@
 
 /***/ }),
 
-/***/ 139:
+/***/ 141:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -492,7 +492,7 @@
 
 /***/ }),
 
-/***/ 140:
+/***/ 142:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -540,7 +540,7 @@
 
 /***/ }),
 
-/***/ 141:
+/***/ 143:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

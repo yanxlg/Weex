@@ -51,10 +51,10 @@
 	var __vue_styles__ = []
 
 	/* script */
-	__vue_exports__ = __webpack_require__(29)
+	__vue_exports__ = __webpack_require__(33)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(30)
+	var __vue_template__ = __webpack_require__(34)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -86,19 +86,22 @@
 
 /***/ }),
 
-/***/ 29:
+/***/ 33:
 /***/ (function(module, exports) {
+
+	"use strict";
 
 	//
 	//
 	//
 	//
 	//
-	"use strict";
+
+	console.log(encode("上海巨荣投资管理合伙企业（有限合伙）"));
 
 /***/ }),
 
-/***/ 30:
+/***/ 34:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

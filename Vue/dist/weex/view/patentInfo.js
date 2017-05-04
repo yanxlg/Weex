@@ -51,14 +51,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(90)
+	__vue_styles__.push(__webpack_require__(92)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(91)
+	__vue_exports__ = __webpack_require__(93)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(92)
+	var __vue_template__ = __webpack_require__(94)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -380,7 +380,7 @@
 
 /***/ }),
 
-/***/ 33:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -390,7 +390,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(34);
+	var _weexConfig = __webpack_require__(29);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -432,7 +432,7 @@
 	            var paramArray = [];
 	            for (var key in json) {
 	                var val = json[key];
-	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                var value = encode ? encodeURIComponent(val) : encodeURI(val);
 	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
@@ -570,7 +570,7 @@
 
 /***/ }),
 
-/***/ 34:
+/***/ 29:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -602,7 +602,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -612,7 +612,7 @@
 	});
 	exports.Loading = undefined;
 
-	var _loading = __webpack_require__(47);
+	var _loading = __webpack_require__(49);
 
 	var _loading2 = _interopRequireDefault(_loading);
 
@@ -624,7 +624,7 @@
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
@@ -664,7 +664,7 @@
 
 /***/ }),
 
-/***/ 84:
+/***/ 86:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -674,7 +674,7 @@
 	});
 	exports.dropdown = undefined;
 
-	var _dropdown = __webpack_require__(85);
+	var _dropdown = __webpack_require__(87);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -686,7 +686,7 @@
 
 /***/ }),
 
-/***/ 85:
+/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
@@ -731,7 +731,7 @@
 
 /***/ }),
 
-/***/ 90:
+/***/ 92:
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -853,7 +853,7 @@
 
 /***/ }),
 
-/***/ 91:
+/***/ 93:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -862,11 +862,11 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(33);
+	var _weex = __webpack_require__(28);
 
-	var _index = __webpack_require__(46);
+	var _index = __webpack_require__(48);
 
-	var _index2 = __webpack_require__(84);
+	var _index2 = __webpack_require__(86);
 
 	//debug companyId:"145351189"   会造成Android动画卡顿，需要解决
 	exports.default = {
@@ -1037,7 +1037,7 @@
 
 /***/ }),
 
-/***/ 92:
+/***/ 94:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

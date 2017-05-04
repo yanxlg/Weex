@@ -39,7 +39,7 @@ let api={
             let paramArray=[];
             for(let key in json){
                 let val=json[key];
-                let value=encode?encodeURIComponent(val):(Object.prototype.toString.call(val) === "[object String]"?val.replace(/ /g, "%20"):val);
+                let value=encode?encodeURIComponent(val):encodeURI(val);
                 paramArray.push(key+"="+(val?(value):""));
             }
             return paramArray.join("&");

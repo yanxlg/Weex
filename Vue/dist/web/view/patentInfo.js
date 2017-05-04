@@ -49,13 +49,13 @@
 
 	
 	/* styles */
-	__webpack_require__(132)
+	__webpack_require__(134)
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(134),
+	  __webpack_require__(136),
 	  /* template */
-	  __webpack_require__(135),
+	  __webpack_require__(137),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -492,7 +492,7 @@
 
 /***/ }),
 
-/***/ 48:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -502,7 +502,7 @@
 	});
 	exports.appConfig = exports.api = undefined;
 
-	var _weexConfig = __webpack_require__(49);
+	var _weexConfig = __webpack_require__(43);
 
 	var navigator = weex.requireModule("navigator"); /**
 	                                                  * Created by yxl79 on 2017/4/8.
@@ -544,7 +544,7 @@
 	            var paramArray = [];
 	            for (var key in json) {
 	                var val = json[key];
-	                var value = encode ? encodeURIComponent(val) : Object.prototype.toString.call(val) === "[object String]" ? val.replace(/ /g, "%20") : val;
+	                var value = encode ? encodeURIComponent(val) : encodeURI(val);
 	                paramArray.push(key + "=" + (val ? value : ""));
 	            }
 	            return paramArray.join("&");
@@ -682,7 +682,7 @@
 
 /***/ }),
 
-/***/ 49:
+/***/ 43:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -714,7 +714,7 @@
 
 /***/ }),
 
-/***/ 66:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -724,7 +724,7 @@
 	});
 	exports.Loading = undefined;
 
-	var _loading = __webpack_require__(67);
+	var _loading = __webpack_require__(69);
 
 	var _loading2 = _interopRequireDefault(_loading);
 
@@ -736,14 +736,14 @@
 
 /***/ }),
 
-/***/ 67:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(68),
+	  __webpack_require__(70),
 	  /* template */
-	  __webpack_require__(69),
+	  __webpack_require__(71),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -771,7 +771,7 @@
 
 /***/ }),
 
-/***/ 68:
+/***/ 70:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -824,7 +824,7 @@
 
 /***/ }),
 
-/***/ 69:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -882,7 +882,7 @@
 
 /***/ }),
 
-/***/ 123:
+/***/ 125:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -892,7 +892,7 @@
 	});
 	exports.dropdown = undefined;
 
-	var _dropdown = __webpack_require__(124);
+	var _dropdown = __webpack_require__(126);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -904,7 +904,7 @@
 
 /***/ }),
 
-/***/ 124:
+/***/ 126:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -913,9 +913,9 @@
 
 	var Component = __webpack_require__(7)(
 	  /* script */
-	  __webpack_require__(125),
+	  __webpack_require__(127),
 	  /* template */
-	  __webpack_require__(126),
+	  __webpack_require__(128),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -943,7 +943,7 @@
 
 /***/ }),
 
-/***/ 125:
+/***/ 127:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1031,7 +1031,7 @@
 
 /***/ }),
 
-/***/ 126:
+/***/ 128:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1084,13 +1084,13 @@
 
 /***/ }),
 
-/***/ 132:
+/***/ 134:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(133);
+	var content = __webpack_require__(135);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -1111,7 +1111,7 @@
 
 /***/ }),
 
-/***/ 133:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -1126,7 +1126,7 @@
 
 /***/ }),
 
-/***/ 134:
+/***/ 136:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1135,11 +1135,11 @@
 	    value: true
 	});
 
-	var _weex = __webpack_require__(48);
+	var _weex = __webpack_require__(42);
 
-	var _index = __webpack_require__(66);
+	var _index = __webpack_require__(68);
 
-	var _index2 = __webpack_require__(123);
+	var _index2 = __webpack_require__(125);
 
 	//debug companyId:"145351189"   会造成Android动画卡顿，需要解决
 	exports.default = {
@@ -1310,7 +1310,7 @@
 
 /***/ }),
 
-/***/ 135:
+/***/ 137:
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
