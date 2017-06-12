@@ -13,6 +13,7 @@ let toastModule=weex.requireModule("toastModule");
 let storage = weex.requireModule('storage');
 let share= weex.requireModule('shareModule');
 let refresh=weex.requireModule('refreshModule');
+let nav=weex.requireModule("navigatorModule");
 let api={
     startActivity:function (bundleUrl,/*Object*/params) {
         //使用json来传递，如果参数名为jsonData则原生使用json来解析
@@ -30,6 +31,9 @@ let api={
         navigator.pop({
             animated:"true"
         })
+    },
+    openController:function (type,data) {
+        nav&&nav.open(type,data);
     },
     serialize(/*Object*/ json,/*boolean*/encode){
         if(arguments.length===1){
