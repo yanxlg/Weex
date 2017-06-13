@@ -1,6 +1,6 @@
 # 新发现首页说明文档
 
-* 原生传递给Weex前端的参数
+* 实例化原生传递给Weex前端的参数
     1. Token
     2. AppType
     3. ApiType
