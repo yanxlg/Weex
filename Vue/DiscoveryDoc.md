@@ -34,5 +34,10 @@
 * 图片Adapter Protocol 添加对于placeholder占位图支持
 * IOS轮播可能存在诡异现象，需要单独定制Component
 * 如果需要下拉刷新IOS需要封装成Component,Android端已经封装完成
+    * 下拉刷新组件名：wx-refresh
+    * 支持属性：
+        1. auto：界面打开时自动触发下拉刷新操作
+        2. refresh：回调给前端的刷新事件名
+        
         
     
