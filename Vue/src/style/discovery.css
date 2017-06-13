@@ -1,0 +1,306 @@
+/**
+ * Created by yxl79 on 2017/4/10.
+ * 框架样式，基础样式  注意，scoped最好不要使用，使用后bdy等标签样式不起作用
+ * 样式能精简就精简，减少bundleJs的大小
+ */
+/**
+ * Created by yxl79 on 2017/4/10.
+ * some config data // theme
+ */
+/** only for web**/
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+body:before {
+  display: none;
+}
+body .weex-root {
+  background-color: #EDEDED;
+}
+body .weex-scroller {
+  flex: 1;
+}
+body .font_padding {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+/*fix weeb slider bug*/
+body .weex-slider-inner {
+  width: 100%!important;
+}
+/**通用**/
+.font_padding {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.font_bold {
+  font-weight: 700;
+}
+.font_silver {
+  color: #999999;
+}
+.font_orange {
+  color: #ffb837;
+}
+.font_size {
+  font-size: 28px;
+}
+.font_small {
+  font-size: 23px;
+}
+.font_big {
+  font-size: 35px;
+}
+.bg_white {
+  background-color: white;
+}
+.bg_silver {
+  background-color: #EDEDED;
+}
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.gone {
+  height: 0.1px;
+  overflow: hidden;
+}
+.text_center {
+  text-align: center;
+}
+.flex_1 {
+  flex: 1;
+}
+.flex_row {
+  flex-direction: row;
+}
+.flex_col {
+  flex-direction: column;
+}
+.align_center {
+  align-items: center;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_start {
+  justify-content: flex-start;
+}
+.h2 {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+}
+.border_top {
+  border-top-width: 1px;
+  border-top-color: #d5d5d5;
+}
+.border_left {
+  border-left-width: 1px;
+  border-left-color: #d5d5d5;
+}
+.small_icon {
+  width: 28px;
+  height: 28px;
+}
+.padding_bottom {
+  padding-bottom: 16px;
+}
+.dis_content {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.dis_header {
+  margin-top: 50px;
+  height: 40px;
+  border-left-width: 6px;
+  border-left-color: #ffd862;
+  border-left-style: solid;
+}
+.dis_title {
+  font-size: 40px;
+  margin-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.dis_index {
+  font-size: 40px;
+  color: #ffb837;
+  line-height: 40px;
+}
+.dis_total {
+  font-size: 28px;
+  color: #999999;
+  line-height: 40px;
+}
+.dis_subTitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  font-size: 28px;
+  line-height: 28px;
+}
+.dis-slider {
+  width: 750px;
+  height: 708px;
+}
+.dis-slider-item {
+  background-color: white;
+}
+.dis-slider-image {
+  height: 595px;
+  width: 744px;
+}
+.dis-slider-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 33.3px;
+}
+.dis-slider-subTitle {
+  color: #999999;
+  font-size: 31px;
+  margin-top: 22.2px;
+  padding-bottom: 55.6px;
+}
+.dis-type-space {
+  margin-left: 60px;
+}
+.dis-type-image {
+  width: 60px;
+  height: 60px;
+}
+.dis-type-text {
+  font-size: 28px;
+  margin-top: 20px;
+  line-height: 28px;
+}
+.dis-type {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top-width: 1px;
+  border-color: #d5d5d5;
+  border-style: solid;
+}
+.dis-type-item {
+  width: 90px;
+  align-items: center;
+}
+.first-space {
+  margin-left: -10px;
+}
+.dis-activity {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top-width: 1px;
+  border-color: #d5d5d5;
+  border-style: solid;
+}
+.dis-activity-item {
+  width: 325px;
+}
+.dis-activity-space {
+  margin-left: 20px;
+}
+.dis-activity-item-image {
+  width: 325px;
+  height: 260px;
+}
+.dis-activity-item-text {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  width: 325px;
+  lines: 2;
+  text-overflow: ellipsis;
+  height: 70px;
+}
+.dis-activity-item-city {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #999999;
+}
+.dis-activity-item-price {
+  font-size: 28px;
+  color: #ff3939;
+  margin-top: 20px;
+}
+.dis_more {
+  font-size: 28px;
+  color: #ffb837;
+  line-height: 28px;
+}
+.dis-border {
+  border-top-width: 1px;
+  border-top-color: #d5d5d5;
+  border-top-style: solid;
+}
+.dis-item-scroller {
+  padding-left: 20px;
+  padding-right: 40px;
+  height: 480px;
+  width: 750px;
+}
+.dis-item {
+  width: 325px;
+  margin-left: 20px;
+}
+.dis-item-img {
+  width: 325px;
+  height: 260px;
+}
+.dis-item-text {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  width: 325px;
+  lines: 1;
+  text-overflow: ellipsis;
+}
+.dis-item-city {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #999999;
+}
+.dis-item-price {
+  font-size: 28px;
+  color: #ff3939;
+  margin-top: 20px;
+}
+.net-error-icon {
+  width: 130px;
+  height: 110px;
+}
+.net-error-text {
+  font-size: 28px;
+  margin-top: 20px;
+}
+.reload-btn {
+  padding-top: 8px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+  padding-left: 14px;
+  border-width: 1px;
+  border-color: #d5d5d5;
+  border-style: solid;
+  border-radius: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.net-error-container {
+  position: absolute;
+  width: 750px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

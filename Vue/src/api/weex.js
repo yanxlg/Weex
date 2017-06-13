@@ -59,7 +59,7 @@ let api={
         }
         return rs;
     },
-    ajax:function (/*String*/type,/*String*/url,/*Object*/params,/*Function*/callback) {
+    ajax:function (/*String*/type,/*String*/url,/*Object*/params,/*Function*/callback,/*Boolean*/handClose) {
         //默认添加请求头,web中body传递参数，支持对象，weex中get需要在url传递，post可以在body中传递，具体的需要参考
         let headers={
             secret:"af2ab55f5cfe4c269a7b726e7f3fdef9"
@@ -89,14 +89,20 @@ let api={
                 if(res.data.Head.Ret == 0){
                     callback(res);
                 }else{
-                    api.alert(res.data.Head.Msg,()=>{
-                        api.closeActivity();
-                    })
+                    api.toast(res.data.Head.Msg);
+                    if(!handClose){
+                        setTimeout(function () {
+                            api.closeActivity();
+                        },1000);
+                    }
                 }
             }else{
-                api.alert(res.statusText,()=>{
-                    api.closeActivity();
-                })
+                callback(res);
+                if(!handClose){
+                    setTimeout(function () {
+                        api.closeActivity();
+                    },1000);
+                }
             }
         })
     },
