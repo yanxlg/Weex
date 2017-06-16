@@ -1,157 +1,146 @@
 <!--发现首页-->
 <template>
-    <scroller show-scrollbar="false" append="tree" :class="[showPage?'visible':'hidden']">
-        <refresh class="refresh" @refresh="refresh" :display="refreshing ? 'show' : 'hide'">
-        </refresh>
-        <div style="height: 866px;">
-            <div class="dis_content" v-if="banner">
-                <div class="dis_header flex_row">
-                    <div class="flex_1">
-                        <text class="dis_title">{{banner.Title}}</text>
-                    </div>
-                    <div class="flex_row">
-                        <text class="dis_index">{{bannerIndex}}</text>
-                        <text class="dis_total" style="line-height: 40px">/{{banner.dataCount}}</text>
-                    </div>
-                </div>
-                <text class="dis_subTitle">{{banner.SubTitle}}</text>
+    <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
+        <scroller show-scrollbar="false" append="tree" :class="[showPage?'visible':'hidden']">
+            <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
+                <image class="net-error-icon" src="local:///wx_empty_failed"></image>
+                <text class="net-error-text">{{errorText}}</text>
+                <text class="reload-btn" @click="reload">重新加载</text>
             </div>
-            <slider-neighbor v-if="banner" class="dis-slider" neighbor-scale="0.9" append="tree" neighbor-space="20" interval="3000" auto-play="true" @change="updateBannerIndex">
-                <div class="dis-slider-item" v-for="img in banner.Content" @click="openBanner(img)">
-                    <image :placeholder="placeholder" class="dis-slider-image" resize="cover" :src="img.Cover"></image>
-                    <text class="dis-slider-title">{{img.Title}}</text>
-                    <text class="dis-slider-subTitle">{{img.SubTitle}}</text>
+            <div v-if="pager" >
+                <div v-if="banner">
+                    <discoveryCarousel style="height: 740px;"  @change="openBanner" :options="banner">
+                    </discoveryCarousel>
                 </div>
-            </slider-neighbor>
-        </div>
-        <div class="dis_content">
-            <div class="flex_row dis-type">
-                <div class="dis-type-item first-space" @click="openType(0)">
-                    <image class="dis-type-image" src="local:///wx_yule"></image>
-                    <text class="dis-type-text">娱乐</text>
-                </div>
-                <div class="dis-type-space dis-type-item" @click="openType(1)">
-                    <image class="dis-type-image" src="local:///wx_huodong"></image>
-                    <text class="dis-type-text">活动</text>
-                </div>
-                <div class="dis-type-space dis-type-item" @click="openType(2)">
-                    <image class="dis-type-image" src="local:///wx_yeshenghuo"></image>
-                    <text class="dis-type-text">夜生活</text>
-                </div>
-                <div class="dis-type-space dis-type-item" @click="openType(3)">
-                    <image class="dis-type-image" src="local:///wx_siyan"></image>
-                    <text class="dis-type-text">私宴</text>
-                </div>
-                <div class="dis-type-space dis-type-item" @click="openType(4)">
-                    <image class="dis-type-image" src="local:///wx_lipin"></image>
-                    <text class="dis-type-text">礼品</text>
-                </div>
-            </div>
-        </div>
-        <div class="dis_content" v-if="activities">
-            <div class="dis-activity flex_row">
-                <div v-for="(activity,index) in activities.Content" :class="['dis-activity-item',index===0?'':'dis-activity-space']" @click="openDetail(activity)">
-                    <image :placeholder="placeholder" class="dis-activity-item-image" resize="cover" :src="activity.Cover"></image>
-                    <text class="dis-activity-item-text">{{activity.Title}}</text>
-                    <text class="dis-activity-item-city">{{activity.Address}}</text>
-                    <text class="dis-activity-item-price">{{activity.Price}}</text>
-                </div>
-            </div>
-        </div>
-        <div v-if="entertainment">
-            <div class="dis_content">
-                <div class="dis-border">
-                    <div class="dis_header flex_row ">
-                        <div class="flex_1">
-                            <text class="dis_title">{{entertainment.Title}}</text>
+                <div class="dis_content">
+                    <div class="flex_row dis-type">
+                        <div class="dis-type-item first-space" @click="openType(0)">
+                            <image class="dis-type-image" src="local:///wx_yule"></image>
+                            <text class="dis-type-text">娱乐</text>
                         </div>
-                        <div class="flex_row">
-                            <text class="dis_more" @click="openMore(entertainment)">查看更多</text>
+                        <div class="dis-type-space dis-type-item" @click="openType(1)">
+                            <image class="dis-type-image" src="local:///wx_huodong"></image>
+                            <text class="dis-type-text">活动</text>
+                        </div>
+                        <div class="dis-type-space dis-type-item" @click="openType(2)">
+                            <image class="dis-type-image" src="local:///wx_yeshenghuo"></image>
+                            <text class="dis-type-text">夜生活</text>
+                        </div>
+                        <div class="dis-type-space dis-type-item" @click="openType(3)">
+                            <image class="dis-type-image" src="local:///wx_siyan"></image>
+                            <text class="dis-type-text">私宴</text>
+                        </div>
+                        <div class="dis-type-space dis-type-item" @click="openType(4)">
+                            <image class="dis-type-image" src="local:///wx_lipin"></image>
+                            <text class="dis-type-text">礼品</text>
                         </div>
                     </div>
-                    <text class="dis_subTitle">{{entertainment.SubTitle}}</text>
                 </div>
-            </div>
-            <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
-                <div class="dis-item" v-for="en in entertainment.Content" @click="openDetail(en)">
-                    <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="en.Cover"></image>
-                    <text class="dis-item-text">{{en.Title}}</text>
-                    <text class="dis-item-city">{{en.Address}}</text>
-                    <text class="dis-item-price">{{en.Price}}</text>
-                </div>
-            </scroller>
-        </div>
-        <div v-if="nightLife">
-            <div class="dis_content">
-                <div class="dis-border">
-                    <div class="dis_header flex_row ">
-                        <div class="flex_1">
-                            <text class="dis_title">{{nightLife.Title}}</text>
-                        </div>
-                        <div class="flex_row">
-                            <text class="dis_more" @click="openMore(nightLife)">查看更多</text>
+                <div class="dis_content" v-if="activities">
+                    <div class="dis-activity flex_row">
+                        <div v-for="(activity,index) in activities.Content" :class="['dis-activity-item',index===0?'':'dis-activity-space']" @click="openDetail(activity)">
+                            <image :placeholder="placeholder" class="dis-activity-item-image" resize="cover" :src="activity.Cover"></image>
+                            <text class="dis-activity-item-text">{{activity.Title}}</text>
+                            <text class="dis-activity-item-city">{{activity.Address}}</text>
+                            <text class="dis-activity-item-price">{{activity.Price}}</text>
                         </div>
                     </div>
-                    <text class="dis_subTitle">{{nightLife.SubTitle}}</text>
                 </div>
-            </div>
-
-            <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
-                <div class="dis-item" v-for="nf in nightLife.Content" @click="openDetail(nf)">
-                    <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
-                    <text class="dis-item-text">{{nf.Title}}</text>
-                    <text class="dis-item-city">{{nf.Address}}</text>
-                    <text class="dis-item-price">{{nf.Price}}</text>
-                </div>
-            </scroller>
-        </div>
-        <div v-if="privateBanquet">
-            <div class="dis_content">
-                <div class="dis-border">
-                    <div class="dis_header flex_row ">
-                        <div class="flex_1">
-                            <text class="dis_title">{{privateBanquet.Title}}</text>
-                        </div>
-                        <div class="flex_row">
-                            <text class="dis_more" @click="openMore(privateBanquet)">查看更多</text>
+                <div v-if="entertainment">
+                    <div class="dis_content">
+                        <div class="dis-border">
+                            <div class="dis_header flex_row align_center">
+                                <div class="flex_1">
+                                    <text class="dis_title">{{entertainment.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_more" @click="openMore(entertainment)">查看更多</text>
+                                </div>
+                            </div>
+                            <text class="dis_subTitle">{{entertainment.SubTitle}}</text>
                         </div>
                     </div>
-                    <text class="dis_subTitle">{{privateBanquet.SubTitle}}</text>
-                </div>
-            </div>
-            <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
-                <div class="dis-item" v-for="nf in privateBanquet.Content" @click="openDetail(nf)">
-                    <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
-                    <text class="dis-item-text">{{nf.Title}}</text>
-                    <text class="dis-item-city">{{nf.Address}}</text>
-                    <text class="dis-item-price">{{nf.Price}}</text>
-                </div>
-            </scroller>
-        </div>
-        <div v-if="gift">
-            <div class="dis_content">
-                <div class="dis-border">
-                    <div class="dis_header flex_row ">
-                        <div class="flex_1">
-                            <text class="dis_title">{{gift.Title}}</text>
+                    <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
+                        <div class="dis-item" v-for="en in entertainment.Content" @click="openDetail(en)">
+                            <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="en.Cover"></image>
+                            <text class="dis-item-text">{{en.Title}}</text>
+                            <text class="dis-item-city">{{en.Address}}</text>
+                            <text class="dis-item-price">{{en.Price}}</text>
                         </div>
-                        <div class="flex_row">
-                            <text class="dis_more" @click="openMore(gift)">查看更多</text>
+                    </scroller>
+                </div>
+                <div v-if="nightLife">
+                    <div class="dis_content">
+                        <div class="dis-border">
+                            <div class="dis_header flex_row align_center">
+                                <div class="flex_1">
+                                    <text class="dis_title">{{nightLife.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_more" @click="openMore(nightLife)">查看更多</text>
+                                </div>
+                            </div>
+                            <text class="dis_subTitle">{{nightLife.SubTitle}}</text>
                         </div>
                     </div>
-                    <text class="dis_subTitle">{{gift.SubTitle}}</text>
+                    <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
+                        <div class="dis-item" v-for="nf in nightLife.Content" @click="openDetail(nf)">
+                            <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
+                            <text class="dis-item-text">{{nf.Title}}</text>
+                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-price">{{nf.Price}}</text>
+                        </div>
+                    </scroller>
+                </div>
+                <div v-if="privateBanquet">
+                    <div class="dis_content">
+                        <div class="dis-border">
+                            <div class="dis_header flex_row align_center">
+                                <div class="flex_1">
+                                    <text class="dis_title">{{privateBanquet.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_more" @click="openMore(privateBanquet)">查看更多</text>
+                                </div>
+                            </div>
+                            <text class="dis_subTitle">{{privateBanquet.SubTitle}}</text>
+                        </div>
+                    </div>
+                    <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
+                        <div class="dis-item" v-for="nf in privateBanquet.Content" @click="openDetail(nf)">
+                            <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
+                            <text class="dis-item-text">{{nf.Title}}</text>
+                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-price">{{nf.Price}}</text>
+                        </div>
+                    </scroller>
+                </div>
+                <div v-if="gift">
+                    <div class="dis_content">
+                        <div class="dis-border">
+                            <div class="dis_header flex_row align_center">
+                                <div class="flex_1">
+                                    <text class="dis_title">{{gift.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_more" @click="openMore(gift)">查看更多</text>
+                                </div>
+                            </div>
+                            <text class="dis_subTitle">{{gift.SubTitle}}</text>
+                        </div>
+                    </div>
+                    <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
+                        <div class="dis-item" v-for="nf in gift.Content" @click="openDetail(nf)">
+                            <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
+                            <text class="dis-item-text">{{nf.Title}}</text>
+                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-price">{{nf.Price}}</text>
+                        </div>
+                    </scroller>
                 </div>
             </div>
-            <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
-                <div class="dis-item" v-for="nf in gift.Content" @click="openDetail(nf)">
-                    <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
-                    <text class="dis-item-text">{{nf.Title}}</text>
-                    <text class="dis-item-city">{{nf.Address}}</text>
-                    <text class="dis-item-price">{{nf.Price}}</text>
-                </div>
-            </scroller>
-        </div>
-    </scroller>
+        </scroller>
+    </wx-refresh>
 </template>
 <style src="../style/discovery.css"></style>
 <script>
@@ -159,7 +148,7 @@
     export default {
         data(){
             let defaultObj={
-                showPage:true,
+                showPage:false,
                 banner:null,
                 activities:null,
                 entertainment:null,
@@ -169,7 +158,8 @@
                 cityCode:"",
                 bannerIndex:1,
                 placeholder:"local:///wx_placeholder_5_4",
-                refreshing: false,
+                errorText:false,
+                pager:true,
             };
             api.getStore("discoverIndexList",function (e){
                 let data=e.data;
@@ -182,6 +172,8 @@
                     defaultObj.nightLife=data[3];
                     defaultObj.privateBanquet=data[4];
                     defaultObj.gift=data[5];
+                    defaultObj.errorText=false;
+                    defaultObj.pager=true;
                 }
             });
             return defaultObj;
@@ -191,15 +183,9 @@
             let _this=this;
             api.addEventListener("discoveryLoad",function (e) {
                 _this.getData(e.code);//城市code
-            })
+            });
         },
         methods:{
-            onrefresh (event) {
-                this.refreshing = true;
-                setTimeout(() => {
-                    this.refreshing = false
-                }, 2000)
-            },
             getData:function (code) {
                 let $this=this,refresh=false;
                 if(code){
@@ -208,21 +194,19 @@
                 }else{
                     code=$this.cityCode;
                     refresh=true;
-                    this.refreshing=true;
                 }
                 api.ajax("get","api/DiscoveryApi/GetDiscoveryIndexInfo",{
                     CityCode:code,
                     token:$this.Token
                 },res=>{
                     refresh&&api.setRefreshState(this.$refs.refresh,false);
-                    refresh&&($this.refreshing = false);
                     if(res.ok){
+                        $this.showPage=true;
+                        $this.errorText=false;
+                        $this.pager=true;
                         if(res.data.Head.Ret==0){
                             let datalist=res.data.Content.datalist;
-                            $this.banner=null;
-                            setTimeout(function () {
-                                $this.banner=datalist[0];
-                            },0);
+                            $this.banner=datalist[0];
                             $this.activities=datalist[1];
                             $this.entertainment=datalist[2];
                             $this.nightLife=datalist[3];
@@ -239,7 +223,13 @@
                             }
                         }
                     }else{
-                        api.toast("加载数据异常，请稍后再试");
+                        $this.showPage=true;
+                        let errText=res.statusText||"似乎已断开与互联网的连接...";
+                        api.toast(errText);
+                        if(!$this.banner){
+                            $this.errorText=errText;
+                            $this.pager=false;
+                        }
                         if(!refresh){
                             api.closeWaiting();
                         }
@@ -249,7 +239,9 @@
             updateBannerIndex:function (e) {
                 this.bannerIndex=e.index+1;
             },
-            openBanner:function (item) {
+            openBanner:function (e) {
+                let index=parseInt(e.index);
+                let item=this.banner.Content[index];
                 api.openController("discoverSpecial",item);
             },
             openType:function (index) {
@@ -296,8 +288,11 @@
             openMore:function (item) {
                 api.openController("dis_more",item);
             },
-            refresh:function () {
+            refreshEve:function () {
                 this.getData();
+            },
+            reload:function () {
+                this.getData(this.cityCode);
             }
         }
     }

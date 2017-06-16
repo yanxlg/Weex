@@ -121,7 +121,6 @@ body .weex-slider-inner {
 }
 .dis_header {
   margin-top: 50px;
-  height: 40px;
   border-left-width: 6px;
   border-left-color: #ffd862;
   border-left-style: solid;
@@ -129,8 +128,6 @@ body .weex-slider-inner {
 .dis_title {
   font-size: 40px;
   margin-left: 10px;
-  height: 40px;
-  line-height: 40px;
   font-weight: 700;
 }
 .dis_index {

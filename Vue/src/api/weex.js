@@ -175,7 +175,11 @@ let api={
     },
     setRefreshState:function (/*String*/ref, /*boolean*/refreshing) {
         refresh&&(function () {
-            refresh.setRefresh(ref,refreshing);
+            if(weex.config.env.platform==="android"){
+                refresh.setRefresh(ref,refreshing);
+            }else{
+                refresh.setRefresh(refreshing);
+            }
         }())
     }
 };

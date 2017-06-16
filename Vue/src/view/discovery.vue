@@ -2,7 +2,7 @@
 <template>
     <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
         <scroller show-scrollbar="false" append="tree" :class="[showPage?'visible':'hidden']">
-            <div v-if="errorText" class="net-error-container align_center justify_center">
+            <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
                 <image class="net-error-icon" src="local:///wx_empty_failed"></image>
                 <text class="net-error-text">{{errorText}}</text>
                 <text class="reload-btn" @click="reload">重新加载</text>
