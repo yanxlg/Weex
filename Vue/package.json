@@ -15,27 +15,27 @@
     "debug": "weex-devtool"
   },
   "dependencies": {
-    "vue":"^2.3.4",
-    "vue-router":"^2.5.3",
-    "vuex":"^2.3.1",
-    "vuex-router-sync":"^4.2.0",
-    "weex-vue-render":"^0.11.48"
+    "vue": "^2.3.4",
+    "vue-router": "^2.6.0",
+    "vuex": "^2.3.1",
+    "vuex-router-sync": "^4.2.0",
+    "weex-vue-render": "^0.11.50"
   },
   "devDependencies": {
-    "babel-core":"^6.24.1",
-    "babel-loader":"^7.0.0",
-    "babel-preset-env":"^1.5.2",
-    "babel-preset-es2015":"^6.24.1",
-    "css-loader":"^0.28.4",
-    "ip":"^1.1.5",
-    "serve":"^5.2.2",
-    "url-loader":"^0.5.8",
-    "file-loader":"^0.11.2",
-    "vue-loader":"^12.2.1",
-    "vue-template-compiler":"^2.3.4",
-    "webpack": "^1.15.0",
-    "weex-devtool":"^0.2.80",
-    "weex-loader":"^0.4.4",
-    "weex-vue-loader":"^0.2.12"
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "ip": "^1.1.5",
+    "serve": "^5.2.2",
+    "url-loader": "^0.5.9",
+    "file-loader": "^0.11.2",
+    "vue-loader": "^12.2.1",
+    "vue-template-compiler": "^2.3.4",
+    "webpack": "^2.6.1",
+    "weex-devtool": "^0.2.80",
+    "weex-loader": "^0.4.4",
+    "weex-vue-loader": "^0.2.12"
   }
 }
