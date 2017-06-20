@@ -2,12 +2,7 @@
 <template>
     <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
         <scroller show-scrollbar="false" append="tree" :class="[showPage?'visible':'hidden']">
-            <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
-                <image class="net-error-icon" src="local:///wx_empty_failed"></image>
-                <text class="net-error-text">{{errorText}}</text>
-                <text class="reload-btn" @click="reload">重新加载</text>
-            </div>
-            <div v-if="pager" >
+            <div>
                 <div v-if="banner">
                     <discoveryCarousel style="height: 740px;"  @change="openBanner" :options="banner">
                     </discoveryCarousel>
@@ -140,11 +135,17 @@
                 </div>
             </div>
         </scroller>
+        <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
+            <image class="net-error-icon" src="local:///wx_empty_failed"></image>
+            <text class="net-error-text">{{errorText}}</text>
+            <text class="reload-btn" @click="reload">重新加载</text>
+        </div>
     </wx-refresh>
 </template>
 <style src="../style/discovery.css"></style>
 <script>
     import {api,appConfig} from "../api/weex";
+    const storage = weex.requireModule('storage');
     export default {
         data(){
             let defaultObj={
@@ -158,12 +159,10 @@
                 cityCode:"",
                 bannerIndex:1,
                 placeholder:"local:///wx_placeholder_5_4",
-                errorText:false,
-                pager:true,
+                errorText:false
             };
-            api.getStore("discoverIndexList",function (e){
-                let data=e.data;
-                if(data){
+            api.getStore("discoverIndexList",function (data){
+                if(data&&data!="undefined"){
                     data=JSON.parse(data);
                     defaultObj.showPage=true;
                     defaultObj.banner=data[0];
@@ -173,7 +172,6 @@
                     defaultObj.privateBanquet=data[4];
                     defaultObj.gift=data[5];
                     defaultObj.errorText=false;
-                    defaultObj.pager=true;
                 }
             });
             return defaultObj;
@@ -203,7 +201,6 @@
                     if(res.ok){
                         $this.showPage=true;
                         $this.errorText=false;
-                        $this.pager=true;
                         if(res.data.Head.Ret==0){
                             let datalist=res.data.Content.datalist;
                             $this.banner=datalist[0];
@@ -223,12 +220,11 @@
                             }
                         }
                     }else{
-                        $this.showPage=true;
                         let errText=res.statusText||"似乎已断开与互联网的连接...";
                         api.toast(errText);
                         if(!$this.banner){
                             $this.errorText=errText;
-                            $this.pager=false;
+                            $this.showPage=false;
                         }
                         if(!refresh){
                             api.closeWaiting();

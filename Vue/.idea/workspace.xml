@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f24bd2b-2b16-41b4-a238-6738b740aa43" name="Default" comment="[change] change project from weexpack to weex">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/test.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/discovery.vue" afterPath="$PROJECT_DIR$/src/view/discovery.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/discovery_ios.vue" afterPath="$PROJECT_DIR$/src/view/discovery_ios.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,16 +23,12 @@
       <file leaf-file-name="discovery.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/discovery.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3059">
-              <caret line="260" column="43" lean-forward="false" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
+            <state relative-caret-position="190">
+              <caret line="180" column="14" lean-forward="true" selection-start-line="180" selection-start-column="14" selection-end-line="180" selection-end-column="14" />
               <folding>
+                <element signature="n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#text#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,15 +37,36 @@
       <file leaf-file-name="discovery_ios.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/discovery_ios.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="210" column="60" lean-forward="false" selection-start-line="210" selection-start-column="60" selection-end-line="210" selection-end-column="60" />
+            <state relative-caret-position="627">
+              <caret line="164" column="42" lean-forward="false" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="42" />
               <folding>
-                <element signature="n#style#0;n#discoveryCarousel#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#div#3;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#12933#14131#0" expanded="false" />
+                <element signature="n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#discoveryCarousel#0;n#div#0;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#div#6;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="e#12783#13981#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dishonestDetail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="101" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="discovery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/discovery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="1355" column="0" lean-forward="true" selection-start-line="1355" selection-start-column="0" selection-end-line="1355" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,8 +74,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="475">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -132,16 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="annualDetail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/annualDetail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5643">
-              <caret line="297" column="20" lean-forward="false" selection-start-line="297" selection-start-column="4" selection-end-line="297" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="discovery.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/style/discovery.less">
           <provider selected="true" editor-type-id="text-editor">
@@ -166,7 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.dis-border</find>
       <find>dis_header</find>
       <find>dis-type</find>
       <find>dis-item</find>
@@ -180,7 +185,6 @@
       <find>Title</find>
       <find>Slider</find>
       <find>Img</find>
-      <find>alert</find>
       <find>showPage</find>
       <find>reload</find>
       <find>dis_title</find>
@@ -196,6 +200,8 @@
       <find>openBanner</find>
       <find>banner</find>
       <find>native-or-bluebird</find>
+      <find>pager</find>
+      <find>alert</find>
     </findStrings>
     <replaceStrings>
       <replace>pngEntry</replace>
@@ -215,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/Activityf76787bb-0da0-403e-b6b2-442af5aa026a.html" />
         <option value="$PROJECT_DIR$/src/test/Activityc21a45e2-7033-4c6b-9987-c8db93b49706.html" />
         <option value="$PROJECT_DIR$/src/test/Activity88e52559-c917-4a6d-97f8-d0e910991baf.html" />
         <option value="$PROJECT_DIR$/src/test/template.css" />
@@ -260,12 +265,13 @@
         <option value="$PROJECT_DIR$/src/test/slider.vue" />
         <option value="$PROJECT_DIR$/src/api/weex.js" />
         <option value="$PROJECT_DIR$/src/test/test.vue" />
-        <option value="$PROJECT_DIR$/src/view/discovery.vue" />
         <option value="$USER_HOME$/Desktop/discovery/discovery.js" />
         <option value="$PROJECT_DIR$/src/style/discovery.css" />
         <option value="$PROJECT_DIR$/src/style/discovery.less" />
-        <option value="$PROJECT_DIR$/src/view/discovery_ios.vue" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$USER_HOME$/Desktop/discovery.js" />
+        <option value="$PROJECT_DIR$/src/view/discovery_ios.vue" />
+        <option value="$PROJECT_DIR$/src/view/discovery.vue" />
       </list>
     </option>
   </component>
@@ -343,14 +349,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,6 +422,16 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="false" name="debug" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="debug" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -464,6 +498,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="npm.debug" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="npm.debug" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -529,7 +571,8 @@
       <workItem from="1497488325625" duration="18157000" />
       <workItem from="1497574674489" duration="8747000" />
       <workItem from="1497853438610" duration="1804000" />
-      <workItem from="1497861455105" duration="595000" />
+      <workItem from="1497861455105" duration="3038000" />
+      <workItem from="1497920249913" duration="9205000" />
     </task>
     <task id="LOCAL-00001" summary="[change] change project from weexpack to weex">
       <created>1493112742977</created>
@@ -699,11 +742,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497613143087</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="升级nodejs 和npm版本 升级依赖包版本">
+      <created>1497862078417</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1497862078417</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356231000" />
+    <option name="totallyTimeSpent" value="367879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -717,16 +767,17 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.496208" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5124594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.503792" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5124594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42686892" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Weex Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32286024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -766,7 +817,8 @@
     <MESSAGE value="update doc" />
     <MESSAGE value="add" />
     <MESSAGE value="discovery finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="discovery finish" />
+    <MESSAGE value="升级nodejs 和npm版本 升级依赖包版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="升级nodejs 和npm版本 升级依赖包版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -775,35 +827,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/vue/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="164" column="86" lean-forward="true" selection-start-line="164" selection-start-column="86" selection-end-line="164" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/company/annual.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/wx_yule.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/wx_lipin.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-746">
-          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/annual.vue">
@@ -1070,35 +1096,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/weex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="186" column="0" lean-forward="false" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/discovery/discovery.js" />
     <entry file="file://$PROJECT_DIR$/weex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/discovery.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3059">
-          <caret line="260" column="43" lean-forward="false" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#text#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1131,20 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/discovery_ios.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="210" column="60" lean-forward="false" selection-start-line="210" selection-start-column="60" selection-end-line="210" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#discoveryCarousel#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#12933#14131#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Node/modules/node_modules/webpack/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1156,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,14 +1152,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="3360" column="6" lean-forward="true" selection-start-line="3360" selection-start-column="6" selection-end-line="3360" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vue/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vue-template-compiler/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/weex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="149" column="34" lean-forward="true" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/discovery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="1355" column="0" lean-forward="true" selection-start-line="1355" selection-start-column="0" selection-end-line="1355" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/dishonestDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="101" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/discovery_ios.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="164" column="42" lean-forward="false" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="42" />
+          <folding>
+            <element signature="n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#discoveryCarousel#0;n#div#0;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#12783#13981#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/discovery.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="180" column="14" lean-forward="true" selection-start-line="180" selection-start-column="14" selection-end-line="180" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#text#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#scroller#0;n#wx-refresh#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="475">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>

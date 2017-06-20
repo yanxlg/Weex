@@ -1,7 +1,7 @@
 <!--发现首页-->
 <template>
     <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
-        <scroller show-scrollbar="false" append="tree" :class="[showPage?'visible':'hidden']">
+        <scroller show-scrollbar="false" append="tree">
             <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
                 <image class="net-error-icon" src="local:///wx_empty_failed"></image>
                 <text class="net-error-text">{{errorText}}</text>
@@ -166,7 +166,7 @@
     export default {
         data(){
             let defaultObj={
-                showPage:false,
+                showPage:true,
                 banner:null,
                 activities:null,
                 entertainment:null,
@@ -179,26 +179,25 @@
                 errorText:false,
                 pager:true,
             };
-            api.getStore("discoverIndexList",function (e){
-                let data=e.data;
-                if(data){
-                    data=JSON.parse(data);
-                    defaultObj.showPage=true;
-                    defaultObj.banner=data[0];
-                    defaultObj.activities=data[1];
-                    defaultObj.entertainment=data[2];
-                    defaultObj.nightLife=data[3];
-                    defaultObj.privateBanquet=data[4];
-                    defaultObj.gift=data[5];
-                    defaultObj.errorText=false;
-                    defaultObj.pager=true;
-                }
-            });
             return defaultObj;
         },
         created(){
-            appConfig.host=this.host;
             let _this=this;
+            api.getStore("discoverIndexList",function (data){
+                if(data&&data!="undefined"){
+                    data=JSON.parse(data);
+                    _this.showPage=true;
+                    _this.banner=data[0];
+                    _this.activities=data[1];
+                    _this.entertainment=data[2];
+                    _this.nightLife=data[3];
+                    _this.privateBanquet=data[4];
+                    _this.gift=data[5];
+                    _this.errorText=false;
+                    _this.pager=true;
+                }
+            });
+            appConfig.host=this.host;
             api.addEventListener("discoveryLoad",function (e) {
                 _this.getData(e.code);//城市code
             });
