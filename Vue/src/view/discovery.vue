@@ -2,26 +2,23 @@
 <template>
     <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
         <scroller show-scrollbar="false" append="tree">
-            <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
-                <image class="net-error-icon" src="local:///wx_empty_failed"></image>
-                <text class="net-error-text">{{errorText}}</text>
-                <text class="reload-btn" @click="reload">重新加载</text>
-            </div>
-            <div v-if="pager">
-                <div style="height: 866px;">
-                    <div class="dis_content" v-if="banner">
-                        <div class="dis_header flex_row">
+            <!--有数据-->
+            <div v-if="status=='1'">
+                <div v-if="banner" style="height: 866px;">
+                    <div class="dis_content" >
+                        <div class="dis_header flex_row ">
+                            <div class="dis_bar"></div>
                             <div class="flex_1">
                                 <text class="dis_title">{{banner.Title}}</text>
                             </div>
                             <div class="flex_row">
-                                <text class="dis_index">{{bannerIndex}}</text>
-                                <text class="dis_total" style="line-height: 40px">/{{banner.dataCount}}</text>
+                                <text class="dis_index" style="line-height: 40px">{{bannerIndex}}</text>
+                                <text class="dis_total" style="line-height: 48px">/{{banner.dataCount}}</text>
                             </div>
                         </div>
                         <text class="dis_subTitle">{{banner.SubTitle}}</text>
                     </div>
-                    <slider-neighbor v-if="banner" class="dis-slider" neighbor-scale="0.9" append="tree" neighbor-space="20" interval="3000" auto-play="true" @change="updateBannerIndex">
+                    <slider-neighbor class="dis-slider" neighbor-scale="0.9" append="tree" neighbor-space="20" interval="3000" :auto-play="banner.Content.length>2" @change="updateBannerIndex">
                         <div class="dis-slider-item" v-for="img in banner.Content" @click="openBanner(img)">
                             <image :placeholder="placeholder" class="dis-slider-image" resize="cover" :src="img.Cover"></image>
                             <text class="dis-slider-title">{{img.Title}}</text>
@@ -29,7 +26,7 @@
                         </div>
                     </slider-neighbor>
                 </div>
-                <div class="dis_content">
+                <div v-if="banner||activities||entertainment||nightLife||privateBanquet||gift" class="dis_content">
                     <div class="flex_row dis-type">
                         <div class="dis-type-item first-space" @click="openType(0)">
                             <image class="dis-type-image" src="local:///wx_yule"></image>
@@ -67,6 +64,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{entertainment.Title}}</text>
                                 </div>
@@ -81,7 +79,7 @@
                         <div class="dis-item" v-for="en in entertainment.Content" @click="openDetail(en)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="en.Cover"></image>
                             <text class="dis-item-text">{{en.Title}}</text>
-                            <text class="dis-item-city">{{en.Address}}</text>
+                            <text class="dis-item-city">{{en.SubTitle}}</text>
                             <text class="dis-item-price">{{en.Price}}</text>
                         </div>
                     </scroller>
@@ -90,6 +88,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{nightLife.Title}}</text>
                                 </div>
@@ -100,12 +99,11 @@
                             <text class="dis_subTitle">{{nightLife.SubTitle}}</text>
                         </div>
                     </div>
-
                     <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
                         <div class="dis-item" v-for="nf in nightLife.Content" @click="openDetail(nf)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
                             <text class="dis-item-text">{{nf.Title}}</text>
-                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-city">{{nf.SubTitle}}</text>
                             <text class="dis-item-price">{{nf.Price}}</text>
                         </div>
                     </scroller>
@@ -114,6 +112,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{privateBanquet.Title}}</text>
                                 </div>
@@ -128,7 +127,7 @@
                         <div class="dis-item" v-for="nf in privateBanquet.Content" @click="openDetail(nf)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
                             <text class="dis-item-text">{{nf.Title}}</text>
-                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-city">{{nf.SubTitle}}</text>
                             <text class="dis-item-price">{{nf.Price}}</text>
                         </div>
                     </scroller>
@@ -137,6 +136,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{gift.Title}}</text>
                                 </div>
@@ -151,11 +151,23 @@
                         <div class="dis-item" v-for="nf in gift.Content" @click="openDetail(nf)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
                             <text class="dis-item-text">{{nf.Title}}</text>
-                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-city">{{nf.SubTitle}}</text>
                             <text class="dis-item-price">{{nf.Price}}</text>
                         </div>
                     </scroller>
                 </div>
+            </div>
+            <!--无网络-->
+            <div v-if="status=='-1'" class="flex_1 net-error-container align_center justify_center" style="background-color: #f2f2f2">
+                <image style="width: 182px;height: 182px;" src="local:///wx_empty_failed"></image>
+                <text style="margin-top: 46px;color: black;font-size: 32px">数据加载失败</text>
+                <text style="color: #999999;font-size: 28px;margin-top: 22px">请重新加载</text>
+                <text class="reload-btn" style="margin-top: 22px;width: 146px;height: 46px;color: #666666;font-size: 28px;text-align: center;padding-top: 6px;" @click="reload">重新加载</text>
+            </div>
+            <!--无数据-->
+            <div v-if="status=='0'" class="flex_1 net-error-container align_center justify_center" style="background-color: #f2f2f2">
+                <image style="width: 242px;height: 203px;" src="local:///wx_noresultpicture"></image>
+                <text style="margin-top: 46px;color: black;font-size: 32px">暂无相关数据~</text>
             </div>
         </scroller>
     </wx-refresh>
@@ -165,8 +177,8 @@
     import {api,appConfig} from "../api/weex";
     export default {
         data(){
-            let defaultObj={
-                showPage:true,
+            return {
+                status:"1",
                 banner:null,
                 activities:null,
                 entertainment:null,
@@ -175,26 +187,21 @@
                 gift:null,
                 cityCode:"",
                 bannerIndex:1,
-                placeholder:"local:///wx_placeholder_5_4",
-                errorText:false,
-                pager:true,
+                placeholder:"local:///wx_placeholder_5_4"
             };
-            return defaultObj;
         },
         created(){
             let _this=this;
             api.getStore("discoverIndexList",function (data){
                 if(data&&data!="undefined"){
                     data=JSON.parse(data);
-                    _this.showPage=true;
+                    _this.status="1";
                     _this.banner=data[0];
                     _this.activities=data[1];
                     _this.entertainment=data[2];
                     _this.nightLife=data[3];
                     _this.privateBanquet=data[4];
                     _this.gift=data[5];
-                    _this.errorText=false;
-                    _this.pager=true;
                 }
             });
             appConfig.host=this.host;
@@ -204,56 +211,54 @@
         },
         methods:{
             getData:function (code) {
-                let $this=this,refresh=false;
+                if(code===-1){
+                    this.status="-1";
+                    return;
+                }
+                let $this=this;
                 if(code){
                     $this.cityCode=code;
-                    api.showWaiting();
+                    api.setRefreshState(this.$refs.refresh,true);
                 }else{
                     code=$this.cityCode;
-                    refresh=true;
                 }
                 api.ajax("get","api/DiscoveryApi/GetDiscoveryIndexInfo",{
                     CityCode:code,
                     token:$this.Token
                 },res=>{
-                    refresh&&api.setRefreshState(this.$refs.refresh,false);
                     if(res.ok){
-                        $this.showPage=true;
-                        $this.errorText=false;
-                        $this.pager=true;
                         if(res.data.Head.Ret==0){
                             let datalist=res.data.Content.datalist;
-                            $this.banner=null;
-                            setTimeout(function () {
-                                $this.banner=datalist[0];
-                            },0);
-                            $this.activities=datalist[1];
-                            $this.entertainment=datalist[2];
-                            $this.nightLife=datalist[3];
-                            $this.privateBanquet=datalist[4];
-                            $this.gift=datalist[5];
-                            api.store("discoverIndexList",JSON.stringify(datalist));
-                            if(!refresh){
-                                api.closeWaiting();
+                            if(datalist.length>0){
+                                $this.status="1";
+                                let newBanner=datalist[0];
+                                newBanner.updateTime=new Date().getTime();
+                                $this.banner=newBanner;
+                                $this.activities=datalist[1];
+                                $this.entertainment=datalist[2];
+                                $this.nightLife=datalist[3];
+                                $this.privateBanquet=datalist[4];
+                                $this.gift=datalist[5];
+                                api.store("discoverIndexList",JSON.stringify(datalist));
+                            }else{
+                                $this.status="0";
                             }
                         }else{
-                            api.toast("加载异常，请稍后再试");
-                            if(!refresh){
-                                api.closeWaiting();
+                            if(!$this.banner&&!$this.activities&&!$this.entertainment&&!$this.nightLife&&!$this.privateBanquet&&!$this.gift){
+                                $this.status="0";//网络异常
+                            }else{
+                                $this.status="1";
                             }
+                            api.toast(res.data.Head.Msg);
                         }
                     }else{
-                        $this.showPage=true;
-                        let errText=res.statusText||"似乎已断开与互联网的连接...";
-                        api.toast(errText);
-                        if(!$this.banner){
-                            $this.errorText=errText;
-                            $this.pager=false;
-                        }
-                        if(!refresh){
-                            api.closeWaiting();
+                        if(!$this.banner&&!$this.activities&&!$this.entertainment&&!$this.nightLife&&!$this.privateBanquet&&!$this.gift){
+                            $this.status="-1";//网络异常
+                        }else{
+                            $this.status="1";
                         }
                     }
+                    api.setRefreshState(this.$refs.refresh,false);
                 },true)
             },
             updateBannerIndex:function (e) {

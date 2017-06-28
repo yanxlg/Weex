@@ -1,14 +1,14 @@
 <!--发现首页-->
 <template>
     <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
-        <scroller show-scrollbar="false" append="tree" :class="[showPage?'visible':'hidden']">
-            <div>
+        <scroller show-scrollbar="false" append="tree">
+            <div v-if="status=='1'">
                 <div v-if="banner">
                     <discoveryCarousel style="height: 740px;"  @change="openBanner" :options="banner">
                     </discoveryCarousel>
                 </div>
-                <div class="dis_content">
-                    <div class="flex_row dis-type">
+                <div v-if="banner||activities||entertainment||nightLife||privateBanquet||gift" class="dis_content">
+                    <div class="flex_row dis-type-ios">
                         <div class="dis-type-item first-space" @click="openType(0)">
                             <image class="dis-type-image" src="local:///wx_yule"></image>
                             <text class="dis-type-text">娱乐</text>
@@ -45,6 +45,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row align_center">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{entertainment.Title}}</text>
                                 </div>
@@ -68,6 +69,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row align_center">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{nightLife.Title}}</text>
                                 </div>
@@ -91,6 +93,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row align_center">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{privateBanquet.Title}}</text>
                                 </div>
@@ -114,6 +117,7 @@
                     <div class="dis_content">
                         <div class="dis-border">
                             <div class="dis_header flex_row align_center">
+                                <div class="dis_bar"></div>
                                 <div class="flex_1">
                                     <text class="dis_title">{{gift.Title}}</text>
                                 </div>
@@ -134,22 +138,30 @@
                     </scroller>
                 </div>
             </div>
+            <!--无网络-->
+            <div v-if="status=='-1'" class="flex_1 net-error-container align_center justify_center" :style="{width:'750px',height:viewportH,'background-color':'#f2f2f2'}">
+                <image style="width: 182px;height: 182px;" src="local:///wx_empty_failed"></image>
+                <text style="margin-top: 46px;color: black;font-size: 32px">似乎已经断开与互联网的连接</text>
+                <text class="reload-btn" style="margin-top: 22px;width: 146px;height: 46px;color: #666666;font-size: 28px;text-align: center;padding-top: 6px;" @click="reload">重新加载</text>
+            </div>
+            <!--无数据-->
+            <div v-if="status=='0'" class="flex_1 net-error-container align_center justify_center" :style="{width:'750px',height:viewportH,'background-color':'#f2f2f2'}">
+                <image style="width: 242px;height: 203px;" src="local:///wx_noresultpicture"></image>
+                <text style="margin-top: 46px;color: black;font-size: 32px">暂无相关数据~</text>
+            </div>
         </scroller>
-        <div v-if="errorText" class="flex_1 net-error-container align_center justify_center">
-            <image class="net-error-icon" src="local:///wx_empty_failed"></image>
-            <text class="net-error-text">{{errorText}}</text>
-            <text class="reload-btn" @click="reload">重新加载</text>
-        </div>
     </wx-refresh>
 </template>
 <style src="../style/discovery.css"></style>
 <script>
     import {api,appConfig} from "../api/weex";
     const storage = weex.requireModule('storage');
+    var modal = weex.requireModule('modal');
+    const dom = weex.requireModule('dom');
     export default {
         data(){
-            let defaultObj={
-                showPage:false,
+            return {
+                status:"1",
                 banner:null,
                 activities:null,
                 entertainment:null,
@@ -159,77 +171,83 @@
                 cityCode:"",
                 bannerIndex:1,
                 placeholder:"local:///wx_placeholder_5_4",
-                errorText:false
+                ref:"viewport",
+                viewportH:0,
             };
+        },
+        created(){
+            let _this=this;
+            dom.getComponentRect(this.ref, option => {
+                _this.viewportH= option.size.height;
+            });
             api.getStore("discoverIndexList",function (data){
                 if(data&&data!="undefined"){
                     data=JSON.parse(data);
-                    defaultObj.showPage=true;
-                    defaultObj.banner=data[0];
-                    defaultObj.activities=data[1];
-                    defaultObj.entertainment=data[2];
-                    defaultObj.nightLife=data[3];
-                    defaultObj.privateBanquet=data[4];
-                    defaultObj.gift=data[5];
-                    defaultObj.errorText=false;
+                    _this.status="1";
+                    _this.banner=data[0];
+                    _this.activities=data[1];
+                    _this.entertainment=data[2];
+                    _this.nightLife=data[3];
+                    _this.privateBanquet=data[4];
+                    _this.gift=data[5];
                 }
             });
-            return defaultObj;
-        },
-        created(){
             appConfig.host=this.host;
-            let _this=this;
             api.addEventListener("discoveryLoad",function (e) {
                 _this.getData(e.code);//城市code
             });
         },
         methods:{
             getData:function (code) {
-                let $this=this,refresh=false;
+                if(code===-1){
+                    this.status="-1";
+                    return;
+                }
+                let $this=this;
                 if(code){
                     $this.cityCode=code;
                     api.showWaiting();
                 }else{
                     code=$this.cityCode;
-                    refresh=true;
                 }
                 api.ajax("get","api/DiscoveryApi/GetDiscoveryIndexInfo",{
                     CityCode:code,
                     token:$this.Token
                 },res=>{
-                    refresh&&api.setRefreshState(this.$refs.refresh,false);
                     if(res.ok){
-                        $this.showPage=true;
-                        $this.errorText=false;
                         if(res.data.Head.Ret==0){
                             let datalist=res.data.Content.datalist;
-                            $this.banner=datalist[0];
-                            $this.activities=datalist[1];
-                            $this.entertainment=datalist[2];
-                            $this.nightLife=datalist[3];
-                            $this.privateBanquet=datalist[4];
-                            $this.gift=datalist[5];
-                            api.store("discoverIndexList",JSON.stringify(datalist));
-                            if(!refresh){
-                                api.closeWaiting();
+                            if(datalist.length>0){
+                                $this.status="1";
+                                let newBanner=datalist[0];
+                                newBanner.updateTime=new Date().getTime();
+                                $this.banner=newBanner;
+                                $this.activities=datalist[1];
+                                $this.entertainment=datalist[2];
+                                $this.nightLife=datalist[3];
+                                $this.privateBanquet=datalist[4];
+                                $this.gift=datalist[5];
+                                api.store("discoverIndexList",JSON.stringify(datalist));
+                            }else{
+                                $this.status="0";
                             }
                         }else{
-                            api.toast("加载异常，请稍后再试");
-                            if(!refresh){
-                                api.closeWaiting();
+                            if(!$this.banner&&!$this.activities&&!$this.entertainment&&!$this.nightLife&&!$this.privateBanquet&&!$this.gift){
+                                $this.status="0";//网络异常
+                            }else{
+                                $this.status="1";//应该是1
                             }
+                            api.alert(res.data.Head.Msg);
                         }
                     }else{
-                        let errText=res.statusText||"似乎已断开与互联网的连接...";
-                        api.toast(errText);
-                        if(!$this.banner){
-                            $this.errorText=errText;
-                            $this.showPage=false;
-                        }
-                        if(!refresh){
-                            api.closeWaiting();
+                        if(!$this.banner&&!$this.activities&&!$this.entertainment&&!$this.nightLife&&!$this.privateBanquet&&!$this.gift){
+                            $this.status="-1";//网络异常
+                        }else{
+                            $this.status="1";
                         }
                     }
+                    api.closeWaiting();
+                    api.setRefreshState(this.$refs.refresh,false);
                 },true)
             },
             updateBannerIndex:function (e) {

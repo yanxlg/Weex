@@ -35,7 +35,7 @@
     "vue-template-compiler": "^2.3.4",
     "webpack": "^2.6.1",
     "weex-devtool": "^0.2.80",
-    "weex-loader": "^0.4.4",
+    "weex-loader": "^0.4.5",
     "weex-vue-loader": "^0.2.12"
   }
 }
