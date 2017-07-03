@@ -60,7 +60,7 @@
                         <div class="dis-item" v-for="en in entertainment.Content" @click="openDetail(en)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="en.Cover"></image>
                             <text class="dis-item-text">{{en.Title}}</text>
-                            <text class="dis-item-city">{{en.Address}}</text>
+                            <text class="dis-item-city">{{en.SubTitle}}</text>
                             <text class="dis-item-price">{{en.Price}}</text>
                         </div>
                     </scroller>
@@ -84,7 +84,7 @@
                         <div class="dis-item" v-for="nf in nightLife.Content" @click="openDetail(nf)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
                             <text class="dis-item-text">{{nf.Title}}</text>
-                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-city">{{nf.SubTitle}}</text>
                             <text class="dis-item-price">{{nf.Price}}</text>
                         </div>
                     </scroller>
@@ -108,7 +108,7 @@
                         <div class="dis-item" v-for="nf in privateBanquet.Content" @click="openDetail(nf)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
                             <text class="dis-item-text">{{nf.Title}}</text>
-                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-city">{{nf.SubTitle}}</text>
                             <text class="dis-item-price">{{nf.Price}}</text>
                         </div>
                     </scroller>
@@ -132,7 +132,7 @@
                         <div class="dis-item" v-for="nf in gift.Content" @click="openDetail(nf)">
                             <image :placeholder="placeholder" class="dis-item-img" resize="cover" :src="nf.Cover"></image>
                             <text class="dis-item-text">{{nf.Title}}</text>
-                            <text class="dis-item-city">{{nf.Address}}</text>
+                            <text class="dis-item-city">{{nf.SubTitle}}</text>
                             <text class="dis-item-price">{{nf.Price}}</text>
                         </div>
                     </scroller>
