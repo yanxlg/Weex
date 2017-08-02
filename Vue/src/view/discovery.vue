@@ -1,34 +1,40 @@
 <!--发现首页-->
 <template>
-    <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve">
+    <wx-refresh ref="refresh" color="#ffc400" class="flex_1" @refresh="refreshEve" lock="true">
         <scroller show-scrollbar="false" append="tree">
             <!--有数据-->
             <div v-if="status=='1'">
-                <div v-if="banner" style="height: 866px;">
-                    <div class="dis_content" >
-                        <div class="dis_header flex_row ">
-                            <div class="dis_bar"></div>
-                            <div class="flex_1">
-                                <text class="dis_title">{{banner.Title}}</text>
+                <div style="height: 866px;">
+                    <div v-if="banner">
+                        <div class="dis_content" >
+                            <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
+                                <div class="flex_1">
+                                    <text class="dis_title">{{banner.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_index" style="line-height: 40px">{{bannerIndex}}</text>
+                                    <text class="dis_total" style="line-height: 48px">/{{banner.dataCount}}</text>
+                                </div>
                             </div>
-                            <div class="flex_row">
-                                <text class="dis_index" style="line-height: 40px">{{bannerIndex}}</text>
-                                <text class="dis_total" style="line-height: 48px">/{{banner.dataCount}}</text>
-                            </div>
+                            <text class="dis_subTitle">{{banner.SubTitle}}</text>
                         </div>
-                        <text class="dis_subTitle">{{banner.SubTitle}}</text>
+                        <slider-neighbor v-if="banner.Content" class="dis-slider" neighbor-scale="0.9" append="tree" neighbor-space="20" interval="3000" :auto-play="banner.Content.length>2" @change="updateBannerIndex">
+                            <div class="dis-slider-item" v-for="img in banner.Content" @click="openBanner(img)">
+                                <image :placeholder="placeholder" class="dis-slider-image" resize="cover" :src="img.Cover"></image>
+                                <text class="dis-slider-title">{{img.Title}}</text>
+                                <text class="dis-slider-subTitle">{{img.SubTitle}}</text>
+                            </div>
+                        </slider-neighbor>
                     </div>
-                    <slider-neighbor class="dis-slider" neighbor-scale="0.9" append="tree" neighbor-space="20" interval="3000" :auto-play="banner.Content.length>2" @change="updateBannerIndex">
-                        <div class="dis-slider-item" v-for="img in banner.Content" @click="openBanner(img)">
-                            <image :placeholder="placeholder" class="dis-slider-image" resize="cover" :src="img.Cover"></image>
-                            <text class="dis-slider-title">{{img.Title}}</text>
-                            <text class="dis-slider-subTitle">{{img.SubTitle}}</text>
-                        </div>
-                    </slider-neighbor>
                 </div>
                 <div v-if="banner||activities||entertainment||nightLife||privateBanquet||gift" class="dis_content">
                     <div class="flex_row dis-type">
-                        <div class="dis-type-item first-space" @click="openType(0)">
+                        <div class="dis-type-item first-space" @click="openType(5)">
+                            <image class="dis-type-image" src="local:///wx_yueta"></image>
+                            <text class="dis-type-text">约TA</text>
+                        </div>
+                        <div class="dis-type-space dis-type-item" @click="openType(0)">
                             <image class="dis-type-image" src="local:///wx_yule"></image>
                             <text class="dis-type-text">娱乐</text>
                         </div>
@@ -59,6 +65,32 @@
                             <text class="dis-activity-item-price">{{activity.Price}}</text>
                         </div>
                     </div>
+                </div>
+                <div v-if="yueta&&yueta.Content.length>0">
+                    <div class="dis_content">
+                        <div class="dis-border">
+                            <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
+                                <div class="flex_1">
+                                    <text class="dis_title">{{yueta.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_more" @click="openMore(yueta,1)">查看更多</text>
+                                </div>
+                            </div>
+                            <text class="dis_subTitle">{{yueta.SubTitle}}</text>
+                        </div>
+                    </div>
+                    <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
+                        <div class="dis-item" v-for="en in yueta.Content" @click="openDetail(en,1)">
+                            <image :placeholder="placeholder" class="dis-item-yueta-img" resize="cover" :src="en.Cover"></image>
+                            <text class="dis-item-text">{{en.Title}}</text>
+                            <div class="flex_row yueta-subtitle">
+                                <text :class="['dis-item-yueta-type',en.SubTitle==='叫醒'?'yueta-type-0':en.SubTitle==='当地向导'?'yueta-type-1':en.SubTitle==='虚拟女友'?'yueta-type-2':en.SubTitle==='视频聊天'?'yueta-type-3':en.SubTitle==='线下K歌'?'yueta-type-4':'yueta-type-5']">{{en.SubTitle}}</text>
+                                <text class="dis-item-yueta-price">{{en.Price}}</text>
+                            </div>
+                        </div>
+                    </scroller>
                 </div>
                 <div v-if="entertainment">
                     <div class="dis_content">
@@ -175,6 +207,7 @@
 <style src="../style/discovery.css"></style>
 <script>
     import {api,appConfig} from "../api/weex";
+    let bannerCache=null;
     export default {
         data(){
             return {
@@ -182,6 +215,7 @@
                 banner:null,
                 activities:null,
                 entertainment:null,
+                yueta:null,
                 nightLife:null,
                 privateBanquet:null,
                 gift:null,
@@ -196,17 +230,23 @@
                 if(data&&data!="undefined"){
                     data=JSON.parse(data);
                     _this.status="1";
-                    _this.banner=data[0];
+                    bannerCache=data[0];
+                    bannerCache.updateTime=new Date().getTime();
+//                    _this.banner=bannerCache;
                     _this.activities=data[1];
                     _this.entertainment=data[2];
                     _this.nightLife=data[3];
                     _this.privateBanquet=data[4];
                     _this.gift=data[5];
+                    _this.yueta=data[6];
                 }
             });
             appConfig.host=this.host;
             api.addEventListener("discoveryLoad",function (e) {
                 _this.getData(e.code);//城市code
+            });
+            api.addEventListener("discoveryInitRefresh",function (e) {
+                _this.banner=bannerCache;
             });
         },
         methods:{
@@ -231,14 +271,18 @@
                             let datalist=res.data.Content.datalist;
                             if(datalist.length>0){
                                 $this.status="1";
-                                let newBanner=datalist[0];
-                                newBanner.updateTime=new Date().getTime();
-                                $this.banner=newBanner;
+                                $this.banner=null;
+                                setTimeout(()=>{
+                                    bannerCache=datalist[0];
+                                    bannerCache.updateTime=new Date().getTime();
+                                    $this.banner=bannerCache;
+                                },0);
                                 $this.activities=datalist[1];
                                 $this.entertainment=datalist[2];
                                 $this.nightLife=datalist[3];
                                 $this.privateBanquet=datalist[4];
                                 $this.gift=datalist[5];
+                                $this.yueta=datalist[6];
                                 api.store("discoverIndexList",JSON.stringify(datalist));
                             }else{
                                 $this.status="0";
@@ -255,6 +299,7 @@
                         if(!$this.banner&&!$this.activities&&!$this.entertainment&&!$this.nightLife&&!$this.privateBanquet&&!$this.gift){
                             $this.status="-1";//网络异常
                         }else{
+                            $this.banner=bannerCache;
                             $this.status="1";
                         }
                     }
@@ -300,16 +345,30 @@
                             iconId:-1
                         });
                         break;
+                    case 5:
+                        api.openController("dis_yueta",{
+                            title:"约TA",
+                            iconId:-1
+                        });
+                        break;
                 }
             },
-            openDetail:function (item) {
-                api.openController("dis_detail",{
-                    type:item.FavoritesType,
-                    id:item.DetailId
-                })
+            openDetail:function (item,yueta) {
+                if(yueta){
+                    api.openController("yueta_detail",item);
+                }else{
+                    api.openController("dis_detail",{
+                        type:item.FavoritesType,
+                        id:item.DetailId
+                    })
+                }
             },
-            openMore:function (item) {
-                api.openController("dis_more",item);
+            openMore:function (item,yueta) {
+                if(yueta){
+                    api.openController("more_ta",item);
+                }else{
+                    api.openController("dis_more",item);
+                }
             },
             refreshEve:function () {
                 this.getData();

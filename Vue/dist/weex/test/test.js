@@ -780,7 +780,7 @@ module.exports = {
     "paddingBottom": 55.6
   },
   "dis-type-space": {
-    "marginLeft": 60
+    "marginLeft": 26
   },
   "dis-type-image": {
     "width": 60,
@@ -871,7 +871,7 @@ module.exports = {
   },
   "dis-item-text": {
     "marginTop": 30,
-    "fontSize": 32,
+    "height": 32,
     "fontWeight": "700",
     "width": 325,
     "lines": 1,
@@ -918,6 +918,47 @@ module.exports = {
     "top": 0,
     "right": 0,
     "bottom": 0
+  },
+  "dis-item-yueta-type": {
+    "width": 100,
+    "height": 30,
+    "fontSize": 20,
+    "borderRadius": 6,
+    "color": "#ffffff",
+    "textAlign": "center",
+    "lineHeight": 30
+  },
+  "dis-item-yueta-price": {
+    "fontSize": 28,
+    "color": "#ff3939",
+    "marginLeft": 10,
+    "lines": 1,
+    "width": 210
+  },
+  "yueta-type-0": {
+    "backgroundImage": "linear-gradient(to right, #0cd1f5, #1e96ff)"
+  },
+  "yueta-type-1": {
+    "backgroundImage": "linear-gradient(to right, #0ff0f0, #00c9c9)"
+  },
+  "yueta-type-2": {
+    "backgroundImage": "linear-gradient(to right, #fbb93a, #ff9000)"
+  },
+  "yueta-type-3": {
+    "backgroundImage": "linear-gradient(to right, #9476fe, #6e46fa)"
+  },
+  "yueta-type-4": {
+    "backgroundImage": "linear-gradient(to right, #ff74b4, #f92084)"
+  },
+  "yueta-type-5": {
+    "backgroundImage": "linear-gradient(to right, #ea91fd, #d930fd)"
+  },
+  "dis-item-yueta-img": {
+    "width": 325,
+    "height": 325
+  },
+  "yueta-subtitle": {
+    "marginTop": 20
   }
 }
 

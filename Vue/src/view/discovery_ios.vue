@@ -9,7 +9,11 @@
                 </div>
                 <div v-if="banner||activities||entertainment||nightLife||privateBanquet||gift" class="dis_content">
                     <div class="flex_row dis-type-ios">
-                        <div class="dis-type-item first-space" @click="openType(0)">
+                        <div class="dis-type-item first-space" @click="openType(5)">
+                            <image class="dis-type-image" src="local:///wx_yueta"></image>
+                            <text class="dis-type-text">约TA</text>
+                        </div>
+                        <div class="dis-type-item dis-type-space" @click="openType(0)">
                             <image class="dis-type-image" src="local:///wx_yule"></image>
                             <text class="dis-type-text">娱乐</text>
                         </div>
@@ -40,6 +44,32 @@
                             <text class="dis-activity-item-price">{{activity.Price}}</text>
                         </div>
                     </div>
+                </div>
+                <div v-if="yueta&&yueta.Content.length>0">
+                    <div class="dis_content">
+                        <div class="dis-border">
+                            <div class="dis_header flex_row ">
+                                <div class="dis_bar"></div>
+                                <div class="flex_1">
+                                    <text class="dis_title">{{yueta.Title}}</text>
+                                </div>
+                                <div class="flex_row">
+                                    <text class="dis_more" @click="openMore(yueta,1)">查看更多</text>
+                                </div>
+                            </div>
+                            <text class="dis_subTitle">{{yueta.SubTitle}}</text>
+                        </div>
+                    </div>
+                    <scroller show-scrollbar="false" append="tree" scroll-direction="horizontal" class="flex_row dis-item-scroller">
+                        <div class="dis-item" v-for="en in yueta.Content" @click="openDetail(en,1)">
+                            <image :placeholder="placeholder" class="dis-item-yueta-img" resize="cover" :src="en.Cover"></image>
+                            <text class="dis-item-text">{{en.Title}}</text>
+                            <div class="flex_row yueta-subtitle">
+                                <text :class="['dis-item-yueta-type',en.SubTitle==='叫醒'?'yueta-type-0':en.SubTitle==='当地向导'?'yueta-type-1':en.SubTitle==='虚拟女友'?'yueta-type-2':en.SubTitle==='视频聊天'?'yueta-type-3':en.SubTitle==='线下K歌'?'yueta-type-4':'yueta-type-5']">{{en.SubTitle}}</text>
+                                <text class="dis-item-yueta-price">{{en.Price}}</text>
+                            </div>
+                        </div>
+                    </scroller>
                 </div>
                 <div v-if="entertainment">
                     <div class="dis_content">
@@ -164,6 +194,7 @@
                 status:"1",
                 banner:null,
                 activities:null,
+                yueta:null,
                 entertainment:null,
                 nightLife:null,
                 privateBanquet:null,
@@ -190,6 +221,7 @@
                     _this.nightLife=data[3];
                     _this.privateBanquet=data[4];
                     _this.gift=data[5];
+                    _this.yueta=data[6];
                 }
             });
             appConfig.host=this.host;
@@ -227,6 +259,7 @@
                                 $this.nightLife=datalist[3];
                                 $this.privateBanquet=datalist[4];
                                 $this.gift=datalist[5];
+                                $this.yueta=datalist[6];
                                 api.store("discoverIndexList",JSON.stringify(datalist));
                             }else{
                                 $this.status="0";
@@ -291,16 +324,30 @@
                             iconId:-1
                         });
                         break;
+                    case 5:
+                        api.openController("dis_yueta",{
+                            title:"约TA",
+                            iconId:-1
+                        });
+                        break;
                 }
             },
-            openDetail:function (item) {
-                api.openController("dis_detail",{
-                    type:item.FavoritesType,
-                    id:item.DetailId
-                })
+            openDetail:function (item,yueta) {
+                if(yueta){
+                    api.openController("yueta_detail",item);
+                }else{
+                    api.openController("dis_detail",{
+                        type:item.FavoritesType,
+                        id:item.DetailId
+                    })
+                }
             },
-            openMore:function (item) {
-                api.openController("dis_more",item);
+            openMore:function (item,yueta) {
+                if(yueta){
+                    api.openController("more_ta",item);
+                }else{
+                    api.openController("dis_more",item);
+                }
             },
             refreshEve:function () {
                 this.getData();

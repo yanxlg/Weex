@@ -173,7 +173,7 @@ body .weex-slider-inner {
   padding-bottom: 55.6px;
 }
 .dis-type-space {
-  margin-left: 60px;
+  margin-left: 26px;
 }
 .dis-type-image {
   width: 60px;
@@ -264,21 +264,26 @@ body .weex-slider-inner {
 }
 .dis-item-text {
   margin-top: 30px;
-  font-size: 32px;
+  height: 32px;
   font-weight: 700;
   width: 325px;
   lines: 1;
   text-overflow: ellipsis;
+  line-height: 32px;
 }
 .dis-item-city {
   margin-top: 20px;
   font-size: 28px;
   color: #999999;
+  height: 28px;
+  line-height: 28px;
 }
 .dis-item-price {
   font-size: 28px;
   color: #ff3939;
   margin-top: 20px;
+  height: 28px;
+  line-height: 28px;
 }
 .net-error-icon {
   width: 130px;
@@ -311,4 +316,45 @@ body .weex-slider-inner {
   top: 0;
   right: 0;
   bottom: 0;
+}
+.dis-item-yueta-type {
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+}
+.dis-item-yueta-price {
+  font-size: 28px;
+  color: #ff3939;
+  margin-left: 10px;
+  lines: 1;
+  width: 210px;
+}
+.yueta-type-0 {
+  background-image: linear-gradient(to right, #0cd1f5, #1e96ff);
+}
+.yueta-type-1 {
+  background-image: linear-gradient(to right, #0ff0f0, #00c9c9);
+}
+.yueta-type-2 {
+  background-image: linear-gradient(to right, #fbb93a, #ff9000);
+}
+.yueta-type-3 {
+  background-image: linear-gradient(to right, #9476fe, #6e46fa);
+}
+.yueta-type-4 {
+  background-image: linear-gradient(to right, #ff74b4, #f92084);
+}
+.yueta-type-5 {
+  background-image: linear-gradient(to right, #ea91fd, #d930fd);
+}
+.dis-item-yueta-img {
+  width: 325px;
+  height: 325px;
+}
+.yueta-subtitle {
+  margin-top: 20px;
 }
