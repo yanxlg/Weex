@@ -356,6 +356,8 @@
             openDetail:function (item,yueta) {
                 if(yueta){
                     api.openController("yueta_detail",item);
+
+
                 }else{
                     api.openController("dis_detail",{
                         type:item.FavoritesType,
